@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A2174111AC9E74A00C4471D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2174101AC9E74A00C4471D /* AppDelegate.swift */; };
-		1A2174131AC9E74A00C4471D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2174121AC9E74A00C4471D /* RootViewController.swift */; };
 		1A2174181AC9E74A00C4471D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174171AC9E74A00C4471D /* Images.xcassets */; };
 		1A21741B1AC9E74A00C4471D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174191AC9E74A00C4471D /* LaunchScreen.xib */; };
 		1A2174271AC9E74A00C4471D /* HackcancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2174261AC9E74A00C4471D /* HackcancerTests.swift */; };
-		1AD3C25E1ACDE7B800142A68 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C25D1ACDE7B800142A68 /* NewsViewController.swift */; };
-		1AD3C2601ACDE8AA00142A68 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C25F1ACDE8AA00142A68 /* AboutViewController.swift */; };
-		1AD3C2621ACDE8BB00142A68 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2611ACDE8BB00142A68 /* ScheduleViewController.swift */; };
-		1AD3C2641ACDEA7000142A68 /* ConciergeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2631ACDEA7000142A68 /* ConciergeViewController.swift */; };
-		1AD3C2661ACDEA8300142A68 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2651ACDEA8300142A68 /* FAQViewController.swift */; };
+		1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2761ACDF60300142A68 /* AppDelegate.swift */; };
+		1AD3C2891ACDF94D00142A68 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2881ACDF94D00142A68 /* EventStore.swift */; };
+		1AD3C28C1ACDF96B00142A68 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C28B1ACDF96B00142A68 /* Event.swift */; };
+		1AD3C2961ACDFA3400142A68 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2901ACDFA3400142A68 /* AboutViewController.swift */; };
+		1AD3C2971ACDFA3400142A68 /* ConciergeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2911ACDFA3400142A68 /* ConciergeViewController.swift */; };
+		1AD3C2981ACDFA3400142A68 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2921ACDFA3400142A68 /* FAQViewController.swift */; };
+		1AD3C2991ACDFA3400142A68 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2931ACDFA3400142A68 /* NewsViewController.swift */; };
+		1AD3C29A1ACDFA3400142A68 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2941ACDFA3400142A68 /* RootViewController.swift */; };
+		1AD3C29B1ACDFA3400142A68 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2951ACDFA3400142A68 /* ScheduleViewController.swift */; };
+		1AD3C29E1ACDFA7700142A68 /* EventTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C29D1ACDFA7700142A68 /* EventTableViewAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,18 +35,21 @@
 /* Begin PBXFileReference section */
 		1A21740B1AC9E74A00C4471D /* Hackcancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackcancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A21740F1AC9E74A00C4471D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A2174101AC9E74A00C4471D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A2174121AC9E74A00C4471D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		1A2174171AC9E74A00C4471D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1A21741A1AC9E74A00C4471D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1A2174201AC9E74A00C4471D /* HackcancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackcancerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2174251AC9E74A00C4471D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A2174261AC9E74A00C4471D /* HackcancerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackcancerTests.swift; sourceTree = "<group>"; };
-		1AD3C25D1ACDE7B800142A68 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		1AD3C25F1ACDE8AA00142A68 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		1AD3C2611ACDE8BB00142A68 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
-		1AD3C2631ACDEA7000142A68 /* ConciergeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeViewController.swift; sourceTree = "<group>"; };
-		1AD3C2651ACDEA8300142A68 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		1AD3C2761ACDF60300142A68 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1AD3C2881ACDF94D00142A68 /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
+		1AD3C28B1ACDF96B00142A68 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		1AD3C2901ACDFA3400142A68 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		1AD3C2911ACDFA3400142A68 /* ConciergeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeViewController.swift; sourceTree = "<group>"; };
+		1AD3C2921ACDFA3400142A68 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		1AD3C2931ACDFA3400142A68 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		1AD3C2941ACDFA3400142A68 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		1AD3C2951ACDFA3400142A68 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		1AD3C29D1ACDFA7700142A68 /* EventTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,16 +91,12 @@
 		1A21740D1AC9E74A00C4471D /* Hackcancer */ = {
 			isa = PBXGroup;
 			children = (
-				1A2174101AC9E74A00C4471D /* AppDelegate.swift */,
-				1A2174121AC9E74A00C4471D /* RootViewController.swift */,
+				1AD3C28E1ACDFA3400142A68 /* View Layer */,
+				1AD3C2861ACDF8DE00142A68 /* Data Layer */,
+				1AD3C2761ACDF60300142A68 /* AppDelegate.swift */,
 				1A2174171AC9E74A00C4471D /* Images.xcassets */,
 				1A2174191AC9E74A00C4471D /* LaunchScreen.xib */,
 				1A21740E1AC9E74A00C4471D /* Supporting Files */,
-				1AD3C25D1ACDE7B800142A68 /* NewsViewController.swift */,
-				1AD3C25F1ACDE8AA00142A68 /* AboutViewController.swift */,
-				1AD3C2611ACDE8BB00142A68 /* ScheduleViewController.swift */,
-				1AD3C2631ACDEA7000142A68 /* ConciergeViewController.swift */,
-				1AD3C2651ACDEA8300142A68 /* FAQViewController.swift */,
 			);
 			path = Hackcancer;
 			sourceTree = "<group>";
@@ -122,6 +124,61 @@
 				1A2174251AC9E74A00C4471D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AD3C2861ACDF8DE00142A68 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1AD3C28A1ACDF96300142A68 /* Model */,
+				1AD3C2871ACDF8EB00142A68 /* Store */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		1AD3C2871ACDF8EB00142A68 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				1AD3C2881ACDF94D00142A68 /* EventStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		1AD3C28A1ACDF96300142A68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AD3C28B1ACDF96B00142A68 /* Event.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AD3C28E1ACDFA3400142A68 /* View Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1AD3C29C1ACDFA4C00142A68 /* Adapter */,
+				1AD3C28F1ACDFA3400142A68 /* Controllers */,
+			);
+			path = "View Layer";
+			sourceTree = "<group>";
+		};
+		1AD3C28F1ACDFA3400142A68 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AD3C2901ACDFA3400142A68 /* AboutViewController.swift */,
+				1AD3C2911ACDFA3400142A68 /* ConciergeViewController.swift */,
+				1AD3C2921ACDFA3400142A68 /* FAQViewController.swift */,
+				1AD3C2931ACDFA3400142A68 /* NewsViewController.swift */,
+				1AD3C2941ACDFA3400142A68 /* RootViewController.swift */,
+				1AD3C2951ACDFA3400142A68 /* ScheduleViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1AD3C29C1ACDFA4C00142A68 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				1AD3C29D1ACDFA7700142A68 /* EventTableViewAdapter.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,13 +280,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD3C25E1ACDE7B800142A68 /* NewsViewController.swift in Sources */,
-				1A2174131AC9E74A00C4471D /* RootViewController.swift in Sources */,
-				1AD3C2641ACDEA7000142A68 /* ConciergeViewController.swift in Sources */,
-				1AD3C2621ACDE8BB00142A68 /* ScheduleViewController.swift in Sources */,
-				1AD3C2661ACDEA8300142A68 /* FAQViewController.swift in Sources */,
-				1AD3C2601ACDE8AA00142A68 /* AboutViewController.swift in Sources */,
-				1A2174111AC9E74A00C4471D /* AppDelegate.swift in Sources */,
+				1AD3C29E1ACDFA7700142A68 /* EventTableViewAdapter.swift in Sources */,
+				1AD3C28C1ACDF96B00142A68 /* Event.swift in Sources */,
+				1AD3C2971ACDFA3400142A68 /* ConciergeViewController.swift in Sources */,
+				1AD3C2891ACDF94D00142A68 /* EventStore.swift in Sources */,
+				1AD3C29B1ACDFA3400142A68 /* ScheduleViewController.swift in Sources */,
+				1AD3C2981ACDFA3400142A68 /* FAQViewController.swift in Sources */,
+				1AD3C2991ACDFA3400142A68 /* NewsViewController.swift in Sources */,
+				1AD3C2961ACDFA3400142A68 /* AboutViewController.swift in Sources */,
+				1AD3C29A1ACDFA3400142A68 /* RootViewController.swift in Sources */,
+				1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
