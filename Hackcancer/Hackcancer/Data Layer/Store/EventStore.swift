@@ -10,8 +10,25 @@ import Foundation
 
 class EventStore
 {
-    func AllEvents() -> [Event]
+    var changeSignal: RACSignal
+    {
+        return changeSubject
+    }
+    
+    private var changeSubject: RACSubject
+        {
+            return RACSubject()
+    }
+    
+    func allEvents() -> [Event]
     {
         return []
+    }
+    
+    private
+    
+    func emitChange()
+    {
+        changeSubject.sendNil()
     }
 }

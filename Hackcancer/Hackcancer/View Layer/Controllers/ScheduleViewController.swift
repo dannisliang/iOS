@@ -57,5 +57,10 @@ class ScheduleViewController: UIViewController
         tableView.delegate = eventTableViewAdapter
         
         eventTableViewAdapter.tableView = tableView
+        eventStore.changeSignal.subscribeNext
+        {
+            (next: AnyObject!) -> () in
+                self.tableView.reloadData()
+        }
     }
 }
