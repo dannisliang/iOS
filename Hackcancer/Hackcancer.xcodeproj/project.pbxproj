@@ -12,6 +12,11 @@
 		1A2174181AC9E74A00C4471D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174171AC9E74A00C4471D /* Images.xcassets */; };
 		1A21741B1AC9E74A00C4471D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174191AC9E74A00C4471D /* LaunchScreen.xib */; };
 		1A2174271AC9E74A00C4471D /* HackcancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2174261AC9E74A00C4471D /* HackcancerTests.swift */; };
+		1AD3C25E1ACDE7B800142A68 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C25D1ACDE7B800142A68 /* NewsViewController.swift */; };
+		1AD3C2601ACDE8AA00142A68 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C25F1ACDE8AA00142A68 /* AboutViewController.swift */; };
+		1AD3C2621ACDE8BB00142A68 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2611ACDE8BB00142A68 /* ScheduleViewController.swift */; };
+		1AD3C2641ACDEA7000142A68 /* ConciergeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2631ACDEA7000142A68 /* ConciergeViewController.swift */; };
+		1AD3C2661ACDEA8300142A68 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2651ACDEA8300142A68 /* FAQViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,11 @@
 		1A2174201AC9E74A00C4471D /* HackcancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackcancerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2174251AC9E74A00C4471D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A2174261AC9E74A00C4471D /* HackcancerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackcancerTests.swift; sourceTree = "<group>"; };
+		1AD3C25D1ACDE7B800142A68 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		1AD3C25F1ACDE8AA00142A68 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		1AD3C2611ACDE8BB00142A68 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		1AD3C2631ACDEA7000142A68 /* ConciergeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeViewController.swift; sourceTree = "<group>"; };
+		1AD3C2651ACDEA8300142A68 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,11 @@
 				1A2174171AC9E74A00C4471D /* Images.xcassets */,
 				1A2174191AC9E74A00C4471D /* LaunchScreen.xib */,
 				1A21740E1AC9E74A00C4471D /* Supporting Files */,
+				1AD3C25D1ACDE7B800142A68 /* NewsViewController.swift */,
+				1AD3C25F1ACDE8AA00142A68 /* AboutViewController.swift */,
+				1AD3C2611ACDE8BB00142A68 /* ScheduleViewController.swift */,
+				1AD3C2631ACDEA7000142A68 /* ConciergeViewController.swift */,
+				1AD3C2651ACDEA8300142A68 /* FAQViewController.swift */,
 			);
 			path = Hackcancer;
 			sourceTree = "<group>";
@@ -208,7 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD3C25E1ACDE7B800142A68 /* NewsViewController.swift in Sources */,
 				1A2174131AC9E74A00C4471D /* RootViewController.swift in Sources */,
+				1AD3C2641ACDEA7000142A68 /* ConciergeViewController.swift in Sources */,
+				1AD3C2621ACDE8BB00142A68 /* ScheduleViewController.swift in Sources */,
+				1AD3C2661ACDEA8300142A68 /* FAQViewController.swift in Sources */,
+				1AD3C2601ACDE8AA00142A68 /* AboutViewController.swift in Sources */,
 				1A2174111AC9E74A00C4471D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +415,7 @@
 				1A21742C1AC9E74A00C4471D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A21742D1AC9E74A00C4471D /* Build configuration list for PBXNativeTarget "HackcancerTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +424,7 @@
 				1A21742F1AC9E74A00C4471D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
