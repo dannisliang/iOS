@@ -22,6 +22,11 @@ class ScheduleViewController: UIViewController
         return adapter
     }
     
+    var eventStore: EventStore
+    {
+        return EventStore()
+    }
+    
     override init()
     {
         super.init()
@@ -50,6 +55,7 @@ class ScheduleViewController: UIViewController
     {
         tableView.dataSource = eventTableViewAdapter
         tableView.delegate = eventTableViewAdapter
+        
         eventTableViewAdapter.tableView = tableView
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class EventTableViewAdapter: NSObject
 {
+    var events: [Event] = [Event]()
     var tableView: UITableView?
 }
 
@@ -17,7 +18,7 @@ extension EventTableViewAdapter: UITableViewDataSource
 {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 0
+        return events.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
