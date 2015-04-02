@@ -10,6 +10,14 @@ import UIKit
 
 class FAQViewController: UIViewController
 {
+    var tableView: UITableView
+    {
+            let tableView = UITableView(frame: UIScreen.mainScreen().bounds)
+            tableView.separatorInset = UIEdgeInsetsZero
+            
+            return tableView
+    }
+    
     override init()
     {
         super.init()
@@ -27,5 +35,10 @@ class FAQViewController: UIViewController
     {
         super.init(nibName: nibNameOrNil,
             bundle: nibBundleOrNil)
+    }
+    
+    override func loadView()
+    {
+        view = tableView
     }
 }

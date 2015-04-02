@@ -28,4 +28,10 @@ class AboutViewController: UIViewController
         super.init(nibName: nibNameOrNil,
             bundle: nibBundleOrNil)
     }
+    
+    override func loadView()
+    {
+        view = UIView(frame: UIScreen.mainScreen().bounds)
+        view.backgroundColor = UIColor.whiteColor()
+    }
 }
