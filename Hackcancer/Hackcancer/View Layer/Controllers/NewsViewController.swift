@@ -10,13 +10,13 @@ import UIKit
 
 class NewsViewController: UIViewController
 {
-    var tableView: UITableView
+    lazy var tableView: UITableView =
     {
         let tableView = UITableView(frame: UIScreen.mainScreen().bounds)
         tableView.separatorInset = UIEdgeInsetsZero
         
         return tableView
-    }
+    }()
     
     override init()
     {

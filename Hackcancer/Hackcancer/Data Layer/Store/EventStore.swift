@@ -15,17 +15,35 @@ class EventStore
         return changeSubject
     }
     
-    private var changeSubject: RACSubject
+    init()
+    {
+        AddEventAction.shared().addEventSubject.subscribeNext
         {
-            return RACSubject()
+            (next: AnyObject!) -> Void in
+                self.addEvent()
+        }
     }
-    
+
     func allEvents() -> [Event]
     {
-        return []
+        return events
     }
     
     private
+    
+    lazy var changeSubject: RACSubject =
+    {
+        return RACSubject()
+    }()
+    
+    var events: [Event] = []
+    
+    func addEvent()
+    {
+        let event = Event()
+        events.append(event)
+        self.emitChange()
+    }
     
     func emitChange()
     {

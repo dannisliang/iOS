@@ -10,11 +10,11 @@ import UIKit
 
 class FAQViewController: UIViewController
 {
-    var tableView: UITableView
+    lazy var tableView: UITableView =
     {
         let tableView = UITableView(frame: UIScreen.mainScreen().bounds)
         return tableView
-    }
+    }()
     
     override init()
     {

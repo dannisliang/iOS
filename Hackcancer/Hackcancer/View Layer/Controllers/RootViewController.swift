@@ -10,30 +10,30 @@ import UIKit
 
 class RootViewController: UITabBarController
 {
-    var newsNavigationViewController: UINavigationController
+    lazy var newsNavigationViewController: UINavigationController =
     {
         return UINavigationController(rootViewController: NewsViewController())
-    }
+    }()
     
-    var aboutNavigationViewController: UINavigationController
+    lazy var aboutNavigationViewController: UINavigationController =
     {
         return UINavigationController(rootViewController: AboutViewController())
-    }
+    }()
     
-    var conciergeNavigationViewController: UINavigationController
+    lazy var conciergeNavigationViewController: UINavigationController =
     {
         return UINavigationController(rootViewController: ConciergeViewController())
-    }
+    }()
     
-    var scheduleNavigationViewController: UINavigationController
+    lazy var scheduleNavigationViewController: UINavigationController =
     {
         return UINavigationController(rootViewController: ScheduleViewController())
-    }
+    }()
     
-    var faqNavigationViewController: UINavigationController
+    lazy var faqNavigationViewController: UINavigationController =
     {
         return UINavigationController(rootViewController: FAQViewController())
-    }
+    }()
 
     override func viewDidLoad()
     {

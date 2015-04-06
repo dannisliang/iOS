@@ -10,22 +10,28 @@ import UIKit
 
 class ScheduleViewController: UIViewController
 {
-    var tableView: UITableView
+    lazy var addBarButtonItem: UIBarButtonItem =
+    {
+        let item = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "didPressAdd:")
+        return item
+    }()
+    
+    lazy var tableView: UITableView =
     {
         let tableView = UITableView(frame: UIScreen.mainScreen().bounds)
         return tableView
-    }
+    }()
     
-    var eventTableViewAdapter: EventTableViewAdapter
+    lazy var eventTableViewAdapter: EventTableViewAdapter =
     {
         let adapter = EventTableViewAdapter()
         return adapter
-    }
+    }()
     
-    var eventStore: EventStore
+    lazy var eventStore: EventStore =
     {
         return EventStore()
-    }
+    }()
     
     override init()
     {
@@ -33,6 +39,7 @@ class ScheduleViewController: UIViewController
         
         self.title = NSLocalizedString("schedule_nav",
                                         comment: "")
+        self.navigationItem.leftBarButtonItem = addBarButtonItem
     }
 
     required init(coder aDecoder: NSCoder)
@@ -57,10 +64,17 @@ class ScheduleViewController: UIViewController
         tableView.delegate = eventTableViewAdapter
         
         eventTableViewAdapter.tableView = tableView
+        eventTableViewAdapter.set(eventStore.allEvents(), animated:false)
+        
         eventStore.changeSignal.subscribeNext
         {
             (next: AnyObject!) -> () in
-                self.tableView.reloadData()
+                self.eventTableViewAdapter.set(self.eventStore.allEvents())
         }
+    }
+    
+    func didPressAdd(sender: AnyObject)
+    {
+        AddEventAction.shared().addEvent()
     }
 }
