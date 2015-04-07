@@ -70,15 +70,22 @@ extension EventTableViewAdapter: UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
+        let cell = self.tableView(tableView, eventCellForRowAtIndexPath: indexPath)
+        let event = events[indexPath.row]
+        
+        cell.textLabel?.text = event.name
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, eventCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
         var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(Identifier) as UITableViewCell?
         
         if (cell == nil)
         {
-            cell = UITableViewCell(style:.Default,
-                                   reuseIdentifier: Identifier)
+            cell = UITableViewCell(style:.Default, reuseIdentifier: Identifier)
         }
-        
-        cell?.textLabel?.text = "Event"
         
         return cell!
     }

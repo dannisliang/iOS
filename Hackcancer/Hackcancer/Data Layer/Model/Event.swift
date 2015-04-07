@@ -10,5 +10,5 @@ import Foundation
 
 class Event: NSObject
 {
-    
+    var name: String?
 }

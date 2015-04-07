@@ -41,6 +41,8 @@ class EventStore
     func addEvent()
     {
         let event = Event()
+        event.name = "New Event"
+        
         events.append(event)
         self.emitChange()
     }
