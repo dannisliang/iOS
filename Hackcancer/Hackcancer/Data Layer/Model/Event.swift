@@ -10,5 +10,22 @@ import Foundation
 
 class Event: NSObject
 {
-    var name: String?
+    let fields: Fields
+    
+    struct Fields
+    {
+        var name: String?
+        var date: NSDate?
+        var description: String?
+        
+        init()
+        {
+            
+        }
+    }
+    
+    init(_ fields: Fields)
+    {
+        self.fields = fields
+    }
 }

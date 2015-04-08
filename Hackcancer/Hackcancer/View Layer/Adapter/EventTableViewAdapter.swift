@@ -73,7 +73,7 @@ extension EventTableViewAdapter: UITableViewDataSource
         let cell = self.tableView(tableView, eventCellForRowAtIndexPath: indexPath)
         let event = events[indexPath.row]
         
-        cell.textLabel?.text = event.name
+        cell.textLabel?.text = event.fields.name
         
         return cell
     }

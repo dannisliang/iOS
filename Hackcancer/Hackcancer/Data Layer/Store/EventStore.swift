@@ -40,9 +40,12 @@ class EventStore
     
     func addEvent()
     {
-        let event = Event()
-        event.name = "New Event"
+        var fields: Event.Fields = Event.Fields()
+        fields.name = "New Event"
+        fields.date = NSDate()
         
+        let event = Event(fields)
+
         events.append(event)
         self.emitChange()
     }
