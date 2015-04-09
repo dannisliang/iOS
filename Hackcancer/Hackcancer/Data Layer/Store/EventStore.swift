@@ -19,10 +19,7 @@ class EventStore
             var name: String?
             var description: String?
             
-            init()
-            {
-                
-            }
+            init(){}
         }
         
         private init(_ fields: Fields)
@@ -63,6 +60,7 @@ class EventStore
     {
         var fields: Event.Fields = Event.Fields()
         fields.name = "New Event"
+        fields.description = "Description"
         
         let event = Event(fields)
 

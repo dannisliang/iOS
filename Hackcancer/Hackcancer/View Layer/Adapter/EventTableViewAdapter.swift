@@ -14,11 +14,6 @@ class EventTableViewAdapter: NSObject
 {
     var tableView: UITableView?
     
-    override init()
-    {
-        events = Array<EventStore.Event>()
-    }
-    
     func set(events: Array<EventStore.Event>, animated: Bool = true)
     {
         CATransaction.begin()
@@ -58,7 +53,7 @@ class EventTableViewAdapter: NSObject
     
     private
     
-    var events: Array<EventStore.Event>
+    var events: Array<EventStore.Event> = Array<EventStore.Event>()
 }
 
 extension EventTableViewAdapter: UITableViewDataSource
@@ -74,6 +69,7 @@ extension EventTableViewAdapter: UITableViewDataSource
         let event = events[indexPath.row]
         
         cell.textLabel?.text = event.fields.name
+        cell.detailTextLabel?.text = event.fields.description
         
         return cell
     }
@@ -84,7 +80,7 @@ extension EventTableViewAdapter: UITableViewDataSource
         
         if (cell == nil)
         {
-            cell = UITableViewCell(style:.Default, reuseIdentifier: Identifier)
+            cell = UITableViewCell(style:.Subtitle, reuseIdentifier: Identifier)
         }
         
         return cell!
