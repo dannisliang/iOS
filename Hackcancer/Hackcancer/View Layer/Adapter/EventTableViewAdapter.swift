@@ -16,10 +16,10 @@ class EventTableViewAdapter: NSObject
     
     override init()
     {
-        events = [Event]()
+        events = Array<EventStore.Event>()
     }
     
-    func set(events: [Event], animated: Bool = true)
+    func set(events: Array<EventStore.Event>, animated: Bool = true)
     {
         CATransaction.begin()
         tableView?.beginUpdates()
@@ -31,7 +31,7 @@ class EventTableViewAdapter: NSObject
 
         let indexPathsToDelete = self.events.filter
         {
-            (object: Event!) -> Bool in
+            (object: EventStore.Event!) -> Bool in
                 return !contains(events, object)
         }.map
         {
@@ -40,7 +40,7 @@ class EventTableViewAdapter: NSObject
         
         let indexPathsToInsert = events.filter
         {
-            (object: Event!) -> Bool in
+            (object: EventStore.Event!) -> Bool in
                 return !contains(self.events, object)
         }.map
         {
@@ -58,7 +58,7 @@ class EventTableViewAdapter: NSObject
     
     private
     
-    var events: [Event]
+    var events: Array<EventStore.Event>
 }
 
 extension EventTableViewAdapter: UITableViewDataSource

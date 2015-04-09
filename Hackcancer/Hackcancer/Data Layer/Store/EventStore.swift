@@ -10,6 +10,27 @@ import Foundation
 
 class EventStore
 {
+    class Event: NSObject
+    {
+        let fields: Fields
+        
+        struct Fields
+        {
+            var name: String?
+            var description: String?
+            
+            init()
+            {
+                
+            }
+        }
+        
+        private init(_ fields: Fields)
+        {
+            self.fields = fields
+        }
+    }
+    
     var changeSignal: RACSignal
     {
         return changeSubject
@@ -24,7 +45,7 @@ class EventStore
         }
     }
 
-    func allEvents() -> [Event]
+    func allEvents() -> Array<Event>
     {
         return events
     }
@@ -36,13 +57,12 @@ class EventStore
         return RACSubject()
     }()
     
-    var events: [Event] = []
+    var events: Array<Event> = []
     
     func addEvent()
     {
         var fields: Event.Fields = Event.Fields()
         fields.name = "New Event"
-        fields.date = NSDate()
         
         let event = Event(fields)
 

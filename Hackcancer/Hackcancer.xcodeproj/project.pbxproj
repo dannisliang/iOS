@@ -15,7 +15,6 @@
 		1A57DD651AD2CC30009E97A3 /* Array+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57DD641AD2CC30009E97A3 /* Array+Functional.swift */; };
 		1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2761ACDF60300142A68 /* AppDelegate.swift */; };
 		1AD3C2891ACDF94D00142A68 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2881ACDF94D00142A68 /* EventStore.swift */; };
-		1AD3C28C1ACDF96B00142A68 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C28B1ACDF96B00142A68 /* Event.swift */; };
 		1AD3C2961ACDFA3400142A68 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2901ACDFA3400142A68 /* AboutViewController.swift */; };
 		1AD3C2971ACDFA3400142A68 /* ConciergeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2911ACDFA3400142A68 /* ConciergeViewController.swift */; };
 		1AD3C2981ACDFA3400142A68 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2921ACDFA3400142A68 /* FAQViewController.swift */; };
@@ -52,7 +51,6 @@
 		1ACC07131ACE08D000F7E347 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		1AD3C2761ACDF60300142A68 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AD3C2881ACDF94D00142A68 /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
-		1AD3C28B1ACDF96B00142A68 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		1AD3C2901ACDFA3400142A68 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		1AD3C2911ACDFA3400142A68 /* ConciergeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeViewController.swift; sourceTree = "<group>"; };
 		1AD3C2921ACDFA3400142A68 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				1A57DD561ACF3779009E97A3 /* Actions */,
-				1AD3C28A1ACDF96300142A68 /* Model */,
 				1AD3C2871ACDF8EB00142A68 /* Store */,
 			);
 			path = "Data Layer";
@@ -185,14 +182,6 @@
 				1AD3C2881ACDF94D00142A68 /* EventStore.swift */,
 			);
 			path = Store;
-			sourceTree = "<group>";
-		};
-		1AD3C28A1ACDF96300142A68 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1AD3C28B1ACDF96B00142A68 /* Event.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1AD3C28E1ACDFA3400142A68 /* View Layer */ = {
@@ -369,7 +358,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AD3C29E1ACDFA7700142A68 /* EventTableViewAdapter.swift in Sources */,
-				1AD3C28C1ACDF96B00142A68 /* Event.swift in Sources */,
 				1A57DD651AD2CC30009E97A3 /* Array+Functional.swift in Sources */,
 				1A57DD551ACE0B9D009E97A3 /* RACSubject+SendNil.m in Sources */,
 				1AD3C2971ACDFA3400142A68 /* ConciergeViewController.swift in Sources */,

@@ -20,9 +20,9 @@ extension Array
         }
     }
     
-    func filter(block: (item: Item) -> Bool) -> [T]
+    func filter(block: (item: Item) -> Bool) -> Array<T>
     {
-        var newArray = [T]()
+        var newArray = Array<T>()
         
         self.each
         {
@@ -35,9 +35,9 @@ extension Array
         return newArray
     }
     
-    func map(block: (item: Item) -> AnyObject) -> [AnyObject]
+    func map(block: (item: Item) -> AnyObject) -> Array<AnyObject>
     {
-        var newArray = [AnyObject]()
+        var newArray = Array<AnyObject>()
         
         self.each
         {
