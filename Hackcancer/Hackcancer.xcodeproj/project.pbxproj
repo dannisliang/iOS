@@ -10,18 +10,19 @@
 		1A2174181AC9E74A00C4471D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174171AC9E74A00C4471D /* Images.xcassets */; };
 		1A21741B1AC9E74A00C4471D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174191AC9E74A00C4471D /* LaunchScreen.xib */; };
 		1A2174271AC9E74A00C4471D /* HackcancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2174261AC9E74A00C4471D /* HackcancerTests.swift */; };
+		1A48405D1AD96E7100DC6FED /* ScheduleItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A48405C1AD96E7100DC6FED /* ScheduleItemViewController.swift */; };
 		1A57DD551ACE0B9D009E97A3 /* RACSubject+SendNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57DD541ACE0B9D009E97A3 /* RACSubject+SendNil.m */; };
 		1A57DD581ACF387D009E97A3 /* AddEventAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57DD571ACF387D009E97A3 /* AddEventAction.swift */; };
 		1A57DD651AD2CC30009E97A3 /* Array+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57DD641AD2CC30009E97A3 /* Array+Functional.swift */; };
 		1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2761ACDF60300142A68 /* AppDelegate.swift */; };
-		1AD3C2891ACDF94D00142A68 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2881ACDF94D00142A68 /* EventStore.swift */; };
+		1AD3C2891ACDF94D00142A68 /* ScheduleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2881ACDF94D00142A68 /* ScheduleStore.swift */; };
 		1AD3C2961ACDFA3400142A68 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2901ACDFA3400142A68 /* AboutViewController.swift */; };
 		1AD3C2971ACDFA3400142A68 /* ConciergeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2911ACDFA3400142A68 /* ConciergeViewController.swift */; };
 		1AD3C2981ACDFA3400142A68 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2921ACDFA3400142A68 /* FAQViewController.swift */; };
 		1AD3C2991ACDFA3400142A68 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2931ACDFA3400142A68 /* NewsViewController.swift */; };
 		1AD3C29A1ACDFA3400142A68 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2941ACDFA3400142A68 /* RootViewController.swift */; };
 		1AD3C29B1ACDFA3400142A68 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2951ACDFA3400142A68 /* ScheduleViewController.swift */; };
-		1AD3C29E1ACDFA7700142A68 /* EventTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C29D1ACDFA7700142A68 /* EventTableViewAdapter.swift */; };
+		1AD3C29E1ACDFA7700142A68 /* ScheduleTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C29D1ACDFA7700142A68 /* ScheduleTableViewAdapter.swift */; };
 		FC97EAEB0EDE2DFB3C887B2F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B58B048463401C9C4DC9239 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -44,20 +45,21 @@
 		1A2174201AC9E74A00C4471D /* HackcancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackcancerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2174251AC9E74A00C4471D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A2174261AC9E74A00C4471D /* HackcancerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackcancerTests.swift; sourceTree = "<group>"; };
+		1A48405C1AD96E7100DC6FED /* ScheduleItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItemViewController.swift; sourceTree = "<group>"; };
 		1A57DD531ACE0B84009E97A3 /* RACSubject+sendNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSubject+sendNil.h"; sourceTree = "<group>"; };
 		1A57DD541ACE0B9D009E97A3 /* RACSubject+SendNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSubject+SendNil.m"; sourceTree = "<group>"; };
 		1A57DD571ACF387D009E97A3 /* AddEventAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventAction.swift; sourceTree = "<group>"; };
 		1A57DD641AD2CC30009E97A3 /* Array+Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Functional.swift"; sourceTree = "<group>"; };
 		1ACC07131ACE08D000F7E347 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		1AD3C2761ACDF60300142A68 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1AD3C2881ACDF94D00142A68 /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
+		1AD3C2881ACDF94D00142A68 /* ScheduleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleStore.swift; sourceTree = "<group>"; };
 		1AD3C2901ACDFA3400142A68 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		1AD3C2911ACDFA3400142A68 /* ConciergeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeViewController.swift; sourceTree = "<group>"; };
 		1AD3C2921ACDFA3400142A68 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		1AD3C2931ACDFA3400142A68 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		1AD3C2941ACDFA3400142A68 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		1AD3C2951ACDFA3400142A68 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
-		1AD3C29D1ACDFA7700142A68 /* EventTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewAdapter.swift; sourceTree = "<group>"; };
+		1AD3C29D1ACDFA7700142A68 /* ScheduleTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewAdapter.swift; sourceTree = "<group>"; };
 		3B58B048463401C9C4DC9239 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6079533D940830D5581BC360 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,7 +181,7 @@
 		1AD3C2871ACDF8EB00142A68 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				1AD3C2881ACDF94D00142A68 /* EventStore.swift */,
+				1AD3C2881ACDF94D00142A68 /* ScheduleStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -202,6 +204,7 @@
 				1AD3C2931ACDFA3400142A68 /* NewsViewController.swift */,
 				1AD3C2941ACDFA3400142A68 /* RootViewController.swift */,
 				1AD3C2951ACDFA3400142A68 /* ScheduleViewController.swift */,
+				1A48405C1AD96E7100DC6FED /* ScheduleItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -209,7 +212,7 @@
 		1AD3C29C1ACDFA4C00142A68 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
-				1AD3C29D1ACDFA7700142A68 /* EventTableViewAdapter.swift */,
+				1AD3C29D1ACDFA7700142A68 /* ScheduleTableViewAdapter.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -357,11 +360,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD3C29E1ACDFA7700142A68 /* EventTableViewAdapter.swift in Sources */,
+				1AD3C29E1ACDFA7700142A68 /* ScheduleTableViewAdapter.swift in Sources */,
 				1A57DD651AD2CC30009E97A3 /* Array+Functional.swift in Sources */,
 				1A57DD551ACE0B9D009E97A3 /* RACSubject+SendNil.m in Sources */,
 				1AD3C2971ACDFA3400142A68 /* ConciergeViewController.swift in Sources */,
-				1AD3C2891ACDF94D00142A68 /* EventStore.swift in Sources */,
+				1AD3C2891ACDF94D00142A68 /* ScheduleStore.swift in Sources */,
+				1A48405D1AD96E7100DC6FED /* ScheduleItemViewController.swift in Sources */,
 				1AD3C29B1ACDFA3400142A68 /* ScheduleViewController.swift in Sources */,
 				1AD3C2981ACDFA3400142A68 /* FAQViewController.swift in Sources */,
 				1AD3C2991ACDFA3400142A68 /* NewsViewController.swift in Sources */,

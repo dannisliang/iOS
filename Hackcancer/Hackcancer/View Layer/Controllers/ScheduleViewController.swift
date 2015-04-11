@@ -22,23 +22,22 @@ class ScheduleViewController: UIViewController
         return tableView
     }()
     
-    lazy var eventTableViewAdapter: EventTableViewAdapter =
+    lazy var eventTableViewAdapter: ScheduleTableViewAdapter =
     {
-        let adapter = EventTableViewAdapter()
+        let adapter = ScheduleTableViewAdapter()
         return adapter
     }()
     
-    lazy var eventStore: EventStore =
+    lazy var scheduleStore: ScheduleStore =
     {
-        return EventStore()
+        return ScheduleStore()
     }()
     
     override init()
     {
         super.init()
         
-        self.title = NSLocalizedString("schedule_nav",
-                                        comment: "")
+        self.title = NSLocalizedString("schedule_nav", comment: "")
         self.navigationItem.leftBarButtonItem = addBarButtonItem
     }
 
@@ -49,8 +48,7 @@ class ScheduleViewController: UIViewController
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
     {
-        super.init(nibName: nibNameOrNil,
-            bundle: nibBundleOrNil)
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     override func loadView()
@@ -64,12 +62,19 @@ class ScheduleViewController: UIViewController
         tableView.delegate = eventTableViewAdapter
         
         eventTableViewAdapter.tableView = tableView
-        eventTableViewAdapter.set(eventStore.allEvents(), animated:false)
+        eventTableViewAdapter.setItems(scheduleStore.allItems(), animated:false)
         
-        eventStore.changeSignal.subscribeNext
+        eventTableViewAdapter.selectionCommand = RACCommand(signalBlock:
+        {
+            let viewController = ScheduleItemViewController(item:$0 as ScheduleStore.Item)
+            self.navigationController?.pushViewController(viewController, animated: true)
+            return RACSignal.empty()
+        });
+        
+        scheduleStore.changeSignal.subscribeNext
         {
             (next: AnyObject!) -> () in
-                self.eventTableViewAdapter.set(self.eventStore.allEvents())
+                self.eventTableViewAdapter.setItems(self.scheduleStore.allItems())
         }
     }
     

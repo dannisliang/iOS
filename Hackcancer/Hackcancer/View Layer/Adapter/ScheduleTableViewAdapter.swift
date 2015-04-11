@@ -1,5 +1,5 @@
 //
-//  EventTableViewAdapter.swift
+//  ScheduleTableViewAdapter.swift
 //  Hackcancer
 //
 //  Created by James Campbell on 02/04/2015.
@@ -10,11 +10,12 @@ import UIKit
 
 let Identifier = "cell"
 
-class EventTableViewAdapter: NSObject
+class ScheduleTableViewAdapter: NSObject
 {
+    var selectionCommand: RACCommand?
     var tableView: UITableView?
     
-    func set(events: Array<EventStore.Event>, animated: Bool = true)
+    func setItems(items: Array<ScheduleStore.Item>, animated: Bool = true)
     {
         CATransaction.begin()
         tableView?.beginUpdates()
@@ -24,19 +25,19 @@ class EventTableViewAdapter: NSObject
             CATransaction.setAnimationDuration(0)
         }
 
-        let indexPathsToDelete = self.events.filter
+        let indexPathsToDelete = self.items.filter
         {
-            (object: EventStore.Event!) -> Bool in
-                return !contains(events, object)
+            (object: ScheduleStore.Item!) -> Bool in
+                return !contains(items, object)
         }.map
         {
             return NSIndexPath(forRow: $0.index, inSection: 0)
         }
         
-        let indexPathsToInsert = events.filter
+        let indexPathsToInsert = items.filter
         {
-            (object: EventStore.Event!) -> Bool in
-                return !contains(self.events, object)
+            (object: ScheduleStore.Item!) -> Bool in
+                return !contains(self.items, object)
         }.map
         {
             return NSIndexPath(forRow: $0.index, inSection: 0)
@@ -45,7 +46,7 @@ class EventTableViewAdapter: NSObject
         tableView?.deleteRowsAtIndexPaths(indexPathsToDelete, withRowAnimation: .Automatic)
         tableView?.insertRowsAtIndexPaths(indexPathsToInsert, withRowAnimation: .Automatic)
         
-        self.events = events
+        self.items = items
         
         tableView?.endUpdates()
         CATransaction.commit()
@@ -53,23 +54,23 @@ class EventTableViewAdapter: NSObject
     
     private
     
-    var events: Array<EventStore.Event> = Array<EventStore.Event>()
+    var items: Array<ScheduleStore.Item> = Array<ScheduleStore.Item>()
 }
 
-extension EventTableViewAdapter: UITableViewDataSource
+extension ScheduleTableViewAdapter: UITableViewDataSource
 {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return events.count
+        return items.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = self.tableView(tableView, eventCellForRowAtIndexPath: indexPath)
-        let event = events[indexPath.row]
+        let event = items[indexPath.row]
         
-        cell.textLabel?.text = event.fields.name
-        cell.detailTextLabel?.text = event.fields.description
+        cell.textLabel?.text = "\(event.name!) - \(event.timeText!)"
+        cell.detailTextLabel?.text = event.descriptionText
         
         return cell
     }
@@ -87,7 +88,12 @@ extension EventTableViewAdapter: UITableViewDataSource
     }
 }
 
-extension EventTableViewAdapter: UITableViewDelegate
+extension ScheduleTableViewAdapter: UITableViewDelegate
 {
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let item = items[indexPath.row]
+        selectionCommand?.execute(item)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 }
