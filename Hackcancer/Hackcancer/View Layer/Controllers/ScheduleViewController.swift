@@ -80,6 +80,6 @@ class ScheduleViewController: UIViewController
     
     func didPressAdd(sender: AnyObject)
     {
-        AddEventAction.shared().addEvent()
+        AddScheduleItemAction.fire()
     }
 }

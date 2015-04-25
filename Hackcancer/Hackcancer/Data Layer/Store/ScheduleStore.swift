@@ -29,7 +29,7 @@ class ScheduleStore
     
     init()
     {
-        AddEventAction.shared().addEventSubject.subscribeNext
+        AddScheduleItemAction.addEventSubject.subscribeNext
         {
             (next: AnyObject!) -> Void in
                 self.addEvent()
@@ -62,7 +62,7 @@ class ScheduleStore
         let item = Item()
         let timeText = "18:00"
         
-        item.name = "New Event"
+        item.name = "New Item"
         item.time = timeFormatter.dateFromString(timeText)
         item.timeText = timeText
         item.descriptionText = "Description"
