@@ -31,7 +31,7 @@ class ConciergeViewController: UIViewController
     {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        self.title = NSLocalizedString("news_nav", comment: "")
+        self.title = NSLocalizedString("concierge_nav", comment: "")
     }
     
     required init(coder aDecoder: NSCoder)
