@@ -16,12 +16,22 @@ class ConciergeViewController: UIViewController
         return tableView
     }()
     
+    lazy var conciergeTableViewAdapter: ConciergeTableViewAdapter =
+    {
+        let adapter = ConciergeTableViewAdapter()
+        return adapter
+    }()
+    
+    lazy var conciergeStore: ConciergeStore =
+    {
+        return ConciergeStore()
+    }()
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
     {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        self.title = NSLocalizedString("concierge_nav",
-                                        comment: "")
+        self.title = NSLocalizedString("news_nav", comment: "")
     }
     
     required init(coder aDecoder: NSCoder)
@@ -32,5 +42,14 @@ class ConciergeViewController: UIViewController
     override func loadView()
     {
         view = tableView
+    }
+    
+    override func viewDidLoad()
+    {
+        tableView.dataSource = conciergeTableViewAdapter
+        tableView.delegate = conciergeTableViewAdapter
+        
+        conciergeTableViewAdapter.tableView = tableView
+        conciergeTableViewAdapter.setItems(conciergeStore.allItems(), animated:false)
     }
 }

@@ -9,7 +9,6 @@
 import ReactiveCocoa
 import UIKit
 
-
 class ScheduleViewController: UIViewController
 {
     lazy var tableView: UITableView =
@@ -18,7 +17,7 @@ class ScheduleViewController: UIViewController
         return tableView
     }()
     
-    lazy var eventTableViewAdapter: ScheduleTableViewAdapter =
+    lazy var scheduleTableViewAdapter: ScheduleTableViewAdapter =
     {
         let adapter = ScheduleTableViewAdapter()
         return adapter
@@ -48,13 +47,13 @@ class ScheduleViewController: UIViewController
     
     override func viewDidLoad()
     {
-        tableView.dataSource = eventTableViewAdapter
-        tableView.delegate = eventTableViewAdapter
+        tableView.dataSource = scheduleTableViewAdapter
+        tableView.delegate = scheduleTableViewAdapter
         
-        eventTableViewAdapter.tableView = tableView
-        eventTableViewAdapter.setItems(scheduleStore.allItems(), animated:false)
+        scheduleTableViewAdapter.tableView = tableView
+        scheduleTableViewAdapter.setItems(scheduleStore.allItems(), animated:false)
 
-        eventTableViewAdapter.selectionAction = Action
+        scheduleTableViewAdapter.selectionAction = Action
         {
             item in
             
