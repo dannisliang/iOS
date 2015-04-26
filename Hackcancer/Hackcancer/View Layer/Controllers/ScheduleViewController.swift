@@ -9,18 +9,9 @@
 import ReactiveCocoa
 import UIKit
 
+
 class ScheduleViewController: UIViewController
 {
-    lazy var addBarButtonItem: UIBarButtonItem =
-    {
-        let action = Action<ScheduleStore.Item, ScheduleStore.Item, NSError>()
-
-        let cocoaAction = CocoaAction(action)
-        let item = UIBarButtonItem(barButtonSystemItem: .Add, target: cocoaAction, action: cocoaAction.selector)
-        
-        return item
-    }()
-    
     lazy var tableView: UITableView =
     {
         let tableView = UITableView(frame: UIScreen.mainScreen().bounds)
@@ -43,7 +34,6 @@ class ScheduleViewController: UIViewController
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         self.title = NSLocalizedString("schedule_nav", comment: "")
-        self.navigationItem.leftBarButtonItem = addBarButtonItem
     }
 
     required init(coder aDecoder: NSCoder)
@@ -63,23 +53,18 @@ class ScheduleViewController: UIViewController
         
         eventTableViewAdapter.tableView = tableView
         eventTableViewAdapter.setItems(scheduleStore.allItems(), animated:false)
-//        
-//        eventTableViewAdapter.selectionCommand = RACCommand(signalBlock:
-//        {
-//            let viewController = ScheduleItemViewController(item:$0 as ScheduleStore.Item)
-//            self.navigationController?.pushViewController(viewController, animated: true)
-//            return RACSignal.empty()
-//        });
-//        
-//        scheduleStore.changeSignal.subscribeNext
-//        {
-//            (next: AnyObject!) -> () in
-//                self.eventTableViewAdapter.setItems(self.scheduleStore.allItems())
-//        }
-    }
-    
-    func didPressAdd(sender: AnyObject)
-    {
-        //AddScheduleItemAction.fire()
+
+        eventTableViewAdapter.selectionAction = Action
+        {
+            item in
+            
+            return SignalProducer
+            {
+                observer, disposable in
+                    let viewController = ScheduleItemViewController(item:item)
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                    sendCompleted(observer)
+            }
+        }
     }
 }

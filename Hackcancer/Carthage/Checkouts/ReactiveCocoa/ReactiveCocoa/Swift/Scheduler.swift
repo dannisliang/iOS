@@ -88,19 +88,13 @@ public final class UIScheduler: SchedulerType {
 public final class QueueScheduler: DateSchedulerType {
 	internal let queue = dispatch_queue_create("org.reactivecocoa.ReactiveCocoa.QueueScheduler", DISPATCH_QUEUE_SERIAL)
 
-	private struct MainQueueSingleton {
-		static let mainQueueScheduler = QueueScheduler(dispatch_get_main_queue())
-	}
-
 	/// A singleton QueueScheduler that always targets the main thread's GCD
 	/// queue.
 	///
 	/// Unlike UIScheduler, this scheduler supports scheduling for a future
 	/// date, and will always schedule asynchronously (even if already running
 	/// on the main thread).
-	public class var mainQueueScheduler: QueueScheduler {
-		return MainQueueSingleton.mainQueueScheduler
-	}
+	public static let mainQueueScheduler = QueueScheduler(dispatch_get_main_queue())
 
 	public var currentDate: NSDate {
 		return NSDate()
@@ -129,11 +123,11 @@ public final class QueueScheduler: DateSchedulerType {
 	public func schedule(action: () -> ()) -> Disposable? {
 		let d = SimpleDisposable()
 
-		dispatch_async(queue, {
+		dispatch_async(queue) {
 			if !d.disposed {
 				action()
 			}
-		})
+		}
 
 		return d
 	}
@@ -151,11 +145,11 @@ public final class QueueScheduler: DateSchedulerType {
 	public func scheduleAfter(date: NSDate, action: () -> ()) -> Disposable? {
 		let d = SimpleDisposable()
 
-		dispatch_after(wallTimeWithDate(date), queue, {
+		dispatch_after(wallTimeWithDate(date), queue) {
 			if !d.disposed {
 				action()
 			}
-		})
+		}
 
 		return d
 	}

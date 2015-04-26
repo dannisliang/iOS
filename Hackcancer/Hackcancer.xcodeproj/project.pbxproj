@@ -14,6 +14,14 @@
 		1A57DD651AD2CC30009E97A3 /* Array+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57DD641AD2CC30009E97A3 /* Array+Functional.swift */; };
 		1A8D52541AEC5A1800F9F1FF /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */; };
 		1A8D52551AEC5A1800F9F1FF /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */; };
+		1A901C991AED9C4B00202D84 /* NewsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A901C981AED9C4B00202D84 /* NewsItemViewController.swift */; };
+		1A901C9B1AED9C5800202D84 /* FAQItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A901C9A1AED9C5800202D84 /* FAQItemViewController.swift */; };
+		1A901C9D1AED9C6A00202D84 /* NewsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A901C9C1AED9C6A00202D84 /* NewsTableViewAdapter.swift */; };
+		1A901C9F1AED9C7400202D84 /* FAQTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A901C9E1AED9C7400202D84 /* FAQTableViewAdapter.swift */; };
+		1A901CA11AED9C8300202D84 /* ConciergeTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A901CA01AED9C8300202D84 /* ConciergeTableViewAdapter.swift */; };
+		1AA751031AED039400ACEA5B /* NewsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA751021AED039400ACEA5B /* NewsStore.swift */; };
+		1AA751051AED03AB00ACEA5B /* ConciergeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA751041AED03AB00ACEA5B /* ConciergeStore.swift */; };
+		1AA751071AED03B300ACEA5B /* FAQStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA751061AED03B300ACEA5B /* FAQStore.swift */; };
 		1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2761ACDF60300142A68 /* AppDelegate.swift */; };
 		1AD3C2891ACDF94D00142A68 /* ScheduleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2881ACDF94D00142A68 /* ScheduleStore.swift */; };
 		1AD3C2961ACDFA3400142A68 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2901ACDFA3400142A68 /* AboutViewController.swift */; };
@@ -36,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04F7348E950E851EC5C178F6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1A21740B1AC9E74A00C4471D /* Hackcancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackcancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A21740F1AC9E74A00C4471D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A2174171AC9E74A00C4471D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -48,6 +55,14 @@
 		1A57DD641AD2CC30009E97A3 /* Array+Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Functional.swift"; sourceTree = "<group>"; };
 		1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
 		1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		1A901C981AED9C4B00202D84 /* NewsItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemViewController.swift; sourceTree = "<group>"; };
+		1A901C9A1AED9C5800202D84 /* FAQItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQItemViewController.swift; sourceTree = "<group>"; };
+		1A901C9C1AED9C6A00202D84 /* NewsTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewAdapter.swift; sourceTree = "<group>"; };
+		1A901C9E1AED9C7400202D84 /* FAQTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableViewAdapter.swift; sourceTree = "<group>"; };
+		1A901CA01AED9C8300202D84 /* ConciergeTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeTableViewAdapter.swift; sourceTree = "<group>"; };
+		1AA751021AED039400ACEA5B /* NewsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsStore.swift; sourceTree = "<group>"; };
+		1AA751041AED03AB00ACEA5B /* ConciergeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeStore.swift; sourceTree = "<group>"; };
+		1AA751061AED03B300ACEA5B /* FAQStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQStore.swift; sourceTree = "<group>"; };
 		1AD3C2761ACDF60300142A68 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AD3C2881ACDF94D00142A68 /* ScheduleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleStore.swift; sourceTree = "<group>"; };
 		1AD3C2901ACDFA3400142A68 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +73,6 @@
 		1AD3C2951ACDFA3400142A68 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		1AD3C29D1ACDFA7700142A68 /* ScheduleTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewAdapter.swift; sourceTree = "<group>"; };
 		3B58B048463401C9C4DC9239 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6079533D940830D5581BC360 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +111,6 @@
 				1A21740D1AC9E74A00C4471D /* Hackcancer */,
 				1A2174231AC9E74A00C4471D /* HackcancerTests */,
 				1A21740C1AC9E74A00C4471D /* Products */,
-				E81B2A85B193224F47294F2A /* Pods */,
 				046076CB88620A05634C5F86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -170,6 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				1AD3C2881ACDF94D00142A68 /* ScheduleStore.swift */,
+				1AA751021AED039400ACEA5B /* NewsStore.swift */,
+				1AA751041AED03AB00ACEA5B /* ConciergeStore.swift */,
+				1AA751061AED03B300ACEA5B /* FAQStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -193,6 +209,8 @@
 				1AD3C2941ACDFA3400142A68 /* RootViewController.swift */,
 				1AD3C2951ACDFA3400142A68 /* ScheduleViewController.swift */,
 				1A48405C1AD96E7100DC6FED /* ScheduleItemViewController.swift */,
+				1A901C981AED9C4B00202D84 /* NewsItemViewController.swift */,
+				1A901C9A1AED9C5800202D84 /* FAQItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -201,17 +219,11 @@
 			isa = PBXGroup;
 			children = (
 				1AD3C29D1ACDFA7700142A68 /* ScheduleTableViewAdapter.swift */,
+				1A901C9C1AED9C6A00202D84 /* NewsTableViewAdapter.swift */,
+				1A901C9E1AED9C7400202D84 /* FAQTableViewAdapter.swift */,
+				1A901CA01AED9C8300202D84 /* ConciergeTableViewAdapter.swift */,
 			);
 			path = Adapter;
-			sourceTree = "<group>";
-		};
-		E81B2A85B193224F47294F2A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6079533D940830D5581BC360 /* Pods.debug.xcconfig */,
-				04F7348E950E851EC5C178F6 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,10 +233,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A21742A1AC9E74A00C4471D /* Build configuration list for PBXNativeTarget "Hackcancer" */;
 			buildPhases = (
+				23315F44B18AC88A626F0360 /* Copy Carthage Frameworks */,
 				1A2174071AC9E74A00C4471D /* Sources */,
 				1A2174081AC9E74A00C4471D /* Frameworks */,
 				1A2174091AC9E74A00C4471D /* Resources */,
-				23315F44B18AC88A626F0360 /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,17 +346,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A901C9D1AED9C6A00202D84 /* NewsTableViewAdapter.swift in Sources */,
 				1AD3C29E1ACDFA7700142A68 /* ScheduleTableViewAdapter.swift in Sources */,
 				1A57DD651AD2CC30009E97A3 /* Array+Functional.swift in Sources */,
 				1AD3C2971ACDFA3400142A68 /* ConciergeViewController.swift in Sources */,
 				1AD3C2891ACDF94D00142A68 /* ScheduleStore.swift in Sources */,
 				1A48405D1AD96E7100DC6FED /* ScheduleItemViewController.swift in Sources */,
+				1A901CA11AED9C8300202D84 /* ConciergeTableViewAdapter.swift in Sources */,
 				1AD3C29B1ACDFA3400142A68 /* ScheduleViewController.swift in Sources */,
 				1AD3C2981ACDFA3400142A68 /* FAQViewController.swift in Sources */,
+				1A901C9F1AED9C7400202D84 /* FAQTableViewAdapter.swift in Sources */,
 				1AD3C2991ACDFA3400142A68 /* NewsViewController.swift in Sources */,
+				1AA751031AED039400ACEA5B /* NewsStore.swift in Sources */,
 				1AD3C2961ACDFA3400142A68 /* AboutViewController.swift in Sources */,
 				1AD3C29A1ACDFA3400142A68 /* RootViewController.swift in Sources */,
 				1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */,
+				1A901C9B1AED9C5800202D84 /* FAQItemViewController.swift in Sources */,
+				1A901C991AED9C4B00202D84 /* NewsItemViewController.swift in Sources */,
+				1AA751071AED03B300ACEA5B /* FAQStore.swift in Sources */,
+				1AA751051AED03AB00ACEA5B /* ConciergeStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +479,6 @@
 		};
 		1A21742B1AC9E74A00C4471D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6079533D940830D5581BC360 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -475,7 +494,6 @@
 		};
 		1A21742C1AC9E74A00C4471D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04F7348E950E851EC5C178F6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

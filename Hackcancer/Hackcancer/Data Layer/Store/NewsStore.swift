@@ -1,14 +1,14 @@
 //
-//  ScheduleStore.swift
+//  NewsStore.swift
 //  Hackcancer
 //
-//  Created by James Campbell on 02/04/2015.
+//  Created by James Campbell on 26/04/2015.
 //  Copyright (c) 2015 HC. All rights reserved.
 //
 
 import Foundation
 
-class ScheduleStore
+class NewsStore
 {
     class Item: NSObject
     {
@@ -16,7 +16,7 @@ class ScheduleStore
         private(set) var time: NSDate?
         private(set) var timeText: String?
         private(set) var descriptionText: String?
-
+        
         private override init()
         {
         }
@@ -33,11 +33,11 @@ class ScheduleStore
             item.time = self.timeFormatter.dateFromString(timeText)
             item.timeText = timeText
             item.descriptionText = "Description"
-
+            
             self.items.append(item)
         }
     }
-
+    
     func allItems() -> Array<Item>
     {
         return items

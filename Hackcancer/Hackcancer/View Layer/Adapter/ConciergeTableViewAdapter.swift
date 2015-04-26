@@ -1,22 +1,22 @@
 //
-//  ScheduleTableViewAdapter.swift
+//  ConciergeTableViewAdapter.swift
 //  Hackcancer
 //
-//  Created by James Campbell on 02/04/2015.
+//  Created by James Campbell on 26/04/2015.
 //  Copyright (c) 2015 HC. All rights reserved.
 //
 
 import ReactiveCocoa
 import UIKit
 
-class ScheduleTableViewAdapter: NSObject
+class ConciergeTableViewAdapter: NSObject
 {
     static let Identifier = "cell"
     
-    var selectionAction: Action<ScheduleStore.Item, ScheduleStore.Item, NoError>?
+    var selectionAction: Action<ConciergeStore.Item, ConciergeStore.Item, NoError>?
     var tableView: UITableView?
     
-    func setItems(items: Array<ScheduleStore.Item>, animated: Bool = true)
+    func setItems(items: Array<ConciergeStore.Item>, animated: Bool = true)
     {
         CATransaction.begin()
         tableView?.beginUpdates()
@@ -25,11 +25,11 @@ class ScheduleTableViewAdapter: NSObject
         {
             CATransaction.setAnimationDuration(0)
         }
-
+        
         let indexPathsToDelete = self.items.filter
         {
-            (object: ScheduleStore.Item!) -> Bool in
-                return !contains(items, object)
+            (object: ConciergeStore.Item!) -> Bool in
+            return !contains(items, object)
         }.map
         {
             return NSIndexPath(forRow: $0.index, inSection: 0)
@@ -37,8 +37,8 @@ class ScheduleTableViewAdapter: NSObject
         
         let indexPathsToInsert = items.filter
         {
-            (object: ScheduleStore.Item!) -> Bool in
-                return !contains(self.items, object)
+            (object: ConciergeStore.Item!) -> Bool in
+            return !contains(self.items, object)
         }.map
         {
             return NSIndexPath(forRow: $0.index, inSection: 0)
@@ -55,10 +55,10 @@ class ScheduleTableViewAdapter: NSObject
     
     private
     
-    var items = Array<ScheduleStore.Item>()
+    var items = Array<ConciergeStore.Item>()
 }
 
-extension ScheduleTableViewAdapter: UITableViewDataSource
+extension ConciergeTableViewAdapter: UITableViewDataSource
 {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -70,7 +70,7 @@ extension ScheduleTableViewAdapter: UITableViewDataSource
         let cell = self.tableView(tableView, eventCellForRowAtIndexPath: indexPath)
         let item = items[indexPath.row]
         
-        cell.textLabel?.text = "\(item.name!) - \(item.timeText!)"
+        cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = item.descriptionText
         
         return cell
@@ -78,18 +78,18 @@ extension ScheduleTableViewAdapter: UITableViewDataSource
     
     func tableView(tableView: UITableView, eventCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(ScheduleTableViewAdapter.Identifier) as! UITableViewCell?
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(ConciergeTableViewAdapter.Identifier) as! UITableViewCell?
         
         if (cell == nil)
         {
-            cell = UITableViewCell(style:.Subtitle, reuseIdentifier: ScheduleTableViewAdapter.Identifier)
+            cell = UITableViewCell(style:.Subtitle, reuseIdentifier: ConciergeTableViewAdapter.Identifier)
         }
         
         return cell!
     }
 }
 
-extension ScheduleTableViewAdapter: UITableViewDelegate
+extension ConciergeTableViewAdapter: UITableViewDelegate
 {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {

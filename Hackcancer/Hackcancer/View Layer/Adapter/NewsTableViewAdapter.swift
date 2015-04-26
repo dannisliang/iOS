@@ -1,22 +1,22 @@
 //
-//  ScheduleTableViewAdapter.swift
+//  NewsTableViewAdapter.swift
 //  Hackcancer
 //
-//  Created by James Campbell on 02/04/2015.
+//  Created by James Campbell on 26/04/2015.
 //  Copyright (c) 2015 HC. All rights reserved.
 //
 
 import ReactiveCocoa
 import UIKit
 
-class ScheduleTableViewAdapter: NSObject
+class NewsTableViewAdapter: NSObject
 {
     static let Identifier = "cell"
     
-    var selectionAction: Action<ScheduleStore.Item, ScheduleStore.Item, NoError>?
+    var selectionAction: Action<NewsStore.Item, NewsStore.Item, NoError>?
     var tableView: UITableView?
     
-    func setItems(items: Array<ScheduleStore.Item>, animated: Bool = true)
+    func setItems(items: Array<NewsStore.Item>, animated: Bool = true)
     {
         CATransaction.begin()
         tableView?.beginUpdates()
@@ -25,11 +25,11 @@ class ScheduleTableViewAdapter: NSObject
         {
             CATransaction.setAnimationDuration(0)
         }
-
+        
         let indexPathsToDelete = self.items.filter
         {
-            (object: ScheduleStore.Item!) -> Bool in
-                return !contains(items, object)
+            (object: NewsStore.Item!) -> Bool in
+            return !contains(items, object)
         }.map
         {
             return NSIndexPath(forRow: $0.index, inSection: 0)
@@ -37,8 +37,8 @@ class ScheduleTableViewAdapter: NSObject
         
         let indexPathsToInsert = items.filter
         {
-            (object: ScheduleStore.Item!) -> Bool in
-                return !contains(self.items, object)
+            (object: NewsStore.Item!) -> Bool in
+            return !contains(self.items, object)
         }.map
         {
             return NSIndexPath(forRow: $0.index, inSection: 0)
@@ -55,10 +55,10 @@ class ScheduleTableViewAdapter: NSObject
     
     private
     
-    var items = Array<ScheduleStore.Item>()
+    var items = Array<NewsStore.Item>()
 }
 
-extension ScheduleTableViewAdapter: UITableViewDataSource
+extension NewsTableViewAdapter: UITableViewDataSource
 {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -78,18 +78,18 @@ extension ScheduleTableViewAdapter: UITableViewDataSource
     
     func tableView(tableView: UITableView, eventCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(ScheduleTableViewAdapter.Identifier) as! UITableViewCell?
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(NewsTableViewAdapter.Identifier) as! UITableViewCell?
         
         if (cell == nil)
         {
-            cell = UITableViewCell(style:.Subtitle, reuseIdentifier: ScheduleTableViewAdapter.Identifier)
+            cell = UITableViewCell(style:.Subtitle, reuseIdentifier: NewsTableViewAdapter.Identifier)
         }
         
         return cell!
     }
 }
 
-extension ScheduleTableViewAdapter: UITableViewDelegate
+extension NewsTableViewAdapter: UITableViewDelegate
 {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {

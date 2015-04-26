@@ -11,7 +11,13 @@ import UIKit
 
 class ScheduleItemViewController: UIViewController
 {
+    lazy var descriptionLabel: UILabel =
+    {
+        return UILabel(frame: self.view.bounds)
+    }()
+    
     let item: ScheduleStore.Item
+    
     
     init(item: ScheduleStore.Item)
     {
@@ -32,11 +38,17 @@ class ScheduleItemViewController: UIViewController
         super.viewWillAppear(animated)
         
         self.navigationItem.title = item.name
+        self.descriptionLabel.text = item.descriptionText
     }
     
     override func loadView()
     {
         view = UIView(frame: UIScreen.mainScreen().bounds)
         view.backgroundColor = UIColor.whiteColor()
+    }
+    
+    override func viewDidLoad()
+    {
+        view.addSubview(self.descriptionLabel)
     }
 }
