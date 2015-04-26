@@ -11,9 +11,9 @@
 		1A21741B1AC9E74A00C4471D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174191AC9E74A00C4471D /* LaunchScreen.xib */; };
 		1A2174271AC9E74A00C4471D /* HackcancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2174261AC9E74A00C4471D /* HackcancerTests.swift */; };
 		1A48405D1AD96E7100DC6FED /* ScheduleItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A48405C1AD96E7100DC6FED /* ScheduleItemViewController.swift */; };
-		1A57DD551ACE0B9D009E97A3 /* RACSubject+SendNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57DD541ACE0B9D009E97A3 /* RACSubject+SendNil.m */; };
-		1A57DD581ACF387D009E97A3 /* AddScheduleItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57DD571ACF387D009E97A3 /* AddScheduleItemAction.swift */; };
 		1A57DD651AD2CC30009E97A3 /* Array+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57DD641AD2CC30009E97A3 /* Array+Functional.swift */; };
+		1A8D52541AEC5A1800F9F1FF /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */; };
+		1A8D52551AEC5A1800F9F1FF /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */; };
 		1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2761ACDF60300142A68 /* AppDelegate.swift */; };
 		1AD3C2891ACDF94D00142A68 /* ScheduleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2881ACDF94D00142A68 /* ScheduleStore.swift */; };
 		1AD3C2961ACDFA3400142A68 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2901ACDFA3400142A68 /* AboutViewController.swift */; };
@@ -23,7 +23,6 @@
 		1AD3C29A1ACDFA3400142A68 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2941ACDFA3400142A68 /* RootViewController.swift */; };
 		1AD3C29B1ACDFA3400142A68 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2951ACDFA3400142A68 /* ScheduleViewController.swift */; };
 		1AD3C29E1ACDFA7700142A68 /* ScheduleTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C29D1ACDFA7700142A68 /* ScheduleTableViewAdapter.swift */; };
-		FC97EAEB0EDE2DFB3C887B2F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B58B048463401C9C4DC9239 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +45,9 @@
 		1A2174251AC9E74A00C4471D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A2174261AC9E74A00C4471D /* HackcancerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackcancerTests.swift; sourceTree = "<group>"; };
 		1A48405C1AD96E7100DC6FED /* ScheduleItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItemViewController.swift; sourceTree = "<group>"; };
-		1A57DD531ACE0B84009E97A3 /* RACSubject+sendNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSubject+sendNil.h"; sourceTree = "<group>"; };
-		1A57DD541ACE0B9D009E97A3 /* RACSubject+SendNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSubject+SendNil.m"; sourceTree = "<group>"; };
-		1A57DD571ACF387D009E97A3 /* AddScheduleItemAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleItemAction.swift; sourceTree = "<group>"; };
 		1A57DD641AD2CC30009E97A3 /* Array+Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Functional.swift"; sourceTree = "<group>"; };
-		1ACC07131ACE08D000F7E347 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
+		1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		1AD3C2761ACDF60300142A68 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AD3C2881ACDF94D00142A68 /* ScheduleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleStore.swift; sourceTree = "<group>"; };
 		1AD3C2901ACDFA3400142A68 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC97EAEB0EDE2DFB3C887B2F /* libPods.a in Frameworks */,
+				1A8D52541AEC5A1800F9F1FF /* LlamaKit.framework in Frameworks */,
+				1A8D52551AEC5A1800F9F1FF /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +84,8 @@
 		046076CB88620A05634C5F86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */,
+				1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */,
 				3B58B048463401C9C4DC9239 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -115,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				1A57DD521ACE0B08009E97A3 /* Categories */,
-				1ACC07131ACE08D000F7E347 /* Bridge.h */,
 				1AD3C28E1ACDFA3400142A68 /* View Layer */,
 				1AD3C2861ACDF8DE00142A68 /* Data Layer */,
 				1AD3C2761ACDF60300142A68 /* AppDelegate.swift */,
@@ -154,25 +153,14 @@
 		1A57DD521ACE0B08009E97A3 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				1A57DD531ACE0B84009E97A3 /* RACSubject+sendNil.h */,
-				1A57DD541ACE0B9D009E97A3 /* RACSubject+SendNil.m */,
 				1A57DD641AD2CC30009E97A3 /* Array+Functional.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		1A57DD561ACF3779009E97A3 /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-				1A57DD571ACF387D009E97A3 /* AddScheduleItemAction.swift */,
-			);
-			path = Actions;
-			sourceTree = "<group>";
-		};
 		1AD3C2861ACDF8DE00142A68 /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
-				1A57DD561ACF3779009E97A3 /* Actions */,
 				1AD3C2871ACDF8EB00142A68 /* Store */,
 			);
 			path = "Data Layer";
@@ -233,11 +221,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A21742A1AC9E74A00C4471D /* Build configuration list for PBXNativeTarget "Hackcancer" */;
 			buildPhases = (
-				21240130E6D0C521170B303F /* Check Pods Manifest.lock */,
 				1A2174071AC9E74A00C4471D /* Sources */,
 				1A2174081AC9E74A00C4471D /* Frameworks */,
 				1A2174091AC9E74A00C4471D /* Resources */,
-				23315F44B18AC88A626F0360 /* Copy Pods Resources */,
+				23315F44B18AC88A626F0360 /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -323,34 +310,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		21240130E6D0C521170B303F /* Check Pods Manifest.lock */ = {
+		23315F44B18AC88A626F0360 /* Copy Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/LlamaKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "Copy Carthage Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		23315F44B18AC88A626F0360 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -362,14 +336,12 @@
 			files = (
 				1AD3C29E1ACDFA7700142A68 /* ScheduleTableViewAdapter.swift in Sources */,
 				1A57DD651AD2CC30009E97A3 /* Array+Functional.swift in Sources */,
-				1A57DD551ACE0B9D009E97A3 /* RACSubject+SendNil.m in Sources */,
 				1AD3C2971ACDFA3400142A68 /* ConciergeViewController.swift in Sources */,
 				1AD3C2891ACDF94D00142A68 /* ScheduleStore.swift in Sources */,
 				1A48405D1AD96E7100DC6FED /* ScheduleItemViewController.swift in Sources */,
 				1AD3C29B1ACDFA3400142A68 /* ScheduleViewController.swift in Sources */,
 				1AD3C2981ACDFA3400142A68 /* FAQViewController.swift in Sources */,
 				1AD3C2991ACDFA3400142A68 /* NewsViewController.swift in Sources */,
-				1A57DD581ACF387D009E97A3 /* AddScheduleItemAction.swift in Sources */,
 				1AD3C2961ACDFA3400142A68 /* AboutViewController.swift in Sources */,
 				1AD3C29A1ACDFA3400142A68 /* RootViewController.swift in Sources */,
 				1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */,
@@ -490,10 +462,14 @@
 			baseConfigurationReference = 6079533D940830D5581BC360 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Hackcancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Bridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -502,10 +478,14 @@
 			baseConfigurationReference = 04F7348E950E851EC5C178F6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Hackcancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Bridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

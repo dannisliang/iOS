@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ReactiveCocoa
 
 class ScheduleStore
 {
@@ -22,18 +23,8 @@ class ScheduleStore
         }
     }
     
-    var changeSignal: RACSignal
-    {
-        return changeSubject
-    }
-    
     init()
     {
-        AddScheduleItemAction.addEventSubject.subscribeNext
-        {
-            (next: AnyObject!) -> Void in
-                self.addEvent()
-        }
     }
 
     func allItems() -> Array<Item>
@@ -41,12 +32,26 @@ class ScheduleStore
         return items
     }
     
-    private
-    
-    lazy var changeSubject: RACSubject =
+    func addItem() -> Signal<Item, NoError>
     {
-        return RACSubject()
-    }()
+        let (signal, observer) = Signal<Item, NoError>.pipe()
+        
+        let item = Item()
+        let timeText = "18:00"
+        
+        item.name = "New Item"
+        item.time = self.timeFormatter.dateFromString(timeText)
+        item.timeText = timeText
+        item.descriptionText = "Description"
+        
+        self.items.append(item)
+        
+        sendCompleted(observer)
+        
+        return signal
+    }
+    
+    private
     
     lazy var timeFormatter: NSDateFormatter =
     {
@@ -56,23 +61,4 @@ class ScheduleStore
     }()
     
     var items: Array<Item> = []
-    
-    func addEvent()
-    {
-        let item = Item()
-        let timeText = "18:00"
-        
-        item.name = "New Item"
-        item.time = timeFormatter.dateFromString(timeText)
-        item.timeText = timeText
-        item.descriptionText = "Description"
-
-        items.append(item)
-        self.emitChange()
-    }
-    
-    func emitChange()
-    {
-        changeSubject.sendNil()
-    }
 }

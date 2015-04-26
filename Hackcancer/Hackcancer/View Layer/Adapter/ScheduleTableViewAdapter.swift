@@ -6,13 +6,14 @@
 //  Copyright (c) 2015 HC. All rights reserved.
 //
 
+import ReactiveCocoa
 import UIKit
 
 let Identifier = "cell"
 
 class ScheduleTableViewAdapter: NSObject
 {
-    var selectionCommand: RACCommand?
+   // var selectionCommand: RACCommand?
     var tableView: UITableView?
     
     func setItems(items: Array<ScheduleStore.Item>, animated: Bool = true)
@@ -77,7 +78,7 @@ extension ScheduleTableViewAdapter: UITableViewDataSource
     
     func tableView(tableView: UITableView, eventCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(Identifier) as UITableViewCell?
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(Identifier) as! UITableViewCell?
         
         if (cell == nil)
         {
@@ -93,7 +94,7 @@ extension ScheduleTableViewAdapter: UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let item = items[indexPath.row]
-        selectionCommand?.execute(item)
+        //selectionCommand?.execute(item)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }

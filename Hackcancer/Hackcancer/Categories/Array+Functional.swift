@@ -12,11 +12,11 @@ extension Array
 {
     typealias Item = (index: Int, element: T)
     
-    func each(block: (item: Item) -> Void)
+    func each(block: (Item) -> Void)
     {
         for item in enumerate(self)
         {
-            block(item:item)
+            block(item)
         }
     }
     
@@ -35,13 +35,13 @@ extension Array
         return newArray
     }
     
-    func map(block: (item: Item) -> AnyObject) -> Array<AnyObject>
+    func map(block: (Item) -> AnyObject) -> Array<AnyObject>
     {
         var newArray = Array<AnyObject>()
         
         self.each
         {
-            let newElement: AnyObject = block(item:$0)
+            let newElement: AnyObject = block($0)
             newArray.append(newElement)
         }
         

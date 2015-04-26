@@ -16,15 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        return RootViewController()
     }()
     
-    lazy var window: UIWindow =
+    lazy var window: UIWindow? =
     {
        return UIWindow(frame: UIScreen.mainScreen().bounds)
     }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
-        window.rootViewController = rootViewController
-        window.makeKeyAndVisible()
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
         
         return true
     }

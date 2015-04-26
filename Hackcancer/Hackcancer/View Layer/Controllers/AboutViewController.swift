@@ -10,23 +10,18 @@ import UIKit
 
 class AboutViewController: UIViewController
 {
-    override init()
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
     {
-        super.init()
+        super.init(nibName: nibNameOrNil,
+            bundle: nibBundleOrNil)
         
         self.title = NSLocalizedString("about_nav",
-                                        comment: "")
+            comment: "")
     }
     
     required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-    }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
-    {
-        super.init(nibName: nibNameOrNil,
-            bundle: nibBundleOrNil)
     }
     
     override func loadView()

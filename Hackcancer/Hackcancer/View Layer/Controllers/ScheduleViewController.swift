@@ -6,13 +6,18 @@
 //  Copyright (c) 2015 HC. All rights reserved.
 //
 
+import ReactiveCocoa
 import UIKit
 
 class ScheduleViewController: UIViewController
 {
     lazy var addBarButtonItem: UIBarButtonItem =
     {
-        let item = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "didPressAdd:")
+        let action = Action<ScheduleStore.Item, ScheduleStore.Item, NSError>()
+
+        let cocoaAction = CocoaAction(action)
+        let item = UIBarButtonItem(barButtonSystemItem: .Add, target: cocoaAction, action: cocoaAction.selector)
+        
         return item
     }()
     
@@ -33,9 +38,9 @@ class ScheduleViewController: UIViewController
         return ScheduleStore()
     }()
     
-    override init()
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
     {
-        super.init()
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         self.title = NSLocalizedString("schedule_nav", comment: "")
         self.navigationItem.leftBarButtonItem = addBarButtonItem
@@ -44,11 +49,6 @@ class ScheduleViewController: UIViewController
     required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-    }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
-    {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     override func loadView()
@@ -63,23 +63,23 @@ class ScheduleViewController: UIViewController
         
         eventTableViewAdapter.tableView = tableView
         eventTableViewAdapter.setItems(scheduleStore.allItems(), animated:false)
-        
-        eventTableViewAdapter.selectionCommand = RACCommand(signalBlock:
-        {
-            let viewController = ScheduleItemViewController(item:$0 as ScheduleStore.Item)
-            self.navigationController?.pushViewController(viewController, animated: true)
-            return RACSignal.empty()
-        });
-        
-        scheduleStore.changeSignal.subscribeNext
-        {
-            (next: AnyObject!) -> () in
-                self.eventTableViewAdapter.setItems(self.scheduleStore.allItems())
-        }
+//        
+//        eventTableViewAdapter.selectionCommand = RACCommand(signalBlock:
+//        {
+//            let viewController = ScheduleItemViewController(item:$0 as ScheduleStore.Item)
+//            self.navigationController?.pushViewController(viewController, animated: true)
+//            return RACSignal.empty()
+//        });
+//        
+//        scheduleStore.changeSignal.subscribeNext
+//        {
+//            (next: AnyObject!) -> () in
+//                self.eventTableViewAdapter.setItems(self.scheduleStore.allItems())
+//        }
     }
     
     func didPressAdd(sender: AnyObject)
     {
-        AddScheduleItemAction.fire()
+        //AddScheduleItemAction.fire()
     }
 }

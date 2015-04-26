@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ScheduleItemViewController: UIViewController
 {
@@ -21,7 +22,7 @@ class ScheduleItemViewController: UIViewController
     
     required init(coder aDecoder: NSCoder)
     {
-       self.item = aDecoder.decodeObjectForKey("item") as ScheduleStore.Item
+       self.item = aDecoder.decodeObjectForKey("item") as! ScheduleStore.Item
         
        super.init(coder: aDecoder)
     }
