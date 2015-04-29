@@ -1,14 +1,15 @@
 //
-//  NewsStore.swift
+//  ScheduleStore.swift
 //  Hackcancer
 //
-//  Created by James Campbell on 26/04/2015.
+//  Created by James Campbell on 02/04/2015.
 //  Copyright (c) 2015 HC. All rights reserved.
 //
 
 import Foundation
+import ReactiveCocoa
 
-class NewsStore
+class ScheduleStore
 {
     class Item: NSObject
     {
@@ -16,7 +17,7 @@ class NewsStore
         private(set) var time: NSDate?
         private(set) var timeText: String?
         private(set) var descriptionText: String?
-        
+
         private override init()
         {
         }
@@ -24,6 +25,8 @@ class NewsStore
     
     init()
     {
+        source = StoreSource<Item>()
+        
         for i in 1...4
         {
             let item = Item()
@@ -33,14 +36,14 @@ class NewsStore
             item.time = self.timeFormatter.dateFromString(timeText)
             item.timeText = timeText
             item.descriptionText = "Description"
-            
-            self.items.append(item)
+
+            source.store(item)
         }
     }
-    
-    func allItems() -> Array<Item>
+
+    func fetchAllItems() -> SignalProducer<Array<Item>?, NSError>?
     {
-        return items
+        return source.fetchAll()
     }
     
     private
@@ -53,4 +56,8 @@ class NewsStore
     }()
     
     var items: Array<Item> = []
+    
+    private
+    
+    let source: StoreSource<Item>
 }

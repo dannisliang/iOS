@@ -51,7 +51,13 @@ class NewsViewController: UIViewController
         tableView.delegate = newsTableViewAdapter
         
         newsTableViewAdapter.tableView = tableView
-        newsTableViewAdapter.setItems(newsStore.allItems(), animated:false)
+        newsStore.fetchAllItems()?.start(next:
+        {
+            if let items = $0
+            {
+                self.newsTableViewAdapter.setItems(items, animated:false)
+            }
+        })
         
         newsTableViewAdapter.selectionAction = Action
         {

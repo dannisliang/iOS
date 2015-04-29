@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ReactiveCocoa
 
 class ConciergeStore
 {
@@ -22,6 +23,8 @@ class ConciergeStore
     
     init()
     {
+        source = MemoryStoreSource<Item>()
+
         for i in 1...4
         {
             let item = Item()
@@ -29,16 +32,16 @@ class ConciergeStore
             item.name = "New Item"
             item.descriptionText = "Description"
             
-            self.items.append(item)
+            source.store(item)
         }
     }
     
-    func allItems() -> Array<Item>
+    func fetchAllItems() -> SignalProducer<Array<Item>?, NSError>?
     {
-        return items
+        return source.fetchAll()
     }
-    
+
     private
     
-    var items: Array<Item> = []
+    let source: StoreSource<Item>
 }

@@ -51,7 +51,13 @@ class FAQViewController: UIViewController
         tableView.delegate = faqTableViewAdapter
         
         faqTableViewAdapter.tableView = tableView
-        faqTableViewAdapter.setItems(faqStore.allItems(), animated:false)
+        faqStore.fetchAllItems()?.start(next:
+        {
+            if let items = $0
+            {
+                self.faqTableViewAdapter.setItems(items, animated:false)
+            }
+        })
         
         faqTableViewAdapter.selectionAction = Action
         {

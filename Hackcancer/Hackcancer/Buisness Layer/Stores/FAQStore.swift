@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ReactiveCocoa
 
 class FAQStore
 {
@@ -22,6 +23,8 @@ class FAQStore
     
     init()
     {
+        source = StoreSource<Item>()
+        
         for i in 1...4
         {
             let item = Item()
@@ -29,16 +32,16 @@ class FAQStore
             item.question = "Question ?"
             item.answer = "Answer"
             
-            self.items.append(item)
+            source.store(item)
         }
     }
     
-    func allItems() -> Array<Item>
+    func fetchAllItems() -> SignalProducer<Array<Item>?, NSError>?
     {
-        return items
+        return source.fetchAll()
     }
     
     private
     
-    var items: Array<Item> = []
+    let source: StoreSource<Item>
 }

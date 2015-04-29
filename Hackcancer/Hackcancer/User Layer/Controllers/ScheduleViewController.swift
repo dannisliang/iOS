@@ -51,8 +51,14 @@ class ScheduleViewController: UIViewController
         tableView.delegate = scheduleTableViewAdapter
         
         scheduleTableViewAdapter.tableView = tableView
-        scheduleTableViewAdapter.setItems(scheduleStore.allItems(), animated:false)
-
+        scheduleStore.fetchAllItems()?.start(next:
+        {
+            if let items = $0
+            {
+                self.scheduleTableViewAdapter.setItems(items, animated:false)
+            }
+        })
+        
         scheduleTableViewAdapter.selectionAction = Action
         {
             item in

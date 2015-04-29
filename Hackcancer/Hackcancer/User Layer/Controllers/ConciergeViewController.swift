@@ -50,6 +50,13 @@ class ConciergeViewController: UIViewController
         tableView.delegate = conciergeTableViewAdapter
         
         conciergeTableViewAdapter.tableView = tableView
-        conciergeTableViewAdapter.setItems(conciergeStore.allItems(), animated:false)
+        
+        conciergeStore.fetchAllItems()?.start(next:
+        {
+            if let items = $0
+            {
+                self.conciergeTableViewAdapter.setItems(items, animated:false)
+            }
+        })
     }
 }
