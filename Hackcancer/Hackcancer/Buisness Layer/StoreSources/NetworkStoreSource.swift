@@ -13,6 +13,9 @@ class NetworkStoreSource<T>: StoreSource<T>
 {
     override func store(item: T) -> Void
     {
+        let request = NSURLRequest()
+        let task = session.makeTaskForRequest(request, type: .Data)
+        task.resume()
     }
     
     override func fetchAll() -> SignalProducer<Array<T>?, NSError>?

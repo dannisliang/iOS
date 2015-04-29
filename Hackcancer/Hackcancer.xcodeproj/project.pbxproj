@@ -32,6 +32,7 @@
 		1A6007471AF1848200DF6FA2 /* NetworkStoreSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007441AF1848200DF6FA2 /* NetworkStoreSource.swift */; };
 		1A6007481AF1848200DF6FA2 /* StoreSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007451AF1848200DF6FA2 /* StoreSource.swift */; };
 		1A60074A1AF1855400DF6FA2 /* HCSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007491AF1855400DF6FA2 /* HCSession.swift */; };
+		1A60074C1AF187E100DF6FA2 /* HCSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60074B1AF187E100DF6FA2 /* HCSessionTask.swift */; };
 		1A8D52541AEC5A1800F9F1FF /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */; };
 		1A8D52551AEC5A1800F9F1FF /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */; };
 		1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2761ACDF60300142A68 /* AppDelegate.swift */; };
@@ -77,6 +78,7 @@
 		1A6007441AF1848200DF6FA2 /* NetworkStoreSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStoreSource.swift; sourceTree = "<group>"; };
 		1A6007451AF1848200DF6FA2 /* StoreSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSource.swift; sourceTree = "<group>"; };
 		1A6007491AF1855400DF6FA2 /* HCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCSession.swift; sourceTree = "<group>"; };
+		1A60074B1AF187E100DF6FA2 /* HCSessionTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCSessionTask.swift; sourceTree = "<group>"; };
 		1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
 		1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		1AD3C2761ACDF60300142A68 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				1A6007491AF1855400DF6FA2 /* HCSession.swift */,
+				1A60074B1AF187E100DF6FA2 /* HCSessionTask.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A60074C1AF187E100DF6FA2 /* HCSessionTask.swift in Sources */,
 				1A60072F1AF176D300DF6FA2 /* ScheduleItemViewController.swift in Sources */,
 				1A6007251AF176D300DF6FA2 /* FAQTableViewAdapter.swift in Sources */,
 				1A6007481AF1848200DF6FA2 /* StoreSource.swift in Sources */,
