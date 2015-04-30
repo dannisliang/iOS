@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 HC. All rights reserved.
 //
 
+import Cent
+import Dollar
 import ReactiveCocoa
 import UIKit
 
@@ -28,21 +30,23 @@ class FAQTableViewAdapter: NSObject
         
         let indexPathsToDelete = self.items.filter
         {
-            (object: FAQStore.Item!) -> Bool in
-            return !contains(items, object)
+            return !contains(items, $0)
         }.map
         {
-            return NSIndexPath(forRow: $0.index, inSection: 0)
-        }
+            let index = find(self.items, $0)
+            return NSIndexPath(forRow: index!, inSection: 0)
+            
+        } as Array<NSIndexPath>
         
         let indexPathsToInsert = items.filter
         {
-            (object: FAQStore.Item!) -> Bool in
-            return !contains(self.items, object)
+            return !contains(self.items, $0)
         }.map
         {
-            return NSIndexPath(forRow: $0.index, inSection: 0)
-        }
+            let index = find(items, $0)
+            return NSIndexPath(forRow: index!, inSection: 0)
+            
+        } as Array<NSIndexPath>
         
         tableView?.deleteRowsAtIndexPaths(indexPathsToDelete, withRowAnimation: .Automatic)
         tableView?.insertRowsAtIndexPaths(indexPathsToInsert, withRowAnimation: .Automatic)

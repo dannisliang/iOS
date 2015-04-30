@@ -11,7 +11,7 @@ import ReactiveCocoa
 
 class ScheduleStore
 {
-    class Item: NSObject
+    class Item: StoreItem
     {
         private(set) var name: String?
         private(set) var time: NSDate?

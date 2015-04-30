@@ -19,10 +19,10 @@ extension HCSession
         
         func resume()
         {
-            
+            task.resume()
         }
         
-        internal
+        private
         
         let task: NSURLSessionTask
     }
@@ -36,11 +36,9 @@ extension HCSession
     
     class UploadTask: Task
     {
-        
     }
     
     class DownloadTask: Task
     {
-        
     }
 }

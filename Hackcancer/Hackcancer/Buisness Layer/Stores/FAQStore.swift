@@ -11,7 +11,7 @@ import ReactiveCocoa
 
 class FAQStore
 {
-    class Item: NSObject
+    class Item: StoreItem
     {
         private(set) var question: String?
         private(set) var answer: String?

@@ -9,7 +9,7 @@
 import Foundation
 import ReactiveCocoa
 
-class MemoryStoreSource<T>: StoreSource<T>
+class MemoryStoreSource<T where T: StoreItem>: StoreSource<T>
 {
     override func store(item: T) -> Void
     {

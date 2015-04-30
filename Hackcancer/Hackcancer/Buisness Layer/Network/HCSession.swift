@@ -18,35 +18,35 @@ class HCSession: NSObject
         
         func createTask(request: NSURLRequest, session: NSURLSession) -> Task
         {
-            let underlyingTask = createUnderlyingTask(request, session: session)
-            let task = Task(task: underlyingTask)
-            return task
-        }
-        
-        private
-        
-        func createUnderlyingTask(request: NSURLRequest, session: NSURLSession) -> NSURLSessionTask
-        {
+            let task:Task
+            
             switch(self)
             {
             case .Data:
-                return session.dataTaskWithRequest(request)
+                let underlyingTask = session.dataTaskWithRequest(request)
+                task = DataTask(task:underlyingTask)
             case .Download:
-                return session.downloadTaskWithRequest(request)
+                let underlyingTask = session.downloadTaskWithRequest(request)
+                task = DownloadTask(task:underlyingTask)
             case .Upload:
-                return session.uploadTaskWithRequest(request, fromData: nil)
+                let underlyingTask = session.uploadTaskWithRequest(request, fromData: nil)
+                task = UploadTask(task:underlyingTask)
             }
+            
+            return task
         }
     }
     
-    class func defaultSession() -> HCSession
+    class func sharedSession() -> HCSession
     {
-        return HCSession()
+        return HCSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     }
     
-    init(configuration: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration())
+    init(configuration: NSURLSessionConfiguration)
     {
-        session = NSURLSession(configuration: configuration)
+        self.configuration = configuration
+        
+        super.init()
     }
     
     func makeTaskForRequest(request: NSURLRequest, type: TaskType = .Data) -> Task
@@ -56,5 +56,15 @@ class HCSession: NSObject
     
     private
     
-    let session: NSURLSession
+    let configuration: NSURLSessionConfiguration
+    let delegateQueue = NSOperationQueue()
+    lazy var session: NSURLSession =
+    {
+       return NSURLSession(configuration: self.configuration, delegate: self, delegateQueue:self.delegateQueue)
+    }()
+}
+
+extension HCSession: NSURLSessionTaskDelegate
+{
+    
 }

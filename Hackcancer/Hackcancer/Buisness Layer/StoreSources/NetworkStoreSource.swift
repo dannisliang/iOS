@@ -9,13 +9,10 @@
 import Foundation
 import ReactiveCocoa
 
-class NetworkStoreSource<T>: StoreSource<T>
+class NetworkStoreSource<T where T: StoreItem>: StoreSource<T>
 {
     override func store(item: T) -> Void
     {
-        let request = NSURLRequest()
-        let task = session.makeTaskForRequest(request, type: .Data)
-        task.resume()
     }
     
     override func fetchAll() -> SignalProducer<Array<T>?, NSError>?
@@ -23,6 +20,9 @@ class NetworkStoreSource<T>: StoreSource<T>
         let producer = SignalProducer<Array<T>?, NSError>()
         {
             observer, disposable in
+                let request = NSURLRequest()
+                let task = self.session.makeTaskForRequest(request, type: .Data)
+                task.resume()
                 return
         }
         return producer
@@ -30,5 +30,5 @@ class NetworkStoreSource<T>: StoreSource<T>
     
     private
     
-    let session = HCSession.defaultSession()
+    let session = HCSession.sharedSession()
 }

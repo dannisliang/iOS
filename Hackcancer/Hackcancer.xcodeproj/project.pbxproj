@@ -10,7 +10,6 @@
 		1A2174181AC9E74A00C4471D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174171AC9E74A00C4471D /* Images.xcassets */; };
 		1A21741B1AC9E74A00C4471D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174191AC9E74A00C4471D /* LaunchScreen.xib */; };
 		1A2174271AC9E74A00C4471D /* HackcancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2174261AC9E74A00C4471D /* HackcancerTests.swift */; };
-		1A57DD651AD2CC30009E97A3 /* Array+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57DD641AD2CC30009E97A3 /* Array+Functional.swift */; };
 		1A6007241AF176D300DF6FA2 /* ConciergeTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007121AF176D300DF6FA2 /* ConciergeTableViewAdapter.swift */; };
 		1A6007251AF176D300DF6FA2 /* FAQTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007131AF176D300DF6FA2 /* FAQTableViewAdapter.swift */; };
 		1A6007261AF176D300DF6FA2 /* NewsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007141AF176D300DF6FA2 /* NewsTableViewAdapter.swift */; };
@@ -33,6 +32,9 @@
 		1A6007481AF1848200DF6FA2 /* StoreSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007451AF1848200DF6FA2 /* StoreSource.swift */; };
 		1A60074A1AF1855400DF6FA2 /* HCSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007491AF1855400DF6FA2 /* HCSession.swift */; };
 		1A60074C1AF187E100DF6FA2 /* HCSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60074B1AF187E100DF6FA2 /* HCSessionTask.swift */; };
+		1A6007521AF1AC0200DF6FA2 /* Cent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6007501AF1AC0200DF6FA2 /* Cent.framework */; };
+		1A6007531AF1AC0200DF6FA2 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6007511AF1AC0200DF6FA2 /* Dollar.framework */; };
+		1A6007551AF1C3E400DF6FA2 /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007541AF1C3E400DF6FA2 /* StoreItem.swift */; };
 		1A8D52541AEC5A1800F9F1FF /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */; };
 		1A8D52551AEC5A1800F9F1FF /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */; };
 		1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2761ACDF60300142A68 /* AppDelegate.swift */; };
@@ -56,7 +58,6 @@
 		1A2174201AC9E74A00C4471D /* HackcancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackcancerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2174251AC9E74A00C4471D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A2174261AC9E74A00C4471D /* HackcancerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackcancerTests.swift; sourceTree = "<group>"; };
-		1A57DD641AD2CC30009E97A3 /* Array+Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Functional.swift"; sourceTree = "<group>"; };
 		1A6007121AF176D300DF6FA2 /* ConciergeTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeTableViewAdapter.swift; sourceTree = "<group>"; };
 		1A6007131AF176D300DF6FA2 /* FAQTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableViewAdapter.swift; sourceTree = "<group>"; };
 		1A6007141AF176D300DF6FA2 /* NewsTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewAdapter.swift; sourceTree = "<group>"; };
@@ -79,6 +80,9 @@
 		1A6007451AF1848200DF6FA2 /* StoreSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSource.swift; sourceTree = "<group>"; };
 		1A6007491AF1855400DF6FA2 /* HCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCSession.swift; sourceTree = "<group>"; };
 		1A60074B1AF187E100DF6FA2 /* HCSessionTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCSessionTask.swift; sourceTree = "<group>"; };
+		1A6007501AF1AC0200DF6FA2 /* Cent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cent.framework; path = Carthage/Build/iOS/Cent.framework; sourceTree = "<group>"; };
+		1A6007511AF1AC0200DF6FA2 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = Carthage/Build/iOS/Dollar.framework; sourceTree = "<group>"; };
+		1A6007541AF1C3E400DF6FA2 /* StoreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
 		1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
 		1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		1AD3C2761ACDF60300142A68 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A8D52541AEC5A1800F9F1FF /* LlamaKit.framework in Frameworks */,
+				1A6007521AF1AC0200DF6FA2 /* Cent.framework in Frameworks */,
+				1A6007531AF1AC0200DF6FA2 /* Dollar.framework in Frameworks */,
 				1A8D52551AEC5A1800F9F1FF /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +114,8 @@
 		046076CB88620A05634C5F86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A6007501AF1AC0200DF6FA2 /* Cent.framework */,
+				1A6007511AF1AC0200DF6FA2 /* Dollar.framework */,
 				1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */,
 				1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */,
 				3B58B048463401C9C4DC9239 /* libPods.a */,
@@ -139,7 +147,6 @@
 			children = (
 				1A60070A1AF176D300DF6FA2 /* Buisness Layer */,
 				1A6007101AF176D300DF6FA2 /* User Layer */,
-				1A57DD521ACE0B08009E97A3 /* Categories */,
 				1AD3C2761ACDF60300142A68 /* AppDelegate.swift */,
 				1A2174171AC9E74A00C4471D /* Images.xcassets */,
 				1A2174191AC9E74A00C4471D /* LaunchScreen.xib */,
@@ -171,14 +178,6 @@
 				1A2174251AC9E74A00C4471D /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1A57DD521ACE0B08009E97A3 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				1A57DD641AD2CC30009E97A3 /* Array+Functional.swift */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		1A60070A1AF176D300DF6FA2 /* Buisness Layer */ = {
@@ -234,6 +233,7 @@
 				1A6007331AF176E700DF6FA2 /* FAQStore.swift */,
 				1A6007341AF176E700DF6FA2 /* NewsStore.swift */,
 				1A6007351AF176E700DF6FA2 /* ScheduleStore.swift */,
+				1A6007541AF1C3E400DF6FA2 /* StoreItem.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -361,6 +361,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/LlamaKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cent.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Dollar.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
@@ -383,13 +385,13 @@
 				1A6007481AF1848200DF6FA2 /* StoreSource.swift in Sources */,
 				1A60072E1AF176D300DF6FA2 /* RootViewController.swift in Sources */,
 				1A6007471AF1848200DF6FA2 /* NetworkStoreSource.swift in Sources */,
+				1A6007551AF1C3E400DF6FA2 /* StoreItem.swift in Sources */,
 				1A6007361AF176E700DF6FA2 /* ConciergeStore.swift in Sources */,
 				1A60072A1AF176D300DF6FA2 /* FAQItemViewController.swift in Sources */,
 				1A6007291AF176D300DF6FA2 /* ConciergeViewController.swift in Sources */,
 				1A6007281AF176D300DF6FA2 /* AboutViewController.swift in Sources */,
 				1A6007381AF176E700DF6FA2 /* NewsStore.swift in Sources */,
 				1A6007271AF176D300DF6FA2 /* ScheduleTableViewAdapter.swift in Sources */,
-				1A57DD651AD2CC30009E97A3 /* Array+Functional.swift in Sources */,
 				1A6007391AF176E700DF6FA2 /* ScheduleStore.swift in Sources */,
 				1A6007261AF176D300DF6FA2 /* NewsTableViewAdapter.swift in Sources */,
 				1A6007241AF176D300DF6FA2 /* ConciergeTableViewAdapter.swift in Sources */,

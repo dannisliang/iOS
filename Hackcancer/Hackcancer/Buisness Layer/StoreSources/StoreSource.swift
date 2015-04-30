@@ -9,7 +9,7 @@
 import Foundation
 import ReactiveCocoa
 
-class StoreSource<T>
+class StoreSource<T where T:StoreItem>
 {
     func store(item: T) -> Void
     {
