@@ -11,6 +11,16 @@ import ReactiveCocoa
 
 class NetworkStoreSource<T where T: StoreItem>: StoreSource<T>
 {
+    override convenience init()
+    {
+        self.init(configuration: nil)
+    }
+    
+    init(configuration: NetworkStoreSourceConfiguration?)
+    {
+        self.configuration = configuration
+    }
+    
     override func store(item: T) -> Void
     {
     }
@@ -20,9 +30,12 @@ class NetworkStoreSource<T where T: StoreItem>: StoreSource<T>
         let producer = SignalProducer<Array<T>?, NSError>()
         {
             observer, disposable in
-                let request = NSURLRequest()
+            
+                let url = self.configuration!.baseURI?.URLByAppendingPathComponent(T.collectionName())
+                let request = NSURLRequest(URL: url!)
                 let task = self.session.makeTaskForRequest(request, type: .Data)
                 task.resume()
+            
                 return
         }
         return producer
@@ -30,5 +43,16 @@ class NetworkStoreSource<T where T: StoreItem>: StoreSource<T>
     
     private
     
+    let configuration: NetworkStoreSourceConfiguration?
     let session = HCSession.sharedSession()
+}
+
+class NetworkStoreSourceConfiguration
+{
+    var baseURI: NSURL?
+    
+    init()
+    {
+        
+    }
 }

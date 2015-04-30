@@ -9,7 +9,7 @@
 import Foundation
 import ReactiveCocoa
 
-class ScheduleStore
+class ScheduleStore: NSObject, Store
 {
     class Item: StoreItem
     {
@@ -23,9 +23,9 @@ class ScheduleStore
         }
     }
     
-    init()
+    override init()
     {
-        source = StoreSource<Item>()
+        super.init()
         
         for i in 1...4
         {
@@ -37,13 +37,13 @@ class ScheduleStore
             item.timeText = timeText
             item.descriptionText = "Description"
 
-            source.store(item)
+            source?.store(item)
         }
     }
 
     func fetchAllItems() -> SignalProducer<Array<Item>?, NSError>?
     {
-        return source.fetchAll()
+        return source?.fetchAll()
     }
     
     private
@@ -55,9 +55,7 @@ class ScheduleStore
         return formatter
     }()
     
-    var items: Array<Item> = []
-    
     private
     
-    let source: StoreSource<Item>
+    var source: StoreSource<Item>?
 }

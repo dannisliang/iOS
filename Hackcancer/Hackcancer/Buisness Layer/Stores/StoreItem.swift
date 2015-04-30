@@ -10,8 +10,13 @@ import Foundation
 
 class StoreItem: NSObject
 {
-    var resourceName: String =
+    class func resourceName() -> String
     {
         return "store_item"
-    }()
+    }
+    
+    class func collectionName() -> String
+    {
+        return "\(resourceName())s"
+    }
 }

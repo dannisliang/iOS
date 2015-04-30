@@ -9,7 +9,7 @@
 import Foundation
 import ReactiveCocoa
 
-class FAQStore
+class FAQStore: NSObject, Store
 {
     class Item: StoreItem
     {
@@ -21,10 +21,8 @@ class FAQStore
         }
     }
     
-    init()
+    override init()
     {
-        source = StoreSource<Item>()
-        
         for i in 1...4
         {
             let item = Item()
@@ -32,16 +30,16 @@ class FAQStore
             item.question = "Question ?"
             item.answer = "Answer"
             
-            source.store(item)
+            source?.store(item)
         }
     }
     
     func fetchAllItems() -> SignalProducer<Array<Item>?, NSError>?
     {
-        return source.fetchAll()
+        return source?.fetchAll()
     }
     
     private
     
-    let source: StoreSource<Item>
+    var source: StoreSource<Item>?
 }
