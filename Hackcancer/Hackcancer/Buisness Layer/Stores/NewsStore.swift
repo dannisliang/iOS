@@ -9,7 +9,7 @@
 import Foundation
 import ReactiveCocoa
 
-class NewsStore: NSObject, Store
+class NewsStore: Store
 {
     class Item: StoreItem
     {
@@ -37,13 +37,13 @@ class NewsStore: NSObject, Store
             item.timeText = timeText
             item.descriptionText = "Description"
             
-            source?.store(item)
+            source.store(item)
         }
     }
     
     func fetchAllItems() -> SignalProducer<Array<Item>?, NSError>?
     {
-        return source?.fetchAll()
+        return source.fetchAll()
     }
     
     private
@@ -57,5 +57,5 @@ class NewsStore: NSObject, Store
     
     private
     
-    var source: StoreSource<Item>?
+    let source: StoreSource<Item> = MemoryStoreSource<Item>()
 }

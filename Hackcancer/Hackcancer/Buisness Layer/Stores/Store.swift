@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol Store
+class Store
 {
+    
 }

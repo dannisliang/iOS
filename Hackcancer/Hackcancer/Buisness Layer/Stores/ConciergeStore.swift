@@ -9,7 +9,7 @@
 import Foundation
 import ReactiveCocoa
 
-class ConciergeStore:NSObject, Store
+class ConciergeStore: Store
 {
     class Item: StoreItem
     {
@@ -26,8 +26,10 @@ class ConciergeStore:NSObject, Store
         }
     }
     
-    override init()
+    init(source: StoreSource<Item> = ApplicationAssembly.conciergeStoreSource)
     {
+        self.source = source
+        
         for i in 1...4
         {
             let item = Item()
@@ -35,16 +37,14 @@ class ConciergeStore:NSObject, Store
             item.name = "New Item"
             item.descriptionText = "Description"
             
-            source?.store(item)
+            source.store(item)
         }
     }
     
     func fetchAllItems() -> SignalProducer<Array<Item>?, NSError>?
     {
-        return source?.fetchAll()
+        return source.fetchAll()
     }
-
-    private
     
-    var source: StoreSource<Item>?
+    let source: StoreSource<Item>
 }

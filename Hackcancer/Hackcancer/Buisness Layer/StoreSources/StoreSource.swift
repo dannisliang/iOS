@@ -9,7 +9,7 @@
 import Foundation
 import ReactiveCocoa
 
-class StoreSource<T where T:StoreItem>
+class StoreSource<T where T:StoreItem>: NSObject
 {
     func store(item: T) -> Void
     {

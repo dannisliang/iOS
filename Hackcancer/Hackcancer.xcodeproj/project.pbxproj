@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A0D005C1AF2CD970000524F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0D005B1AF2CD970000524F /* Store.swift */; };
+		1A0D00601AF2D3FB0000524F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0D005F1AF2D3FB0000524F /* Store.swift */; };
 		1A2174181AC9E74A00C4471D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174171AC9E74A00C4471D /* Images.xcassets */; };
 		1A21741B1AC9E74A00C4471D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174191AC9E74A00C4471D /* LaunchScreen.xib */; };
 		1A2174271AC9E74A00C4471D /* HackcancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2174261AC9E74A00C4471D /* HackcancerTests.swift */; };
@@ -36,10 +36,10 @@
 		1A6007521AF1AC0200DF6FA2 /* Cent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6007501AF1AC0200DF6FA2 /* Cent.framework */; };
 		1A6007531AF1AC0200DF6FA2 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6007511AF1AC0200DF6FA2 /* Dollar.framework */; };
 		1A6007571AF2C42A00DF6FA2 /* Typhoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6007561AF2C42A00DF6FA2 /* Typhoon.framework */; };
-		1A60075C1AF2C8BD00DF6FA2 /* HCApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60075B1AF2C8BD00DF6FA2 /* HCApplicationAssembly.swift */; };
 		1A60075E1AF2CA6C00DF6FA2 /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60075D1AF2CA6C00DF6FA2 /* StoreItem.swift */; };
 		1A8D52541AEC5A1800F9F1FF /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */; };
 		1A8D52551AEC5A1800F9F1FF /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */; };
+		1AA1BAC41AF58AB200158E51 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1BAC31AF58AB200158E51 /* ApplicationAssembly.swift */; };
 		1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2761ACDF60300142A68 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A0D005B1AF2CD970000524F /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		1A0D005F1AF2D3FB0000524F /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		1A21740B1AC9E74A00C4471D /* Hackcancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackcancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A21740F1AC9E74A00C4471D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A2174171AC9E74A00C4471D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -87,10 +87,10 @@
 		1A6007501AF1AC0200DF6FA2 /* Cent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cent.framework; path = Carthage/Build/iOS/Cent.framework; sourceTree = "<group>"; };
 		1A6007511AF1AC0200DF6FA2 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = Carthage/Build/iOS/Dollar.framework; sourceTree = "<group>"; };
 		1A6007561AF2C42A00DF6FA2 /* Typhoon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Typhoon.framework; path = Carthage/Build/iOS/Typhoon.framework; sourceTree = "<group>"; };
-		1A60075B1AF2C8BD00DF6FA2 /* HCApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCApplicationAssembly.swift; sourceTree = "<group>"; };
 		1A60075D1AF2CA6C00DF6FA2 /* StoreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
 		1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
 		1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		1AA1BAC31AF58AB200158E51 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
 		1AD3C2761ACDF60300142A68 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B58B048463401C9C4DC9239 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -153,7 +153,6 @@
 		1A21740D1AC9E74A00C4471D /* Hackcancer */ = {
 			isa = PBXGroup;
 			children = (
-				1A60075A1AF2C8A700DF6FA2 /* Assembly */,
 				1A60070A1AF176D300DF6FA2 /* Buisness Layer */,
 				1A6007101AF176D300DF6FA2 /* User Layer */,
 				1AD3C2761ACDF60300142A68 /* AppDelegate.swift */,
@@ -192,6 +191,7 @@
 		1A60070A1AF176D300DF6FA2 /* Buisness Layer */ = {
 			isa = PBXGroup;
 			children = (
+				1AA1BAC21AF58A6F00158E51 /* Assembly */,
 				1A6007421AF1848200DF6FA2 /* StoreSources */,
 				1A60073A1AF176F500DF6FA2 /* Network */,
 				1A6007311AF176E700DF6FA2 /* Stores */,
@@ -243,7 +243,7 @@
 				1A6007341AF176E700DF6FA2 /* NewsStore.swift */,
 				1A6007351AF176E700DF6FA2 /* ScheduleStore.swift */,
 				1A60075D1AF2CA6C00DF6FA2 /* StoreItem.swift */,
-				1A0D005B1AF2CD970000524F /* Store.swift */,
+				1A0D005F1AF2D3FB0000524F /* Store.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -267,13 +267,14 @@
 			path = StoreSources;
 			sourceTree = "<group>";
 		};
-		1A60075A1AF2C8A700DF6FA2 /* Assembly */ = {
+		1AA1BAC21AF58A6F00158E51 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				1A60075B1AF2C8BD00DF6FA2 /* HCApplicationAssembly.swift */,
+				1AA1BAC31AF58AB200158E51 /* ApplicationAssembly.swift */,
 			);
-			path = Assembly;
-			sourceTree = "<group>";
+			name = Assembly;
+			path = Hackcancer/Assembly;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -401,24 +402,24 @@
 				1A60074C1AF187E100DF6FA2 /* HCSessionTask.swift in Sources */,
 				1A60072F1AF176D300DF6FA2 /* ScheduleItemViewController.swift in Sources */,
 				1A6007251AF176D300DF6FA2 /* FAQTableViewAdapter.swift in Sources */,
+				1A0D00601AF2D3FB0000524F /* Store.swift in Sources */,
 				1A6007481AF1848200DF6FA2 /* StoreSource.swift in Sources */,
 				1A60072E1AF176D300DF6FA2 /* RootViewController.swift in Sources */,
 				1A6007471AF1848200DF6FA2 /* NetworkStoreSource.swift in Sources */,
 				1A60075E1AF2CA6C00DF6FA2 /* StoreItem.swift in Sources */,
-				1A0D005C1AF2CD970000524F /* Store.swift in Sources */,
 				1A6007361AF176E700DF6FA2 /* ConciergeStore.swift in Sources */,
 				1A60072A1AF176D300DF6FA2 /* FAQItemViewController.swift in Sources */,
 				1A6007291AF176D300DF6FA2 /* ConciergeViewController.swift in Sources */,
 				1A6007281AF176D300DF6FA2 /* AboutViewController.swift in Sources */,
 				1A6007381AF176E700DF6FA2 /* NewsStore.swift in Sources */,
 				1A6007271AF176D300DF6FA2 /* ScheduleTableViewAdapter.swift in Sources */,
+				1AA1BAC41AF58AB200158E51 /* ApplicationAssembly.swift in Sources */,
 				1A6007391AF176E700DF6FA2 /* ScheduleStore.swift in Sources */,
 				1A6007261AF176D300DF6FA2 /* NewsTableViewAdapter.swift in Sources */,
 				1A6007241AF176D300DF6FA2 /* ConciergeTableViewAdapter.swift in Sources */,
 				1A6007461AF1848200DF6FA2 /* MemoryStoreSource.swift in Sources */,
 				1A6007371AF176E700DF6FA2 /* FAQStore.swift in Sources */,
 				1A6007301AF176D300DF6FA2 /* ScheduleViewController.swift in Sources */,
-				1A60075C1AF2C8BD00DF6FA2 /* HCApplicationAssembly.swift in Sources */,
 				1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */,
 				1A60072B1AF176D300DF6FA2 /* FAQViewController.swift in Sources */,
 				1A60074A1AF1855400DF6FA2 /* HCSession.swift in Sources */,
