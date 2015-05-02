@@ -18,6 +18,11 @@ class ScheduleStore: Store
         private(set) var timeText: String?
         private(set) var descriptionText: String?
 
+        override class func resourceName() -> String
+        {
+            return "schedule_item"
+        }
+        
         private override init()
         {
         }
@@ -57,5 +62,5 @@ class ScheduleStore: Store
     
     private
     
-    let source: StoreSource<Item> = MemoryStoreSource<Item>()
+    let source: StoreSource<Item> = NetworkStoreSource<Item>(baseURI: ApplicationAssembly.apiBaseURI!)
 }

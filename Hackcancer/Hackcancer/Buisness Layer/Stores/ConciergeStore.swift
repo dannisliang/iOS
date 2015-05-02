@@ -26,9 +26,9 @@ class ConciergeStore: Store
         }
     }
     
-    init(source: StoreSource<Item> = ApplicationAssembly.conciergeStoreSource)
+    override init()
     {
-        self.source = source
+        super.init()
         
         for i in 1...4
         {
@@ -46,5 +46,5 @@ class ConciergeStore: Store
         return source.fetchAll()
     }
     
-    let source: StoreSource<Item>
+    let source: StoreSource<Item> = NetworkStoreSource<Item>(baseURI: ApplicationAssembly.apiBaseURI!)
 }

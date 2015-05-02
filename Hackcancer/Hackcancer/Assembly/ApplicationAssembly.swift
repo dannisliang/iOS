@@ -10,11 +10,5 @@ import Foundation
 
 class ApplicationAssembly
 {
-    class var conciergeStoreSource: NetworkStoreSource<ConciergeStore.Item>
-    {
-        let networkConfiguration = NetworkStoreSourceConfiguration()
-        networkConfiguration.baseURI = NSURL(string: "http://localhost:3000/")
-
-        return NetworkStoreSource<ConciergeStore.Item>(configuration: networkConfiguration)
-    }
+    static let apiBaseURI = NSURL(string: "http://localhost:3000/")
 }

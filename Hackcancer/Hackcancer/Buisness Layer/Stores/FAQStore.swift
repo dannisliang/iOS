@@ -16,6 +16,11 @@ class FAQStore: Store
         private(set) var question: String?
         private(set) var answer: String?
         
+        override class func resourceName() -> String
+        {
+            return "faq_item"
+        }
+        
         private override init()
         {
         }
@@ -23,6 +28,8 @@ class FAQStore: Store
     
     override init()
     {
+        super.init()
+        
         for i in 1...4
         {
             let item = Item()
@@ -41,5 +48,5 @@ class FAQStore: Store
     
     private
     
-    var source: StoreSource<Item> = MemoryStoreSource<Item>();
+    let source: StoreSource<Item> = NetworkStoreSource<Item>(baseURI: ApplicationAssembly.apiBaseURI!)
 }

@@ -11,14 +11,11 @@ import ReactiveCocoa
 
 class NetworkStoreSource<T where T: StoreItem>: StoreSource<T>
 {
-    override convenience init()
-    {
-        self.init(configuration: nil)
-    }
+    let baseURI: NSURL
     
-    init(configuration: NetworkStoreSourceConfiguration?)
+    init(baseURI: NSURL)
     {
-        self.configuration = configuration
+        self.baseURI = baseURI
     }
     
     override func store(item: T) -> Void
@@ -31,8 +28,8 @@ class NetworkStoreSource<T where T: StoreItem>: StoreSource<T>
         {
             observer, disposable in
             
-                let url = self.configuration!.baseURI?.URLByAppendingPathComponent(T.collectionName())
-                let request = NSURLRequest(URL: url!)
+                let url = self.baseURI.URLByAppendingPathComponent(T.collectionName())
+                let request = NSURLRequest(URL: url)
                 let task = self.session.makeTaskForRequest(request, type: .Data)
                 task.resume()
             
@@ -43,16 +40,5 @@ class NetworkStoreSource<T where T: StoreItem>: StoreSource<T>
     
     private
     
-    let configuration: NetworkStoreSourceConfiguration?
     let session = HCSession.sharedSession()
-}
-
-class NetworkStoreSourceConfiguration
-{
-    var baseURI: NSURL?
-    
-    init()
-    {
-        
-    }
 }
