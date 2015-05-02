@@ -35,6 +35,7 @@ class NetworkStoreSource<T where T: StoreItem>: StoreSource<T>
             
                 return
         }
+        
         return producer
     }
     

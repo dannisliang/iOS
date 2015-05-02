@@ -10,6 +10,13 @@ import Foundation
 
 class HCSession: NSObject
 {
+    var contextDictionary: Dictionary<Int, Context> = Dictionary()
+    
+    class Context
+    {
+        
+    }
+    
     enum TaskType
     {
         case Data
@@ -51,7 +58,12 @@ class HCSession: NSObject
     
     func makeTaskForRequest(request: NSURLRequest, type: TaskType = .Data) -> Task
     {
-        return type.createTask(request, session: session)
+        let task = type.createTask(request, session: session)
+        let context = Context()
+        
+        contextDictionary[task.taskIdentifier] = context
+        
+        return task
     }
     
     private
@@ -66,5 +78,8 @@ class HCSession: NSObject
 
 extension HCSession: NSURLSessionTaskDelegate
 {
-    
+    func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveResponse response: NSURLResponse, completionHandler: (NSURLSessionResponseDisposition) -> Void)
+    {
+        
+    }
 }

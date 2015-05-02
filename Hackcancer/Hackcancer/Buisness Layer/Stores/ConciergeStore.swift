@@ -46,5 +46,5 @@ class ConciergeStore: Store
         return source.fetchAll()
     }
     
-    let source: StoreSource<Item> = NetworkStoreSource<Item>(baseURI: ApplicationAssembly.apiBaseURI!)
+    let source: StoreSource<Item> = NetworkStoreSource(baseURI: ApplicationAssembly.apiBaseURI!)
 }

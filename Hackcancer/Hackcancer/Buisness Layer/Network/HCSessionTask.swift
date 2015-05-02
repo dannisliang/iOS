@@ -12,6 +12,14 @@ extension HCSession
 {
     class Task : NSObject
     {
+        var taskIdentifier: Int
+        {
+            get
+            {
+                return task.taskIdentifier
+            }
+        }
+        
         internal init(task: NSURLSessionTask)
         {
             self.task = task
