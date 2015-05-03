@@ -41,6 +41,9 @@
 		1A8D52551AEC5A1800F9F1FF /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */; };
 		1AA1BAC41AF58AB200158E51 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1BAC31AF58AB200158E51 /* ApplicationAssembly.swift */; };
 		1AA1BAC61AF59C9500158E51 /* HCURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1BAC51AF59C9500158E51 /* HCURLRequest.swift */; };
+		1AA1BAC81AF59E2300158E51 /* HCURLSessionRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1BAC71AF59E2300158E51 /* HCURLSessionRequestSerializer.swift */; };
+		1AA1BACA1AF59FA300158E51 /* HCURLSessionResponseDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1BAC91AF59FA300158E51 /* HCURLSessionResponseDeserializer.swift */; };
+		1AA1BACC1AF59FE000158E51 /* HCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1BACB1AF59FE000158E51 /* HCParser.swift */; };
 		1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2761ACDF60300142A68 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +96,9 @@
 		1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		1AA1BAC31AF58AB200158E51 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
 		1AA1BAC51AF59C9500158E51 /* HCURLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCURLRequest.swift; sourceTree = "<group>"; };
+		1AA1BAC71AF59E2300158E51 /* HCURLSessionRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCURLSessionRequestSerializer.swift; sourceTree = "<group>"; };
+		1AA1BAC91AF59FA300158E51 /* HCURLSessionResponseDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCURLSessionResponseDeserializer.swift; sourceTree = "<group>"; };
+		1AA1BACB1AF59FE000158E51 /* HCParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCParser.swift; sourceTree = "<group>"; };
 		1AD3C2761ACDF60300142A68 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B58B048463401C9C4DC9239 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -256,6 +262,9 @@
 				1A6007491AF1855400DF6FA2 /* HCURLSession.swift */,
 				1A60074B1AF187E100DF6FA2 /* HCURLSessionTask.swift */,
 				1AA1BAC51AF59C9500158E51 /* HCURLRequest.swift */,
+				1AA1BAC71AF59E2300158E51 /* HCURLSessionRequestSerializer.swift */,
+				1AA1BAC91AF59FA300158E51 /* HCURLSessionResponseDeserializer.swift */,
+				1AA1BACB1AF59FE000158E51 /* HCParser.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -407,9 +416,11 @@
 				1A6007251AF176D300DF6FA2 /* FAQTableViewAdapter.swift in Sources */,
 				1A0D00601AF2D3FB0000524F /* Store.swift in Sources */,
 				1A6007481AF1848200DF6FA2 /* StoreSource.swift in Sources */,
+				1AA1BACC1AF59FE000158E51 /* HCParser.swift in Sources */,
 				1A60072E1AF176D300DF6FA2 /* RootViewController.swift in Sources */,
 				1A6007471AF1848200DF6FA2 /* NetworkStoreSource.swift in Sources */,
 				1A60075E1AF2CA6C00DF6FA2 /* StoreItem.swift in Sources */,
+				1AA1BACA1AF59FA300158E51 /* HCURLSessionResponseDeserializer.swift in Sources */,
 				1A6007361AF176E700DF6FA2 /* ConciergeStore.swift in Sources */,
 				1A60072A1AF176D300DF6FA2 /* FAQItemViewController.swift in Sources */,
 				1A6007291AF176D300DF6FA2 /* ConciergeViewController.swift in Sources */,
@@ -417,6 +428,7 @@
 				1A6007381AF176E700DF6FA2 /* NewsStore.swift in Sources */,
 				1A6007271AF176D300DF6FA2 /* ScheduleTableViewAdapter.swift in Sources */,
 				1AA1BAC41AF58AB200158E51 /* ApplicationAssembly.swift in Sources */,
+				1AA1BAC81AF59E2300158E51 /* HCURLSessionRequestSerializer.swift in Sources */,
 				1A6007391AF176E700DF6FA2 /* ScheduleStore.swift in Sources */,
 				1A6007261AF176D300DF6FA2 /* NewsTableViewAdapter.swift in Sources */,
 				1A6007241AF176D300DF6FA2 /* ConciergeTableViewAdapter.swift in Sources */,
