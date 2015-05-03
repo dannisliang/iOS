@@ -41,5 +41,5 @@ class NetworkStoreSource<T where T: StoreItem>: StoreSource<T>
     
     private
     
-    let session = HCSession.sharedSession()
+    let session = HCURLSession.sharedSession()
 }

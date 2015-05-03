@@ -1,5 +1,5 @@
 //
-//  HCSession.swift
+//  HCURLSession.swift
 //  Hackcancer
 //
 //  Created by James Campbell on 29/04/2015.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HCSession: NSObject
+class HCURLSession: NSObject
 {
     var contextDictionary: Dictionary<Int, Context> = Dictionary()
     
@@ -44,9 +44,9 @@ class HCSession: NSObject
         }
     }
     
-    class func sharedSession() -> HCSession
+    class func sharedSession() -> HCURLSession
     {
-        return HCSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        return HCURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     }
     
     init(configuration: NSURLSessionConfiguration)
@@ -76,7 +76,7 @@ class HCSession: NSObject
     }()
 }
 
-extension HCSession: NSURLSessionTaskDelegate
+extension HCURLSession: NSURLSessionTaskDelegate
 {
     func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveResponse response: NSURLResponse, completionHandler: (NSURLSessionResponseDisposition) -> Void)
     {

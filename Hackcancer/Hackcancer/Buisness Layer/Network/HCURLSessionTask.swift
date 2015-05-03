@@ -1,5 +1,5 @@
 //
-//  HCSessionTask.swift
+//  HCURLSessionTask.swift
 //  Hackcancer
 //
 //  Created by James Campbell on 29/04/2015.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension HCSession
+extension HCURLSession
 {
     class Task : NSObject
     {
