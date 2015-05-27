@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Hackcancer
 //
-//  Created by James Campbell on 30/03/2015.
-//  Copyright (c) 2015 HC. All rights reserved.
+//  Created by James Campbell on 26/05/2015.
+//  Copyright (c) 2015 Hackcancer. All rights reserved.
 //
 
 import UIKit
@@ -11,14 +11,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    lazy var window: UIWindow? =
+    {
+        let frame = UIScreen.mainScreen().bounds
+        return UIWindow(frame:frame)
+    }()
+
     lazy var rootViewController: RootViewController =
     {
        return RootViewController()
-    }()
-    
-    lazy var window: UIWindow? =
-    {
-       return UIWindow(frame: UIScreen.mainScreen().bounds)
     }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool

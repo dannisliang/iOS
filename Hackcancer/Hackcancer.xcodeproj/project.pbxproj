@@ -7,116 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A0D00601AF2D3FB0000524F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0D005F1AF2D3FB0000524F /* Store.swift */; };
-		1A2174181AC9E74A00C4471D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174171AC9E74A00C4471D /* Images.xcassets */; };
-		1A21741B1AC9E74A00C4471D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2174191AC9E74A00C4471D /* LaunchScreen.xib */; };
-		1A2174271AC9E74A00C4471D /* HackcancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2174261AC9E74A00C4471D /* HackcancerTests.swift */; };
-		1A6007241AF176D300DF6FA2 /* ConciergeTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007121AF176D300DF6FA2 /* ConciergeTableViewAdapter.swift */; };
-		1A6007251AF176D300DF6FA2 /* FAQTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007131AF176D300DF6FA2 /* FAQTableViewAdapter.swift */; };
-		1A6007261AF176D300DF6FA2 /* NewsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007141AF176D300DF6FA2 /* NewsTableViewAdapter.swift */; };
-		1A6007271AF176D300DF6FA2 /* ScheduleTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007151AF176D300DF6FA2 /* ScheduleTableViewAdapter.swift */; };
-		1A6007281AF176D300DF6FA2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007171AF176D300DF6FA2 /* AboutViewController.swift */; };
-		1A6007291AF176D300DF6FA2 /* ConciergeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007181AF176D300DF6FA2 /* ConciergeViewController.swift */; };
-		1A60072A1AF176D300DF6FA2 /* FAQItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007191AF176D300DF6FA2 /* FAQItemViewController.swift */; };
-		1A60072B1AF176D300DF6FA2 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60071A1AF176D300DF6FA2 /* FAQViewController.swift */; };
-		1A60072C1AF176D300DF6FA2 /* NewsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60071B1AF176D300DF6FA2 /* NewsItemViewController.swift */; };
-		1A60072D1AF176D300DF6FA2 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60071C1AF176D300DF6FA2 /* NewsViewController.swift */; };
-		1A60072E1AF176D300DF6FA2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60071D1AF176D300DF6FA2 /* RootViewController.swift */; };
-		1A60072F1AF176D300DF6FA2 /* ScheduleItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60071E1AF176D300DF6FA2 /* ScheduleItemViewController.swift */; };
-		1A6007301AF176D300DF6FA2 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60071F1AF176D300DF6FA2 /* ScheduleViewController.swift */; };
-		1A6007361AF176E700DF6FA2 /* ConciergeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007321AF176E700DF6FA2 /* ConciergeStore.swift */; };
-		1A6007371AF176E700DF6FA2 /* FAQStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007331AF176E700DF6FA2 /* FAQStore.swift */; };
-		1A6007381AF176E700DF6FA2 /* NewsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007341AF176E700DF6FA2 /* NewsStore.swift */; };
-		1A6007391AF176E700DF6FA2 /* ScheduleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007351AF176E700DF6FA2 /* ScheduleStore.swift */; };
-		1A6007461AF1848200DF6FA2 /* MemoryStoreSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007431AF1848200DF6FA2 /* MemoryStoreSource.swift */; };
-		1A6007471AF1848200DF6FA2 /* NetworkStoreSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007441AF1848200DF6FA2 /* NetworkStoreSource.swift */; };
-		1A6007481AF1848200DF6FA2 /* StoreSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007451AF1848200DF6FA2 /* StoreSource.swift */; };
-		1A60074A1AF1855400DF6FA2 /* HCURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6007491AF1855400DF6FA2 /* HCURLSession.swift */; };
-		1A60074C1AF187E100DF6FA2 /* HCURLSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60074B1AF187E100DF6FA2 /* HCURLSessionTask.swift */; };
-		1A6007521AF1AC0200DF6FA2 /* Cent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6007501AF1AC0200DF6FA2 /* Cent.framework */; };
-		1A6007531AF1AC0200DF6FA2 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6007511AF1AC0200DF6FA2 /* Dollar.framework */; };
-		1A6007571AF2C42A00DF6FA2 /* Typhoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6007561AF2C42A00DF6FA2 /* Typhoon.framework */; };
-		1A60075E1AF2CA6C00DF6FA2 /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60075D1AF2CA6C00DF6FA2 /* StoreItem.swift */; };
-		1A8D52541AEC5A1800F9F1FF /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */; };
-		1A8D52551AEC5A1800F9F1FF /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */; };
-		1AA1BAC41AF58AB200158E51 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1BAC31AF58AB200158E51 /* ApplicationAssembly.swift */; };
-		1AA1BAC61AF59C9500158E51 /* HCURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1BAC51AF59C9500158E51 /* HCURLRequest.swift */; };
-		1AA1BAC81AF59E2300158E51 /* HCURLSessionRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1BAC71AF59E2300158E51 /* HCURLSessionRequestSerializer.swift */; };
-		1AA1BACA1AF59FA300158E51 /* HCURLSessionResponseDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1BAC91AF59FA300158E51 /* HCURLSessionResponseDeserializer.swift */; };
-		1AA1BACC1AF59FE000158E51 /* HCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1BACB1AF59FE000158E51 /* HCParser.swift */; };
-		1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3C2761ACDF60300142A68 /* AppDelegate.swift */; };
+		745D60911B15209D00558337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60901B15209D00558337 /* AppDelegate.swift */; };
+		745D60931B15209D00558337 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60921B15209D00558337 /* RootViewController.swift */; };
+		745D60961B15209D00558337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 745D60941B15209D00558337 /* Main.storyboard */; };
+		745D60981B15209D00558337 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745D60971B15209D00558337 /* Images.xcassets */; };
+		745D609B1B15209D00558337 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745D60991B15209D00558337 /* LaunchScreen.xib */; };
+		745D60A71B15209D00558337 /* HackcancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60A61B15209D00558337 /* HackcancerTests.swift */; };
+		745D60B21B166D0C00558337 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60B11B166D0C00558337 /* NewsViewController.swift */; };
+		745D60B51B166F4E00558337 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 745D60B41B166F4E00558337 /* Localizable.strings */; };
+		8F39E9DCD6716F5894E80AA0 /* libPods-Hackcancer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09620C2B2C31E4F535FF835A /* libPods-Hackcancer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1A2174211AC9E74A00C4471D /* PBXContainerItemProxy */ = {
+		745D60A11B15209D00558337 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1A2174031AC9E74A00C4471D /* Project object */;
+			containerPortal = 745D60831B15209D00558337 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1A21740A1AC9E74A00C4471D;
+			remoteGlobalIDString = 745D608A1B15209D00558337;
 			remoteInfo = Hackcancer;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A0D005F1AF2D3FB0000524F /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		1A21740B1AC9E74A00C4471D /* Hackcancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackcancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A21740F1AC9E74A00C4471D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A2174171AC9E74A00C4471D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1A21741A1AC9E74A00C4471D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1A2174201AC9E74A00C4471D /* HackcancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackcancerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A2174251AC9E74A00C4471D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A2174261AC9E74A00C4471D /* HackcancerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackcancerTests.swift; sourceTree = "<group>"; };
-		1A6007121AF176D300DF6FA2 /* ConciergeTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeTableViewAdapter.swift; sourceTree = "<group>"; };
-		1A6007131AF176D300DF6FA2 /* FAQTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableViewAdapter.swift; sourceTree = "<group>"; };
-		1A6007141AF176D300DF6FA2 /* NewsTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewAdapter.swift; sourceTree = "<group>"; };
-		1A6007151AF176D300DF6FA2 /* ScheduleTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewAdapter.swift; sourceTree = "<group>"; };
-		1A6007171AF176D300DF6FA2 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		1A6007181AF176D300DF6FA2 /* ConciergeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeViewController.swift; sourceTree = "<group>"; };
-		1A6007191AF176D300DF6FA2 /* FAQItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQItemViewController.swift; sourceTree = "<group>"; };
-		1A60071A1AF176D300DF6FA2 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
-		1A60071B1AF176D300DF6FA2 /* NewsItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemViewController.swift; sourceTree = "<group>"; };
-		1A60071C1AF176D300DF6FA2 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		1A60071D1AF176D300DF6FA2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		1A60071E1AF176D300DF6FA2 /* ScheduleItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItemViewController.swift; sourceTree = "<group>"; };
-		1A60071F1AF176D300DF6FA2 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
-		1A6007321AF176E700DF6FA2 /* ConciergeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeStore.swift; sourceTree = "<group>"; };
-		1A6007331AF176E700DF6FA2 /* FAQStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQStore.swift; sourceTree = "<group>"; };
-		1A6007341AF176E700DF6FA2 /* NewsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsStore.swift; sourceTree = "<group>"; };
-		1A6007351AF176E700DF6FA2 /* ScheduleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleStore.swift; sourceTree = "<group>"; };
-		1A6007431AF1848200DF6FA2 /* MemoryStoreSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryStoreSource.swift; sourceTree = "<group>"; };
-		1A6007441AF1848200DF6FA2 /* NetworkStoreSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStoreSource.swift; sourceTree = "<group>"; };
-		1A6007451AF1848200DF6FA2 /* StoreSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSource.swift; sourceTree = "<group>"; };
-		1A6007491AF1855400DF6FA2 /* HCURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCURLSession.swift; sourceTree = "<group>"; };
-		1A60074B1AF187E100DF6FA2 /* HCURLSessionTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCURLSessionTask.swift; sourceTree = "<group>"; };
-		1A6007501AF1AC0200DF6FA2 /* Cent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cent.framework; path = Carthage/Build/iOS/Cent.framework; sourceTree = "<group>"; };
-		1A6007511AF1AC0200DF6FA2 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = Carthage/Build/iOS/Dollar.framework; sourceTree = "<group>"; };
-		1A6007561AF2C42A00DF6FA2 /* Typhoon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Typhoon.framework; path = Carthage/Build/iOS/Typhoon.framework; sourceTree = "<group>"; };
-		1A60075D1AF2CA6C00DF6FA2 /* StoreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
-		1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
-		1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
-		1AA1BAC31AF58AB200158E51 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
-		1AA1BAC51AF59C9500158E51 /* HCURLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCURLRequest.swift; sourceTree = "<group>"; };
-		1AA1BAC71AF59E2300158E51 /* HCURLSessionRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCURLSessionRequestSerializer.swift; sourceTree = "<group>"; };
-		1AA1BAC91AF59FA300158E51 /* HCURLSessionResponseDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCURLSessionResponseDeserializer.swift; sourceTree = "<group>"; };
-		1AA1BACB1AF59FE000158E51 /* HCParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCParser.swift; sourceTree = "<group>"; };
-		1AD3C2761ACDF60300142A68 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B58B048463401C9C4DC9239 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		09620C2B2C31E4F535FF835A /* libPods-Hackcancer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackcancer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		745D608B1B15209D00558337 /* Hackcancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackcancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		745D608F1B15209D00558337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		745D60901B15209D00558337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		745D60921B15209D00558337 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		745D60951B15209D00558337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		745D60971B15209D00558337 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		745D609A1B15209D00558337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		745D60A01B15209D00558337 /* HackcancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackcancerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		745D60A51B15209D00558337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		745D60A61B15209D00558337 /* HackcancerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackcancerTests.swift; sourceTree = "<group>"; };
+		745D60B11B166D0C00558337 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		745D60B41B166F4E00558337 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.debug.xcconfig"; sourceTree = "<group>"; };
+		EEE420A2D4F7B4784BE1C9E8 /* Pods-Hackcancer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1A2174081AC9E74A00C4471D /* Frameworks */ = {
+		745D60881B15209D00558337 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A6007571AF2C42A00DF6FA2 /* Typhoon.framework in Frameworks */,
-				1A8D52541AEC5A1800F9F1FF /* LlamaKit.framework in Frameworks */,
-				1A6007521AF1AC0200DF6FA2 /* Cent.framework in Frameworks */,
-				1A6007531AF1AC0200DF6FA2 /* Dollar.framework in Frameworks */,
-				1A8D52551AEC5A1800F9F1FF /* ReactiveCocoa.framework in Frameworks */,
+				8F39E9DCD6716F5894E80AA0 /* libPods-Hackcancer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A21741D1AC9E74A00C4471D /* Frameworks */ = {
+		745D609D1B15209D00558337 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -126,179 +65,111 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		046076CB88620A05634C5F86 /* Frameworks */ = {
+		745D60821B15209D00558337 = {
 			isa = PBXGroup;
 			children = (
-				1A6007561AF2C42A00DF6FA2 /* Typhoon.framework */,
-				1A6007501AF1AC0200DF6FA2 /* Cent.framework */,
-				1A6007511AF1AC0200DF6FA2 /* Dollar.framework */,
-				1A8D52521AEC5A1800F9F1FF /* LlamaKit.framework */,
-				1A8D52531AEC5A1800F9F1FF /* ReactiveCocoa.framework */,
-				3B58B048463401C9C4DC9239 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1A2174021AC9E74A00C4471D = {
-			isa = PBXGroup;
-			children = (
-				1A21740D1AC9E74A00C4471D /* Hackcancer */,
-				1A2174231AC9E74A00C4471D /* HackcancerTests */,
-				1A21740C1AC9E74A00C4471D /* Products */,
-				046076CB88620A05634C5F86 /* Frameworks */,
+				745D608D1B15209D00558337 /* Hackcancer */,
+				745D60A31B15209D00558337 /* HackcancerTests */,
+				745D608C1B15209D00558337 /* Products */,
+				7FDE03CFBAC6030F61D00834 /* Pods */,
+				A73BA80D422F025919807B8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		1A21740C1AC9E74A00C4471D /* Products */ = {
+		745D608C1B15209D00558337 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A21740B1AC9E74A00C4471D /* Hackcancer.app */,
-				1A2174201AC9E74A00C4471D /* HackcancerTests.xctest */,
+				745D608B1B15209D00558337 /* Hackcancer.app */,
+				745D60A01B15209D00558337 /* HackcancerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1A21740D1AC9E74A00C4471D /* Hackcancer */ = {
+		745D608D1B15209D00558337 /* Hackcancer */ = {
 			isa = PBXGroup;
 			children = (
-				1A60070A1AF176D300DF6FA2 /* Buisness Layer */,
-				1A6007101AF176D300DF6FA2 /* User Layer */,
-				1AD3C2761ACDF60300142A68 /* AppDelegate.swift */,
-				1A2174171AC9E74A00C4471D /* Images.xcassets */,
-				1A2174191AC9E74A00C4471D /* LaunchScreen.xib */,
-				1A21740E1AC9E74A00C4471D /* Supporting Files */,
+				745D60B01B166CFB00558337 /* ViewController */,
+				745D60901B15209D00558337 /* AppDelegate.swift */,
+				745D60921B15209D00558337 /* RootViewController.swift */,
+				745D60941B15209D00558337 /* Main.storyboard */,
+				745D60971B15209D00558337 /* Images.xcassets */,
+				745D60991B15209D00558337 /* LaunchScreen.xib */,
+				745D608E1B15209D00558337 /* Supporting Files */,
 			);
 			path = Hackcancer;
 			sourceTree = "<group>";
 		};
-		1A21740E1AC9E74A00C4471D /* Supporting Files */ = {
+		745D608E1B15209D00558337 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1A21740F1AC9E74A00C4471D /* Info.plist */,
+				745D60B31B166F4E00558337 /* Resources */,
+				745D608F1B15209D00558337 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1A2174231AC9E74A00C4471D /* HackcancerTests */ = {
+		745D60A31B15209D00558337 /* HackcancerTests */ = {
 			isa = PBXGroup;
 			children = (
-				1A2174261AC9E74A00C4471D /* HackcancerTests.swift */,
-				1A2174241AC9E74A00C4471D /* Supporting Files */,
+				745D60A61B15209D00558337 /* HackcancerTests.swift */,
+				745D60A41B15209D00558337 /* Supporting Files */,
 			);
 			path = HackcancerTests;
 			sourceTree = "<group>";
 		};
-		1A2174241AC9E74A00C4471D /* Supporting Files */ = {
+		745D60A41B15209D00558337 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1A2174251AC9E74A00C4471D /* Info.plist */,
+				745D60A51B15209D00558337 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1A60070A1AF176D300DF6FA2 /* Buisness Layer */ = {
+		745D60B01B166CFB00558337 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1AA1BAC21AF58A6F00158E51 /* Assembly */,
-				1A6007421AF1848200DF6FA2 /* StoreSources */,
-				1A60073A1AF176F500DF6FA2 /* Network */,
-				1A6007311AF176E700DF6FA2 /* Stores */,
+				745D60B11B166D0C00558337 /* NewsViewController.swift */,
 			);
-			path = "Buisness Layer";
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		1A6007101AF176D300DF6FA2 /* User Layer */ = {
+		745D60B31B166F4E00558337 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1A6007111AF176D300DF6FA2 /* Adapter */,
-				1A6007161AF176D300DF6FA2 /* Controllers */,
+				745D60B41B166F4E00558337 /* Localizable.strings */,
 			);
-			path = "User Layer";
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		1A6007111AF176D300DF6FA2 /* Adapter */ = {
+		7FDE03CFBAC6030F61D00834 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1A6007121AF176D300DF6FA2 /* ConciergeTableViewAdapter.swift */,
-				1A6007131AF176D300DF6FA2 /* FAQTableViewAdapter.swift */,
-				1A6007141AF176D300DF6FA2 /* NewsTableViewAdapter.swift */,
-				1A6007151AF176D300DF6FA2 /* ScheduleTableViewAdapter.swift */,
+				8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */,
+				EEE420A2D4F7B4784BE1C9E8 /* Pods-Hackcancer.release.xcconfig */,
 			);
-			path = Adapter;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		1A6007161AF176D300DF6FA2 /* Controllers */ = {
+		A73BA80D422F025919807B8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1A6007171AF176D300DF6FA2 /* AboutViewController.swift */,
-				1A6007181AF176D300DF6FA2 /* ConciergeViewController.swift */,
-				1A6007191AF176D300DF6FA2 /* FAQItemViewController.swift */,
-				1A60071A1AF176D300DF6FA2 /* FAQViewController.swift */,
-				1A60071B1AF176D300DF6FA2 /* NewsItemViewController.swift */,
-				1A60071C1AF176D300DF6FA2 /* NewsViewController.swift */,
-				1A60071D1AF176D300DF6FA2 /* RootViewController.swift */,
-				1A60071E1AF176D300DF6FA2 /* ScheduleItemViewController.swift */,
-				1A60071F1AF176D300DF6FA2 /* ScheduleViewController.swift */,
+				09620C2B2C31E4F535FF835A /* libPods-Hackcancer.a */,
 			);
-			path = Controllers;
+			name = Frameworks;
 			sourceTree = "<group>";
-		};
-		1A6007311AF176E700DF6FA2 /* Stores */ = {
-			isa = PBXGroup;
-			children = (
-				1A6007321AF176E700DF6FA2 /* ConciergeStore.swift */,
-				1A6007331AF176E700DF6FA2 /* FAQStore.swift */,
-				1A6007341AF176E700DF6FA2 /* NewsStore.swift */,
-				1A6007351AF176E700DF6FA2 /* ScheduleStore.swift */,
-				1A60075D1AF2CA6C00DF6FA2 /* StoreItem.swift */,
-				1A0D005F1AF2D3FB0000524F /* Store.swift */,
-			);
-			path = Stores;
-			sourceTree = "<group>";
-		};
-		1A60073A1AF176F500DF6FA2 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				1A6007491AF1855400DF6FA2 /* HCURLSession.swift */,
-				1A60074B1AF187E100DF6FA2 /* HCURLSessionTask.swift */,
-				1AA1BAC51AF59C9500158E51 /* HCURLRequest.swift */,
-				1AA1BAC71AF59E2300158E51 /* HCURLSessionRequestSerializer.swift */,
-				1AA1BAC91AF59FA300158E51 /* HCURLSessionResponseDeserializer.swift */,
-				1AA1BACB1AF59FE000158E51 /* HCParser.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		1A6007421AF1848200DF6FA2 /* StoreSources */ = {
-			isa = PBXGroup;
-			children = (
-				1A6007431AF1848200DF6FA2 /* MemoryStoreSource.swift */,
-				1A6007441AF1848200DF6FA2 /* NetworkStoreSource.swift */,
-				1A6007451AF1848200DF6FA2 /* StoreSource.swift */,
-			);
-			path = StoreSources;
-			sourceTree = "<group>";
-		};
-		1AA1BAC21AF58A6F00158E51 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				1AA1BAC31AF58AB200158E51 /* ApplicationAssembly.swift */,
-			);
-			name = Assembly;
-			path = Hackcancer/Assembly;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A21740A1AC9E74A00C4471D /* Hackcancer */ = {
+		745D608A1B15209D00558337 /* Hackcancer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A21742A1AC9E74A00C4471D /* Build configuration list for PBXNativeTarget "Hackcancer" */;
+			buildConfigurationList = 745D60AA1B15209D00558337 /* Build configuration list for PBXNativeTarget "Hackcancer" */;
 			buildPhases = (
-				23315F44B18AC88A626F0360 /* Copy Carthage Frameworks */,
-				1A2174071AC9E74A00C4471D /* Sources */,
-				1A2174081AC9E74A00C4471D /* Frameworks */,
-				1A2174091AC9E74A00C4471D /* Resources */,
+				2664B882F944BE357651DAA6 /* Check Pods Manifest.lock */,
+				745D60871B15209D00558337 /* Sources */,
+				745D60881B15209D00558337 /* Frameworks */,
+				745D60891B15209D00558337 /* Resources */,
+				BE02B4BDE15CFD276EBADB45 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,46 +177,46 @@
 			);
 			name = Hackcancer;
 			productName = Hackcancer;
-			productReference = 1A21740B1AC9E74A00C4471D /* Hackcancer.app */;
+			productReference = 745D608B1B15209D00558337 /* Hackcancer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1A21741F1AC9E74A00C4471D /* HackcancerTests */ = {
+		745D609F1B15209D00558337 /* HackcancerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A21742D1AC9E74A00C4471D /* Build configuration list for PBXNativeTarget "HackcancerTests" */;
+			buildConfigurationList = 745D60AD1B15209D00558337 /* Build configuration list for PBXNativeTarget "HackcancerTests" */;
 			buildPhases = (
-				1A21741C1AC9E74A00C4471D /* Sources */,
-				1A21741D1AC9E74A00C4471D /* Frameworks */,
-				1A21741E1AC9E74A00C4471D /* Resources */,
+				745D609C1B15209D00558337 /* Sources */,
+				745D609D1B15209D00558337 /* Frameworks */,
+				745D609E1B15209D00558337 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1A2174221AC9E74A00C4471D /* PBXTargetDependency */,
+				745D60A21B15209D00558337 /* PBXTargetDependency */,
 			);
 			name = HackcancerTests;
 			productName = HackcancerTests;
-			productReference = 1A2174201AC9E74A00C4471D /* HackcancerTests.xctest */;
+			productReference = 745D60A01B15209D00558337 /* HackcancerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1A2174031AC9E74A00C4471D /* Project object */ = {
+		745D60831B15209D00558337 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
-				ORGANIZATIONNAME = HC;
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Hackcancer;
 				TargetAttributes = {
-					1A21740A1AC9E74A00C4471D = {
-						CreatedOnToolsVersion = 6.2;
+					745D608A1B15209D00558337 = {
+						CreatedOnToolsVersion = 6.3.1;
 					};
-					1A21741F1AC9E74A00C4471D = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 1A21740A1AC9E74A00C4471D;
+					745D609F1B15209D00558337 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 745D608A1B15209D00558337;
 					};
 				};
 			};
-			buildConfigurationList = 1A2174061AC9E74A00C4471D /* Build configuration list for PBXProject "Hackcancer" */;
+			buildConfigurationList = 745D60861B15209D00558337 /* Build configuration list for PBXProject "Hackcancer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -353,28 +224,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 1A2174021AC9E74A00C4471D;
-			productRefGroup = 1A21740C1AC9E74A00C4471D /* Products */;
+			mainGroup = 745D60821B15209D00558337;
+			productRefGroup = 745D608C1B15209D00558337 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A21740A1AC9E74A00C4471D /* Hackcancer */,
-				1A21741F1AC9E74A00C4471D /* HackcancerTests */,
+				745D608A1B15209D00558337 /* Hackcancer */,
+				745D609F1B15209D00558337 /* HackcancerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1A2174091AC9E74A00C4471D /* Resources */ = {
+		745D60891B15209D00558337 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A21741B1AC9E74A00C4471D /* LaunchScreen.xib in Resources */,
-				1A2174181AC9E74A00C4471D /* Images.xcassets in Resources */,
+				745D60961B15209D00558337 /* Main.storyboard in Resources */,
+				745D60B51B166F4E00558337 /* Localizable.strings in Resources */,
+				745D609B1B15209D00558337 /* LaunchScreen.xib in Resources */,
+				745D60981B15209D00558337 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A21741E1AC9E74A00C4471D /* Resources */ = {
+		745D609E1B15209D00558337 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -384,89 +257,80 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23315F44B18AC88A626F0360 /* Copy Carthage Frameworks */ = {
+		2664B882F944BE357651DAA6 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/LlamaKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Cent.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Dollar.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Typhoon.framework",
 			);
-			name = "Copy Carthage Frameworks";
+			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE02B4BDE15CFD276EBADB45 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A2174071AC9E74A00C4471D /* Sources */ = {
+		745D60871B15209D00558337 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A60074C1AF187E100DF6FA2 /* HCURLSessionTask.swift in Sources */,
-				1A60072F1AF176D300DF6FA2 /* ScheduleItemViewController.swift in Sources */,
-				1A6007251AF176D300DF6FA2 /* FAQTableViewAdapter.swift in Sources */,
-				1A0D00601AF2D3FB0000524F /* Store.swift in Sources */,
-				1A6007481AF1848200DF6FA2 /* StoreSource.swift in Sources */,
-				1AA1BACC1AF59FE000158E51 /* HCParser.swift in Sources */,
-				1A60072E1AF176D300DF6FA2 /* RootViewController.swift in Sources */,
-				1A6007471AF1848200DF6FA2 /* NetworkStoreSource.swift in Sources */,
-				1A60075E1AF2CA6C00DF6FA2 /* StoreItem.swift in Sources */,
-				1AA1BACA1AF59FA300158E51 /* HCURLSessionResponseDeserializer.swift in Sources */,
-				1A6007361AF176E700DF6FA2 /* ConciergeStore.swift in Sources */,
-				1A60072A1AF176D300DF6FA2 /* FAQItemViewController.swift in Sources */,
-				1A6007291AF176D300DF6FA2 /* ConciergeViewController.swift in Sources */,
-				1A6007281AF176D300DF6FA2 /* AboutViewController.swift in Sources */,
-				1A6007381AF176E700DF6FA2 /* NewsStore.swift in Sources */,
-				1A6007271AF176D300DF6FA2 /* ScheduleTableViewAdapter.swift in Sources */,
-				1AA1BAC41AF58AB200158E51 /* ApplicationAssembly.swift in Sources */,
-				1AA1BAC81AF59E2300158E51 /* HCURLSessionRequestSerializer.swift in Sources */,
-				1A6007391AF176E700DF6FA2 /* ScheduleStore.swift in Sources */,
-				1A6007261AF176D300DF6FA2 /* NewsTableViewAdapter.swift in Sources */,
-				1A6007241AF176D300DF6FA2 /* ConciergeTableViewAdapter.swift in Sources */,
-				1A6007461AF1848200DF6FA2 /* MemoryStoreSource.swift in Sources */,
-				1A6007371AF176E700DF6FA2 /* FAQStore.swift in Sources */,
-				1A6007301AF176D300DF6FA2 /* ScheduleViewController.swift in Sources */,
-				1AD3C2771ACDF60300142A68 /* AppDelegate.swift in Sources */,
-				1A60072B1AF176D300DF6FA2 /* FAQViewController.swift in Sources */,
-				1AA1BAC61AF59C9500158E51 /* HCURLRequest.swift in Sources */,
-				1A60074A1AF1855400DF6FA2 /* HCURLSession.swift in Sources */,
-				1A60072C1AF176D300DF6FA2 /* NewsItemViewController.swift in Sources */,
-				1A60072D1AF176D300DF6FA2 /* NewsViewController.swift in Sources */,
+				745D60B21B166D0C00558337 /* NewsViewController.swift in Sources */,
+				745D60931B15209D00558337 /* RootViewController.swift in Sources */,
+				745D60911B15209D00558337 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A21741C1AC9E74A00C4471D /* Sources */ = {
+		745D609C1B15209D00558337 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A2174271AC9E74A00C4471D /* HackcancerTests.swift in Sources */,
+				745D60A71B15209D00558337 /* HackcancerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1A2174221AC9E74A00C4471D /* PBXTargetDependency */ = {
+		745D60A21B15209D00558337 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1A21740A1AC9E74A00C4471D /* Hackcancer */;
-			targetProxy = 1A2174211AC9E74A00C4471D /* PBXContainerItemProxy */;
+			target = 745D608A1B15209D00558337 /* Hackcancer */;
+			targetProxy = 745D60A11B15209D00558337 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1A2174191AC9E74A00C4471D /* LaunchScreen.xib */ = {
+		745D60941B15209D00558337 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1A21741A1AC9E74A00C4471D /* Base */,
+				745D60951B15209D00558337 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		745D60991B15209D00558337 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				745D609A1B15209D00558337 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -474,7 +338,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1A2174281AC9E74A00C4471D /* Debug */ = {
+		745D60A81B15209D00558337 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -493,9 +357,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -508,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -517,7 +383,7 @@
 			};
 			name = Debug;
 		};
-		1A2174291AC9E74A00C4471D /* Release */ = {
+		745D60A91B15209D00558337 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -536,16 +402,18 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -553,37 +421,29 @@
 			};
 			name = Release;
 		};
-		1A21742B1AC9E74A00C4471D /* Debug */ = {
+		745D60AB1B15209D00558337 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Hackcancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
-		1A21742C1AC9E74A00C4471D /* Release */ = {
+		745D60AC1B15209D00558337 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE420A2D4F7B4784BE1C9E8 /* Pods-Hackcancer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Hackcancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
-		1A21742E1AC9E74A00C4471D /* Debug */ = {
+		745D60AE1B15209D00558337 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -602,7 +462,7 @@
 			};
 			name = Debug;
 		};
-		1A21742F1AC9E74A00C4471D /* Release */ = {
+		745D60AF1B15209D00558337 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -620,34 +480,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A2174061AC9E74A00C4471D /* Build configuration list for PBXProject "Hackcancer" */ = {
+		745D60861B15209D00558337 /* Build configuration list for PBXProject "Hackcancer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A2174281AC9E74A00C4471D /* Debug */,
-				1A2174291AC9E74A00C4471D /* Release */,
+				745D60A81B15209D00558337 /* Debug */,
+				745D60A91B15209D00558337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A21742A1AC9E74A00C4471D /* Build configuration list for PBXNativeTarget "Hackcancer" */ = {
+		745D60AA1B15209D00558337 /* Build configuration list for PBXNativeTarget "Hackcancer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A21742B1AC9E74A00C4471D /* Debug */,
-				1A21742C1AC9E74A00C4471D /* Release */,
+				745D60AB1B15209D00558337 /* Debug */,
+				745D60AC1B15209D00558337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A21742D1AC9E74A00C4471D /* Build configuration list for PBXNativeTarget "HackcancerTests" */ = {
+		745D60AD1B15209D00558337 /* Build configuration list for PBXNativeTarget "HackcancerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A21742E1AC9E74A00C4471D /* Debug */,
-				1A21742F1AC9E74A00C4471D /* Release */,
+				745D60AE1B15209D00558337 /* Debug */,
+				745D60AF1B15209D00558337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1A2174031AC9E74A00C4471D /* Project object */;
+	rootObject = 745D60831B15209D00558337 /* Project object */;
 }

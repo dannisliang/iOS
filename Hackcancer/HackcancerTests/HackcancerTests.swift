@@ -2,8 +2,8 @@
 //  HackcancerTests.swift
 //  HackcancerTests
 //
-//  Created by James Campbell on 30/03/2015.
-//  Copyright (c) 2015 HC. All rights reserved.
+//  Created by James Campbell on 26/05/2015.
+//  Copyright (c) 2015 Hackcancer. All rights reserved.
 //
 
 import UIKit
