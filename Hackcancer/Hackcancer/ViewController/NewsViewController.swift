@@ -10,6 +10,11 @@ import UIKit
 
 class NewsViewController: UIViewController
 {
+    lazy var store: NewsItemStore =
+    {
+       return NewsItemStore()
+    }()
+    
     lazy var tableView: UITableView =
     {
        return UITableView(frame: self.view.bounds)
@@ -22,6 +27,8 @@ class NewsViewController: UIViewController
         title = NSLocalizedString("news_nav", comment:"Title for NewsViewController")
         
         view.addSubview(tableView)
+        
+        store.fetchAllItems()
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)

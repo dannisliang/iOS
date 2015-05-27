@@ -15,6 +15,9 @@
 		745D60A71B15209D00558337 /* HackcancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60A61B15209D00558337 /* HackcancerTests.swift */; };
 		745D60B21B166D0C00558337 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60B11B166D0C00558337 /* NewsViewController.swift */; };
 		745D60B51B166F4E00558337 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 745D60B41B166F4E00558337 /* Localizable.strings */; };
+		745D60BA1B16707100558337 /* NewsItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60B91B16707100558337 /* NewsItemStore.swift */; };
+		745D60BC1B16707C00558337 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60BB1B16707C00558337 /* NewsItem.swift */; };
+		745D60BE1B16709A00558337 /* NewsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60BD1B16709A00558337 /* NewsTableViewAdapter.swift */; };
 		8F39E9DCD6716F5894E80AA0 /* libPods-Hackcancer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09620C2B2C31E4F535FF835A /* libPods-Hackcancer.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,10 @@
 		745D60A61B15209D00558337 /* HackcancerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackcancerTests.swift; sourceTree = "<group>"; };
 		745D60B11B166D0C00558337 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		745D60B41B166F4E00558337 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		745D60B91B16707100558337 /* NewsItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemStore.swift; sourceTree = "<group>"; };
+		745D60BB1B16707C00558337 /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		745D60BD1B16709A00558337 /* NewsTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewAdapter.swift; sourceTree = "<group>"; };
+		745D60BF1B16741400558337 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.debug.xcconfig"; sourceTree = "<group>"; };
 		EEE420A2D4F7B4784BE1C9E8 /* Pods-Hackcancer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +95,9 @@
 		745D608D1B15209D00558337 /* Hackcancer */ = {
 			isa = PBXGroup;
 			children = (
+				745D60B71B16704300558337 /* Models */,
+				745D60B81B16704300558337 /* Stores */,
+				745D60B61B16703500558337 /* Adapters */,
 				745D60B01B166CFB00558337 /* ViewController */,
 				745D60901B15209D00558337 /* AppDelegate.swift */,
 				745D60921B15209D00558337 /* RootViewController.swift */,
@@ -104,6 +114,7 @@
 			children = (
 				745D60B31B166F4E00558337 /* Resources */,
 				745D608F1B15209D00558337 /* Info.plist */,
+				745D60BF1B16741400558337 /* Bridge.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -139,6 +150,30 @@
 				745D60B41B166F4E00558337 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		745D60B61B16703500558337 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				745D60BD1B16709A00558337 /* NewsTableViewAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		745D60B71B16704300558337 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				745D60BB1B16707C00558337 /* NewsItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		745D60B81B16704300558337 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				745D60B91B16707100558337 /* NewsItemStore.swift */,
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 		7FDE03CFBAC6030F61D00834 /* Pods */ = {
@@ -294,9 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				745D60BE1B16709A00558337 /* NewsTableViewAdapter.swift in Sources */,
 				745D60B21B166D0C00558337 /* NewsViewController.swift in Sources */,
+				745D60BC1B16707C00558337 /* NewsItem.swift in Sources */,
 				745D60931B15209D00558337 /* RootViewController.swift in Sources */,
 				745D60911B15209D00558337 /* AppDelegate.swift in Sources */,
+				745D60BA1B16707100558337 /* NewsItemStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,9 +464,15 @@
 			baseConfigurationReference = 8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"API_ENDPOINT=@\\\"http://localhost:3000\\\"",
+				);
 				INFOPLIST_FILE = Hackcancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Bridge.h";
 			};
 			name = Debug;
 		};
@@ -437,9 +481,15 @@
 			baseConfigurationReference = EEE420A2D4F7B4784BE1C9E8 /* Pods-Hackcancer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"API_ENDPOINT=@\\\"http://localhost:3000\\\"",
+				);
 				INFOPLIST_FILE = Hackcancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Bridge.h";
 			};
 			name = Release;
 		};
