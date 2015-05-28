@@ -10,5 +10,12 @@ import Foundation
 
 class NewsItem: MTLModel
 {
+    private(set) var title: String?
     
+    class func JSONKeyPathsByPropertyKey() -> Dictionary<NSObject, AnyObject>!
+    {
+        return [
+            "title": "title"
+        ]
+    }
 }

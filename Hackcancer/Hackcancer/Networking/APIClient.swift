@@ -13,9 +13,6 @@ class APIClient: OVCHTTPSessionManager
         let baseURL = NSURL(string: API_ENDPOINT)
         
         super.init(baseURL: baseURL, sessionConfiguration: NSURLSessionConfiguration.defaultSessionConfiguration())
-        
-        self.requestSerializer = AFJSONRequestSerializer()
-        self.responseSerializer = AFJSONResponseSerializer()
     }
 
     required init(coder aDecoder: NSCoder)
@@ -26,14 +23,11 @@ class APIClient: OVCHTTPSessionManager
     override init!(baseURL url: NSURL!, managedObjectContext context: NSManagedObjectContext!, sessionConfiguration configuration: NSURLSessionConfiguration!)
     {
         super.init(baseURL: url, managedObjectContext: context, sessionConfiguration: configuration);
-        
-        APIClient.modelClassesByResourcePath()
     }
     
     override class func modelClassesByResourcePath() -> Dictionary<NSObject, AnyObject>!
     {
         return [
-            "news_items/": NewsFeed.classForCoder(),
             "news_items/*": NewsItem.classForCoder()
         ]
     }

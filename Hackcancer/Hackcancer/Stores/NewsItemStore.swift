@@ -14,7 +14,7 @@ class NewsItemStore: NSObject
     
     func fetchAllItems()
     {
-        let getSignal = session.rac_GET("new_items", parameters:nil)
+        let getSignal = session.rac_GET("news_items", parameters:nil)
         
         getSignal.subscribeNext
         {
