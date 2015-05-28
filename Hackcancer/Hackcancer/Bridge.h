@@ -6,4 +6,5 @@
 //  Copyright (c) 2015 Hackcancer. All rights reserved.
 //
 
-#import <Overcoat/Overcoat.hg
+#import <Overcoat/Overcoat.h>
+#import <Overcoat/ReactiveCocoa+Overcoat.h>

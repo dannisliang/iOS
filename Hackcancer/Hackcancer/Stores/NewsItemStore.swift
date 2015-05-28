@@ -10,10 +10,22 @@ import Foundation
 
 class NewsItemStore: NSObject
 {
-    var apiClient = OVCHTTPSessionManager()
+    var session = APIClient()
     
     func fetchAllItems()
     {
+        let getSignal = session.rac_GET("new_items", parameters:nil)
         
+        getSignal.subscribeNext
+        {
+            response in
+            NSLog("Result: \(response.result)")
+        }
+        
+        getSignal.subscribeError
+        {
+                error in
+                NSLog("Result: \(error)")
+        }
     }
 }
