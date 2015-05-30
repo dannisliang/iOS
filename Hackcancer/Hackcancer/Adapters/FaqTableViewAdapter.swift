@@ -1,28 +1,28 @@
 //
-//  NewsTableViewAdapter.swift
+//  FaqTableViewAdapter.swift
 //  Hackcancer
 //
-//  Created by James Campbell on 27/05/2015.
+//  Created by James Campbell on 30/05/2015.
 //  Copyright (c) 2015 Hackcancer. All rights reserved.
 //
 
 import Foundation
 
-protocol NewsTableViewAdapterDelegate
+protocol FaqTableViewAdapterDelegate
 {
-    func adapter(adapter: NewsTableViewAdapter, didSelectItem item: NewsItem)
+    func adapter(adapter: FaqTableViewAdapter, didSelectItem item: FaqItem)
 }
 
-class NewsTableViewAdapter: NSObject
+class FaqTableViewAdapter: NSObject
 {
-    var delegate: NewsTableViewAdapterDelegate?
+    var delegate: FaqTableViewAdapterDelegate?
     
     private(set) var tableView: UITableView?
-    private(set) var items: Array<NewsItem>?
+    private(set) var items: Array<FaqItem>?
     
-    lazy var store: NewsItemStore =
+    lazy var store: FaqItemStore =
     {
-        return NewsItemStore()
+        return FaqItemStore()
     }()
     
     init(tableView: UITableView)
@@ -31,23 +31,23 @@ class NewsTableViewAdapter: NSObject
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.registerClass(NewsItemTableViewCell.self, forCellReuseIdentifier: NewsItemTableViewCell.identifier())
+        tableView.registerClass(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier())
         
         self.tableView = tableView
         
         let getSignal = store.fetchAllItems()
-
+        
         getSignal.subscribeNext
         {
             response in
-            
-            self.items = response.result as! Array<NewsItem>?
+                
+            self.items = response.result as! Array<FaqItem>?
             self.tableView?.reloadData()
         }
     }
 }
 
-extension NewsTableViewAdapter: UITableViewDataSource
+extension FaqTableViewAdapter: UITableViewDataSource
 {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
@@ -61,16 +61,16 @@ extension NewsTableViewAdapter: UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell: NewsItemTableViewCell = tableView.dequeueReusableCellWithIdentifier(NewsItemTableViewCell.identifier(), forIndexPath: indexPath) as! NewsItemTableViewCell
+        let cell: TableViewCell = tableView.dequeueReusableCellWithIdentifier(TableViewCell.identifier(), forIndexPath: indexPath) as! TableViewCell
         
         let item = items?[indexPath.row]
-        cell.newsItem = item
+        cell.textLabel?.text = item?.question
         
         return cell;
     }
 }
 
-extension NewsTableViewAdapter: UITableViewDelegate
+extension FaqTableViewAdapter: UITableViewDelegate
 {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
@@ -78,10 +78,5 @@ extension NewsTableViewAdapter: UITableViewDelegate
         
         delegate?.adapter(self, didSelectItem: item)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
-    {
-        return 200
     }
 }

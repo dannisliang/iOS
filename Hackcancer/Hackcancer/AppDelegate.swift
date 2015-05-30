@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let frame = UIScreen.mainScreen().bounds
         return UIWindow(frame:frame)
     }()
+    
+    lazy var navigationViewController: UINavigationController =
+    {
+        return UINavigationController()
+    }()
 
     lazy var rootViewController: RootViewController =
     {
@@ -24,7 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
-        window?.rootViewController = rootViewController
+        navigationViewController.pushViewController(rootViewController, animated: false)
+        window?.rootViewController = navigationViewController
         window?.makeKeyAndVisible()
         
         return true

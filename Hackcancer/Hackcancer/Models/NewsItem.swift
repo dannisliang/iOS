@@ -8,14 +8,16 @@
 
 import Foundation
 
-class NewsItem: MTLModel
+class NewsItem: MTLModel, MTLJSONSerializing
 {
     private(set) var title: String?
+    private(set) var content: String?
     
     class func JSONKeyPathsByPropertyKey() -> Dictionary<NSObject, AnyObject>!
     {
         return [
-            "title": "title"
+            "title": "title",
+            "content": "content"
         ]
     }
 }

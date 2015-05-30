@@ -28,7 +28,8 @@ class APIClient: OVCHTTPSessionManager
     override class func modelClassesByResourcePath() -> Dictionary<NSObject, AnyObject>!
     {
         return [
-            "news_items/*": NewsItem.classForCoder()
+            "news_items": NewsItem.self,
+            "faq_items": FaqItem.self
         ]
     }
 }

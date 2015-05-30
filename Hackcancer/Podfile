@@ -2,12 +2,11 @@
 # platform :ios, '6.0'
 
 target 'Hackcancer' do
-
+    
 pod 'Overcoat/ReactiveCocoa'
+pod 'PureLayout'
 
 end
 
 target 'HackcancerTests' do
-
-end
 

@@ -32,6 +32,7 @@ PODS:
     - Overcoat/Core
     - Overcoat/NSURLSession
     - ReactiveCocoa (~> 2.4)
+  - PureLayout (2.0.6)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -42,11 +43,13 @@ PODS:
 
 DEPENDENCIES:
   - Overcoat/ReactiveCocoa
+  - PureLayout
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3
   Overcoat: a8d02b26f11e72ca10b4d8d786f6df83b3277b28
+  PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
 COCOAPODS: 0.37.1

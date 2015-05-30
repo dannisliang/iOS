@@ -1,34 +1,31 @@
 //
-//  NewsViewController.swift
+//  AboutViewController.swift
 //  Hackcancer
 //
-//  Created by James Campbell on 27/05/2015.
+//  Created by James Campbell on 30/05/2015.
 //  Copyright (c) 2015 Hackcancer. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import MapKit
 
-class NewsViewController: UIViewController
+class AboutViewController: UIViewController
 {
-    lazy var store: NewsItemStore =
+    lazy var contentTextView: UITextView =
     {
-       return NewsItemStore()
+       return UITextView()
     }()
     
-    lazy var tableView: UITableView =
+    lazy var mapView: MKMapView =
     {
-       return UITableView(frame: self.view.bounds)
+       return MKMapView()
     }()
     
     init()
     {
         super.init(nibName: nil, bundle: nil)
         
-        title = NSLocalizedString("news_nav", comment:"Title for NewsViewController")
-        
-        view.addSubview(tableView)
-        
-        store.fetchAllItems()
+        title = NSLocalizedString("about_nav", comment:"Title for AboutViewController")
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
@@ -39,5 +36,8 @@ class NewsViewController: UIViewController
     required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
+    }
+    
+    override func updateView
     }
 }

@@ -16,7 +16,9 @@ class RootViewController: UITabBarController
         
         viewControllers =
         [
-            NewsViewController()
+            NewsViewController(),
+            AboutViewController(),
+            FaqViewController()
         ]
     }
     
