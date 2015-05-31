@@ -24,10 +24,10 @@ class NewsItemViewController: UIViewController
         
         navigationItem.title = item.title
 
-        contentTextView.text = self.item?.content
+        contentTextView.text = item.content
         view.addSubview(contentTextView)
         
-         self.item = item
+        self.item = item
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)

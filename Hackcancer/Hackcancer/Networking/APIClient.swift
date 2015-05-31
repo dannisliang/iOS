@@ -29,6 +29,8 @@ class APIClient: OVCHTTPSessionManager
     {
         return [
             "news_items": NewsItem.self,
+            "concierge_items": ConciergeItem.self,
+            "schedule_items": ScheduleItem.self,
             "faq_items": FaqItem.self
         ]
     }

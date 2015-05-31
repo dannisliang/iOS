@@ -18,6 +18,8 @@ class RootViewController: UITabBarController
         [
             NewsViewController(),
             AboutViewController(),
+            ScheduleViewController(),
+            ConciergeViewController(),
             FaqViewController()
         ]
     }

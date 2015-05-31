@@ -64,7 +64,7 @@ extension NewsTableViewAdapter: UITableViewDataSource
         let cell: NewsItemTableViewCell = tableView.dequeueReusableCellWithIdentifier(NewsItemTableViewCell.identifier(), forIndexPath: indexPath) as! NewsItemTableViewCell
         
         let item = items?[indexPath.row]
-        cell.newsItem = item
+        cell.item = item
         
         return cell;
     }

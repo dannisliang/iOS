@@ -26,6 +26,15 @@
 		745D60DA1B1A110B00558337 /* FaqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60D91B1A110B00558337 /* FaqViewController.swift */; };
 		745D60DC1B1A113400558337 /* FaqTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60DB1B1A113400558337 /* FaqTableViewAdapter.swift */; };
 		745D60DE1B1A14BB00558337 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60DD1B1A14BB00558337 /* AboutViewController.swift */; };
+		745D60E01B1A17C400558337 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60DF1B1A17C400558337 /* ScheduleItem.swift */; };
+		745D60E21B1A185100558337 /* ScheduleItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60E11B1A185100558337 /* ScheduleItemTableViewCell.swift */; };
+		745D60E41B1A189500558337 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60E31B1A189500558337 /* ScheduleViewController.swift */; };
+		745D60E61B1A18AA00558337 /* ScheduleItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60E51B1A18AA00558337 /* ScheduleItemStore.swift */; };
+		745D60E81B1A18B900558337 /* ScheduleTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60E71B1A18B900558337 /* ScheduleTableViewAdapter.swift */; };
+		745D60EA1B1BAB1400558337 /* ConciergeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60E91B1BAB1400558337 /* ConciergeViewController.swift */; };
+		745D60EC1B1BAB4300558337 /* ConciergeItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60EB1B1BAB4300558337 /* ConciergeItemStore.swift */; };
+		745D60EE1B1BAB5100558337 /* ConciergeTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60ED1B1BAB5100558337 /* ConciergeTableViewAdapter.swift */; };
+		745D60F01B1BAB5D00558337 /* ConciergeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60EF1B1BAB5D00558337 /* ConciergeItem.swift */; };
 		8F39E9DCD6716F5894E80AA0 /* libPods-Hackcancer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09620C2B2C31E4F535FF835A /* libPods-Hackcancer.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +74,15 @@
 		745D60D91B1A110B00558337 /* FaqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaqViewController.swift; sourceTree = "<group>"; };
 		745D60DB1B1A113400558337 /* FaqTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaqTableViewAdapter.swift; sourceTree = "<group>"; };
 		745D60DD1B1A14BB00558337 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		745D60DF1B1A17C400558337 /* ScheduleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
+		745D60E11B1A185100558337 /* ScheduleItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItemTableViewCell.swift; sourceTree = "<group>"; };
+		745D60E31B1A189500558337 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		745D60E51B1A18AA00558337 /* ScheduleItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItemStore.swift; sourceTree = "<group>"; };
+		745D60E71B1A18B900558337 /* ScheduleTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewAdapter.swift; sourceTree = "<group>"; };
+		745D60E91B1BAB1400558337 /* ConciergeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeViewController.swift; sourceTree = "<group>"; };
+		745D60EB1B1BAB4300558337 /* ConciergeItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeItemStore.swift; sourceTree = "<group>"; };
+		745D60ED1B1BAB5100558337 /* ConciergeTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeTableViewAdapter.swift; sourceTree = "<group>"; };
+		745D60EF1B1BAB5D00558337 /* ConciergeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeItem.swift; sourceTree = "<group>"; };
 		8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.debug.xcconfig"; sourceTree = "<group>"; };
 		EEE420A2D4F7B4784BE1C9E8 /* Pods-Hackcancer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +184,8 @@
 			children = (
 				745D60BD1B16709A00558337 /* NewsTableViewAdapter.swift */,
 				745D60DB1B1A113400558337 /* FaqTableViewAdapter.swift */,
+				745D60E71B1A18B900558337 /* ScheduleTableViewAdapter.swift */,
+				745D60ED1B1BAB5100558337 /* ConciergeTableViewAdapter.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -175,6 +195,8 @@
 			children = (
 				745D60BB1B16707C00558337 /* NewsItem.swift */,
 				745D60D51B1A10B900558337 /* FaqItem.swift */,
+				745D60DF1B1A17C400558337 /* ScheduleItem.swift */,
+				745D60EF1B1BAB5D00558337 /* ConciergeItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +206,8 @@
 			children = (
 				745D60B91B16707100558337 /* NewsItemStore.swift */,
 				745D60D71B1A10EB00558337 /* FaqItemStore.swift */,
+				745D60E51B1A18AA00558337 /* ScheduleItemStore.swift */,
+				745D60EB1B1BAB4300558337 /* ConciergeItemStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -203,6 +227,8 @@
 				745D60CC1B17D1A700558337 /* NewsViewController.swift */,
 				745D60D91B1A110B00558337 /* FaqViewController.swift */,
 				745D60DD1B1A14BB00558337 /* AboutViewController.swift */,
+				745D60E31B1A189500558337 /* ScheduleViewController.swift */,
+				745D60E91B1BAB1400558337 /* ConciergeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -220,6 +246,7 @@
 			children = (
 				745D60D11B17D1B700558337 /* NewsItemTableViewCell.swift */,
 				745D60D31B18F67900558337 /* TableViewCell.swift */,
+				745D60E11B1A185100558337 /* ScheduleItemTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -378,18 +405,27 @@
 			files = (
 				745D60BE1B16709A00558337 /* NewsTableViewAdapter.swift in Sources */,
 				745D60DA1B1A110B00558337 /* FaqViewController.swift in Sources */,
+				745D60E81B1A18B900558337 /* ScheduleTableViewAdapter.swift in Sources */,
 				745D60D81B1A10EB00558337 /* FaqItemStore.swift in Sources */,
+				745D60F01B1BAB5D00558337 /* ConciergeItem.swift in Sources */,
+				745D60E41B1A189500558337 /* ScheduleViewController.swift in Sources */,
+				745D60EA1B1BAB1400558337 /* ConciergeViewController.swift in Sources */,
+				745D60E61B1A18AA00558337 /* ScheduleItemStore.swift in Sources */,
 				745D60DE1B1A14BB00558337 /* AboutViewController.swift in Sources */,
+				745D60EE1B1BAB5100558337 /* ConciergeTableViewAdapter.swift in Sources */,
 				745D60BC1B16707C00558337 /* NewsItem.swift in Sources */,
 				745D60931B15209D00558337 /* RootViewController.swift in Sources */,
+				745D60E21B1A185100558337 /* ScheduleItemTableViewCell.swift in Sources */,
 				745D60911B15209D00558337 /* AppDelegate.swift in Sources */,
 				745D60D21B17D1B700558337 /* NewsItemTableViewCell.swift in Sources */,
 				745D60D41B18F67900558337 /* TableViewCell.swift in Sources */,
+				745D60E01B1A17C400558337 /* ScheduleItem.swift in Sources */,
 				745D60DC1B1A113400558337 /* FaqTableViewAdapter.swift in Sources */,
 				745D60BA1B16707100558337 /* NewsItemStore.swift in Sources */,
 				745D60C21B1674E300558337 /* APIClient.swift in Sources */,
 				745D60CF1B17D1A700558337 /* NewsItemViewController.swift in Sources */,
 				745D60D01B17D1A700558337 /* NewsViewController.swift in Sources */,
+				745D60EC1B1BAB4300558337 /* ConciergeItemStore.swift in Sources */,
 				745D60D61B1A10B900558337 /* FaqItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

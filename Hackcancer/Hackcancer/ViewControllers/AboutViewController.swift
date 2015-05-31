@@ -26,6 +26,13 @@ class AboutViewController: UIViewController
         super.init(nibName: nil, bundle: nil)
         
         title = NSLocalizedString("about_nav", comment:"Title for AboutViewController")
+        
+        contentTextView.text = NSLocalizedString("about_content_text", comment:"Content for AboutViewController")
+        
+        view.backgroundColor = UIColor.whiteColor()
+        
+        view.addSubview(contentTextView)
+        view.addSubview(mapView)
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
@@ -36,8 +43,5 @@ class AboutViewController: UIViewController
     required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-    }
-    
-    override func updateView
     }
 }
