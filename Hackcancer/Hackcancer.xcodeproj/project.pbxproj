@@ -551,7 +551,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"API_ENDPOINT=@\\\"http://localhost:3000\\\"",
+					"API_ENDPOINT=@\\\"https://afternoon-woodland-5606.herokuapp.com\\\"",
 				);
 				INFOPLIST_FILE = Hackcancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -568,7 +568,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"API_ENDPOINT=@\\\"http://localhost:3000\\\"",
+					"API_ENDPOINT=@\\\"https://afternoon-woodland-5606.herokuapp.com\\\"",
 				);
 				INFOPLIST_FILE = Hackcancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
