@@ -10,15 +10,8 @@ import Foundation
 
 class FaqViewController: UIViewController
 {
-    lazy var adapter: FaqTableViewAdapter =
-    {
-        return FaqTableViewAdapter(tableView: self.tableView)
-    }()
-    
-    lazy var tableView: UITableView =
-    {
-        return UITableView(frame: self.view.bounds)
-    }()
+    var adapter: FaqTableViewAdapter?
+    @IBOutlet var tableView: UITableView?
     
     init()
     {
@@ -26,9 +19,11 @@ class FaqViewController: UIViewController
         
         title = NSLocalizedString("faq_nav", comment:"Title for FaqViewController")
         
-        adapter.delegate = self
-        
-        view.addSubview(tableView)
+        if let tableView = self.tableView
+        {
+            adapter = FaqTableViewAdapter(tableView: tableView)
+            adapter?.delegate = self
+        }
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
@@ -39,21 +34,6 @@ class FaqViewController: UIViewController
     required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-    }
-    
-    override func viewWillAppear(animated: Bool)
-    {
-        var inset: UIEdgeInsets = UIEdgeInsetsZero
-        
-        var statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-        inset.top = statusBarHeight
-        
-        if let navigationController = self.navigationController
-        {
-            inset.top += navigationController.navigationBar.frame.height
-        }
-        
-        tableView.contentInset = inset
     }
 }
 

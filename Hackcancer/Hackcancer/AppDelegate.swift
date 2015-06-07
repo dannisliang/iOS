@@ -16,24 +16,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let frame = UIScreen.mainScreen().bounds
         return UIWindow(frame:frame)
     }()
-    
-    lazy var navigationViewController: UINavigationController =
-    {
-        return UINavigationController()
-    }()
-
-    lazy var rootViewController: RootViewController =
-    {
-       return RootViewController()
-    }()
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
-    {
-        navigationViewController.pushViewController(rootViewController, animated: false)
-        window?.rootViewController = navigationViewController
-        window?.makeKeyAndVisible()
-        
-        return true
-    }
 }
 

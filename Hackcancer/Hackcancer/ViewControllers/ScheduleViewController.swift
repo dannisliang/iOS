@@ -10,25 +10,20 @@ import Foundation
 
 class ScheduleViewController: UIViewController
 {
-    lazy var adapter: ScheduleTableViewAdapter =
-    {
-        return ScheduleTableViewAdapter(tableView: self.tableView)
-    }()
-    
-    lazy var tableView: UITableView =
-    {
-        return UITableView(frame: self.view.bounds)
-    }()
-    
+    var adapter: ScheduleTableViewAdapter?
+    @IBOutlet var tableView: UITableView?
+
     init()
     {
         super.init(nibName: nil, bundle: nil)
         
         title = NSLocalizedString("schedule_nav", comment:"Title for ScheduleViewController")
         
-        adapter.delegate = self
-        
-        view.addSubview(tableView)
+        if let tableView = self.tableView
+        {
+            adapter = ScheduleTableViewAdapter(tableView: tableView)
+            adapter?.delegate = self
+        }
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
@@ -39,21 +34,6 @@ class ScheduleViewController: UIViewController
     required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-    }
-    
-    override func viewWillAppear(animated: Bool)
-    {
-        var inset: UIEdgeInsets = UIEdgeInsetsZero
-        
-        var statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-        inset.top = statusBarHeight
-        
-        if let navigationController = self.navigationController
-        {
-            inset.top += navigationController.navigationBar.frame.height
-        }
-        
-        tableView.contentInset = inset
     }
 }
 

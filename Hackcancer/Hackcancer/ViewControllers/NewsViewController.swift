@@ -10,25 +10,18 @@ import UIKit
 
 class NewsViewController: UIViewController
 {
-    lazy var adapter: NewsTableViewAdapter =
-    {
-        return NewsTableViewAdapter(tableView: self.tableView)
-    }()
+    var adapter: NewsTableViewAdapter?
+    @IBOutlet var tableView: UITableView?
     
-    lazy var tableView: UITableView =
+    override func awakeFromNib()
     {
-       return UITableView(frame: self.view.bounds)
-    }()
-    
-    init()
-    {
-        super.init(nibName: nil, bundle: nil)
-        
         title = NSLocalizedString("news_nav", comment:"Title for NewsViewController")
-    
-        adapter.delegate = self
         
-        view.addSubview(tableView)
+        if let tableView = self.tableView
+        {
+            adapter = NewsTableViewAdapter(tableView: tableView)
+            adapter?.delegate = self
+        }
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)

@@ -10,15 +10,13 @@ import Foundation
 
 class ConciergeViewController: UIViewController
 {
-    lazy var adapter: ConciergeTableViewAdapter =
-    {
-        return ConciergeTableViewAdapter(tableView: self.tableView)
-    }()
+    var adapter: ConciergeTableViewAdapter?
+    @IBOutlet var tableView: UITableView?
     
     lazy var orderButton: UIButton =
     {
         var frame = CGRectZero
-        frame.size.width = self.tableView.bounds.width
+        frame.size.width = self.tableView?.bounds.width ?? 0
         frame.size.height = 75
         
         let orderButton = UIButton(frame: frame)
@@ -32,23 +30,20 @@ class ConciergeViewController: UIViewController
         return orderButton
     }()
     
-    lazy var tableView: UITableView =
-    {
-        return UITableView(frame: self.view.bounds)
-    }()
-    
     init()
     {
         super.init(nibName: nil, bundle: nil)
         
         title = NSLocalizedString("concierge_nav", comment:"Title for ConciergeViewController")
         
-        tableView.allowsMultipleSelection = true
-        tableView.tableFooterView = orderButton
+        tableView?.allowsMultipleSelection = true
+        tableView?.tableFooterView = orderButton
         
-        adapter.delegate = self
-        
-        view.addSubview(tableView)
+        if let tableView = self.tableView
+        {
+            adapter = ConciergeTableViewAdapter(tableView: tableView)
+            adapter?.delegate = self
+        }
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
@@ -59,21 +54,6 @@ class ConciergeViewController: UIViewController
     required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-    }
-    
-    override func viewWillAppear(animated: Bool)
-    {
-        var inset: UIEdgeInsets = UIEdgeInsetsZero
-        
-        var statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-        inset.top = statusBarHeight
-        
-        if let navigationController = self.navigationController
-        {
-            inset.top += navigationController.navigationBar.frame.height
-        }
-        
-        tableView.contentInset = inset
     }
     
     func didOrder(sender: AnyObject?)

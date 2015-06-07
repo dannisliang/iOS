@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		745D60911B15209D00558337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60901B15209D00558337 /* AppDelegate.swift */; };
-		745D60931B15209D00558337 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60921B15209D00558337 /* RootViewController.swift */; };
 		745D60981B15209D00558337 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745D60971B15209D00558337 /* Images.xcassets */; };
 		745D609B1B15209D00558337 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745D60991B15209D00558337 /* LaunchScreen.xib */; };
 		745D60A71B15209D00558337 /* HackcancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60A61B15209D00558337 /* HackcancerTests.swift */; };
@@ -25,7 +24,6 @@
 		745D60D81B1A10EB00558337 /* FaqItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60D71B1A10EB00558337 /* FaqItemStore.swift */; };
 		745D60DA1B1A110B00558337 /* FaqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60D91B1A110B00558337 /* FaqViewController.swift */; };
 		745D60DC1B1A113400558337 /* FaqTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60DB1B1A113400558337 /* FaqTableViewAdapter.swift */; };
-		745D60DE1B1A14BB00558337 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60DD1B1A14BB00558337 /* AboutViewController.swift */; };
 		745D60E01B1A17C400558337 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60DF1B1A17C400558337 /* ScheduleItem.swift */; };
 		745D60E21B1A185100558337 /* ScheduleItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60E11B1A185100558337 /* ScheduleItemTableViewCell.swift */; };
 		745D60E41B1A189500558337 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60E31B1A189500558337 /* ScheduleViewController.swift */; };
@@ -35,6 +33,7 @@
 		745D60EC1B1BAB4300558337 /* ConciergeItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60EB1B1BAB4300558337 /* ConciergeItemStore.swift */; };
 		745D60EE1B1BAB5100558337 /* ConciergeTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60ED1B1BAB5100558337 /* ConciergeTableViewAdapter.swift */; };
 		745D60F01B1BAB5D00558337 /* ConciergeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60EF1B1BAB5D00558337 /* ConciergeItem.swift */; };
+		748B21891B24882B002D2E15 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748B21871B24882B002D2E15 /* MainInterface.storyboard */; };
 		8F39E9DCD6716F5894E80AA0 /* libPods-Hackcancer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09620C2B2C31E4F535FF835A /* libPods-Hackcancer.a */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		745D608B1B15209D00558337 /* Hackcancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackcancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		745D608F1B15209D00558337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		745D60901B15209D00558337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		745D60921B15209D00558337 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		745D60971B15209D00558337 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		745D609A1B15209D00558337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		745D60A01B15209D00558337 /* HackcancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackcancerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +71,6 @@
 		745D60D71B1A10EB00558337 /* FaqItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaqItemStore.swift; sourceTree = "<group>"; };
 		745D60D91B1A110B00558337 /* FaqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaqViewController.swift; sourceTree = "<group>"; };
 		745D60DB1B1A113400558337 /* FaqTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaqTableViewAdapter.swift; sourceTree = "<group>"; };
-		745D60DD1B1A14BB00558337 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		745D60DF1B1A17C400558337 /* ScheduleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
 		745D60E11B1A185100558337 /* ScheduleItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItemTableViewCell.swift; sourceTree = "<group>"; };
 		745D60E31B1A189500558337 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +80,7 @@
 		745D60EB1B1BAB4300558337 /* ConciergeItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeItemStore.swift; sourceTree = "<group>"; };
 		745D60ED1B1BAB5100558337 /* ConciergeTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeTableViewAdapter.swift; sourceTree = "<group>"; };
 		745D60EF1B1BAB5D00558337 /* ConciergeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeItem.swift; sourceTree = "<group>"; };
+		748B21881B24882B002D2E15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.debug.xcconfig"; sourceTree = "<group>"; };
 		EEE420A2D4F7B4784BE1C9E8 /* Pods-Hackcancer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,10 +134,10 @@
 				745D60B81B16704300558337 /* Stores */,
 				745D60B61B16703500558337 /* Adapters */,
 				745D60901B15209D00558337 /* AppDelegate.swift */,
-				745D60921B15209D00558337 /* RootViewController.swift */,
 				745D60971B15209D00558337 /* Images.xcassets */,
 				745D60991B15209D00558337 /* LaunchScreen.xib */,
 				745D608E1B15209D00558337 /* Supporting Files */,
+				748B21871B24882B002D2E15 /* MainInterface.storyboard */,
 			);
 			path = Hackcancer;
 			sourceTree = "<group>";
@@ -226,7 +224,6 @@
 				745D60CB1B17D1A700558337 /* NewsItemViewController.swift */,
 				745D60CC1B17D1A700558337 /* NewsViewController.swift */,
 				745D60D91B1A110B00558337 /* FaqViewController.swift */,
-				745D60DD1B1A14BB00558337 /* AboutViewController.swift */,
 				745D60E31B1A189500558337 /* ScheduleViewController.swift */,
 				745D60E91B1BAB1400558337 /* ConciergeViewController.swift */,
 			);
@@ -351,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				745D60B51B166F4E00558337 /* Localizable.strings in Resources */,
+				748B21891B24882B002D2E15 /* MainInterface.storyboard in Resources */,
 				745D609B1B15209D00558337 /* LaunchScreen.xib in Resources */,
 				745D60981B15209D00558337 /* Images.xcassets in Resources */,
 			);
@@ -411,10 +409,8 @@
 				745D60E41B1A189500558337 /* ScheduleViewController.swift in Sources */,
 				745D60EA1B1BAB1400558337 /* ConciergeViewController.swift in Sources */,
 				745D60E61B1A18AA00558337 /* ScheduleItemStore.swift in Sources */,
-				745D60DE1B1A14BB00558337 /* AboutViewController.swift in Sources */,
 				745D60EE1B1BAB5100558337 /* ConciergeTableViewAdapter.swift in Sources */,
 				745D60BC1B16707C00558337 /* NewsItem.swift in Sources */,
-				745D60931B15209D00558337 /* RootViewController.swift in Sources */,
 				745D60E21B1A185100558337 /* ScheduleItemTableViewCell.swift in Sources */,
 				745D60911B15209D00558337 /* AppDelegate.swift in Sources */,
 				745D60D21B17D1B700558337 /* NewsItemTableViewCell.swift in Sources */,
@@ -455,6 +451,14 @@
 				745D609A1B15209D00558337 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		748B21871B24882B002D2E15 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				748B21881B24882B002D2E15 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
