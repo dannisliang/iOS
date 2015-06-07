@@ -12,6 +12,7 @@ class NewsItem: MTLModel, MTLJSONSerializing
 {
     private(set) var title: String?
     private(set) var content: String?
+    private(set) var imageURL: NSURL? = NSURL(string: "http://loremflickr.com/320/240")
     
     class func JSONKeyPathsByPropertyKey() -> Dictionary<NSObject, AnyObject>!
     {
