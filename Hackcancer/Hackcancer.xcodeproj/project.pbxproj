@@ -34,6 +34,7 @@
 		745D60EE1B1BAB5100558337 /* ConciergeTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60ED1B1BAB5100558337 /* ConciergeTableViewAdapter.swift */; };
 		745D60F01B1BAB5D00558337 /* ConciergeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D60EF1B1BAB5D00558337 /* ConciergeItem.swift */; };
 		748B21891B24882B002D2E15 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748B21871B24882B002D2E15 /* MainInterface.storyboard */; };
+		74BE05051B26346C00C58272 /* NewsItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74BE05041B26346C00C58272 /* NewsItemTableViewCell.xib */; };
 		8F39E9DCD6716F5894E80AA0 /* libPods-Hackcancer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09620C2B2C31E4F535FF835A /* libPods-Hackcancer.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		745D60ED1B1BAB5100558337 /* ConciergeTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeTableViewAdapter.swift; sourceTree = "<group>"; };
 		745D60EF1B1BAB5D00558337 /* ConciergeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeItem.swift; sourceTree = "<group>"; };
 		748B21881B24882B002D2E15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		74BE05041B26346C00C58272 /* NewsItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsItemTableViewCell.xib; sourceTree = "<group>"; };
 		8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.debug.xcconfig"; sourceTree = "<group>"; };
 		EEE420A2D4F7B4784BE1C9E8 /* Pods-Hackcancer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				745D60B41B166F4E00558337 /* Localizable.strings */,
+				74BE05041B26346C00C58272 /* NewsItemTableViewCell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				748B21891B24882B002D2E15 /* MainInterface.storyboard in Resources */,
 				745D609B1B15209D00558337 /* LaunchScreen.xib in Resources */,
 				745D60981B15209D00558337 /* Images.xcassets in Resources */,
+				74BE05051B26346C00C58272 /* NewsItemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

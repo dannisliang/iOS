@@ -31,7 +31,9 @@ class NewsTableViewAdapter: NSObject
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.registerClass(NewsItemTableViewCell.self, forCellReuseIdentifier: NewsItemTableViewCell.identifier())
+        
+        let newsTableViewCellNib = UINib(nibName: "NewsItemTableViewCell", bundle: nil);
+        tableView.registerNib(newsTableViewCellNib, forCellReuseIdentifier: NewsItemTableViewCell.identifier())
         
         self.tableView = tableView
         

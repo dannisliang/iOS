@@ -13,17 +13,6 @@ class NewsViewController: UIViewController
     var adapter: NewsTableViewAdapter?
     @IBOutlet var tableView: UITableView?
     
-    override func awakeFromNib()
-    {
-        title = NSLocalizedString("news_nav", comment:"Title for NewsViewController")
-        
-        if let tableView = self.tableView
-        {
-            adapter = NewsTableViewAdapter(tableView: tableView)
-            adapter?.delegate = self
-        }
-    }
-    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
     {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -32,6 +21,19 @@ class NewsViewController: UIViewController
     required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
+        
+        title = NSLocalizedString("news_nav", comment:"Title for NewsViewController")
+        
+        
+    }
+    
+    override func viewDidLoad()
+    {
+        if let tableView = self.tableView
+        {
+            adapter = NewsTableViewAdapter(tableView: tableView)
+            adapter?.delegate = self
+        }
     }
 }
 
