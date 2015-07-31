@@ -21,7 +21,7 @@
 
 + (NSString *)parseClassName
 {
-    return @"FAQItem";
+    return @"FAQQuestion";
 }
 
 @end

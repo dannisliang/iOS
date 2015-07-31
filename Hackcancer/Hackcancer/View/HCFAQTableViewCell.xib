@@ -40,7 +40,7 @@
                 <outlet property="answerLabel" destination="7Nh-Xo-cx3" id="lK5-La-qZx"/>
                 <outlet property="questionLabel" destination="hgK-Op-p5T" id="OOY-FS-dgn"/>
             </connections>
-            <point key="canvasLocation" x="139" y="374.5"/>
+            <point key="canvasLocation" x="184" y="338.5"/>
         </tableViewCell>
     </objects>
 </document>
