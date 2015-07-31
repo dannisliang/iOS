@@ -3,7 +3,6 @@
 
 target 'Hackcancer' do
 
-pod 'PureLayout'
 pod 'Parse'
 pod 'ParseUI'
 
