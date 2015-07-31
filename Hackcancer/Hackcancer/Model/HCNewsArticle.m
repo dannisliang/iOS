@@ -10,6 +10,7 @@
 
 @implementation HCNewsArticle
 
+@dynamic image;
 @dynamic title;
 
 + (NSString *)parseClassName

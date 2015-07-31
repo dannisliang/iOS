@@ -10,6 +10,7 @@
 
 @interface HCNewsArticle : PFObject<PFSubclassing>
 
+@property (nonatomic, strong) PFFile *image;
 @property (nonatomic, strong) NSString *title;
 
 + (NSString *)parseClassName;
