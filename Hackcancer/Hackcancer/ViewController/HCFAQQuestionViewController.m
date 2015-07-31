@@ -10,6 +10,9 @@
 
 @interface HCFAQQuestionViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
+
 @end
 
 @implementation HCFAQQuestionViewController
@@ -19,6 +22,8 @@
     [super viewWillAppear:animated];
     
     self.navigationItem.title = self.question.title;
+    self.questionLabel.text = self.question.question;
+    self.answerLabel.text = self.question.answer;
 }
 
 @end

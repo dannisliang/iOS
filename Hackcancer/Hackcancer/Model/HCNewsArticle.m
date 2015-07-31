@@ -12,6 +12,7 @@
 
 @dynamic image;
 @dynamic title;
+@dynamic content;
 
 + (void)load
 {

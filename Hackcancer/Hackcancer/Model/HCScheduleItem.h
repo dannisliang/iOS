@@ -11,6 +11,7 @@
 @interface HCScheduleItem : PFObject<PFSubclassing>
 
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) PFFile *image;
 @property (nonatomic, strong) NSString *content;
 @property (nonatomic, strong) NSDate *time;
 

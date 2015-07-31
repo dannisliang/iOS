@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) PFFile *image;
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *content;
 
 + (NSString *)parseClassName;
 

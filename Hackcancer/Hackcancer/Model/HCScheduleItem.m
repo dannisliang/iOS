@@ -10,6 +10,7 @@
 
 @implementation HCScheduleItem
 
+@dynamic image;
 @dynamic title;
 @dynamic content;
 @dynamic time;

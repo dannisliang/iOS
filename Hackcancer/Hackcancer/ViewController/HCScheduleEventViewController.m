@@ -8,7 +8,13 @@
 
 #import "HCScheduleEventViewController.h"
 
+#import <ParseUI/ParseUI.h>
+
 @interface HCScheduleEventViewController ()
+
+@property (weak, nonatomic) IBOutlet PFImageView *eventImageView;
+@property (weak, nonatomic) IBOutlet UILabel *eventTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *eventContentLabel;
 
 @end
 
@@ -19,6 +25,9 @@
     [super viewWillAppear:animated];
     
     self.navigationItem.title = self.event.title;
+    self.eventImageView.file = self.event.image;
+    self.eventTitleLabel.text = self.event.title;
+    self.eventContentLabel.text = self.event.content;
 }
 
 @end
