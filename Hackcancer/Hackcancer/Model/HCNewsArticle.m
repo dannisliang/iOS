@@ -13,6 +13,11 @@
 @dynamic image;
 @dynamic title;
 
++ (void)load
+{
+    [self registerSubclass];
+}
+
 + (NSString *)parseClassName
 {
     return @"NewsArticle";
