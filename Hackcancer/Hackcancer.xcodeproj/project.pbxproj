@@ -24,6 +24,14 @@
 		74B059061B6BB2A0006394F6 /* HCScheduleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059051B6BB2A0006394F6 /* HCScheduleItem.m */; };
 		74B059091B6BB369006394F6 /* HCScheduleItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059081B6BB369006394F6 /* HCScheduleItemTableViewCell.m */; };
 		74B0590B1B6BB386006394F6 /* ScheduleItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B0590A1B6BB386006394F6 /* ScheduleItemTableViewCell.xib */; };
+		74B059111B6C39D3006394F6 /* HCAboutMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B059101B6C39D3006394F6 /* HCAboutMapTableViewCell.xib */; };
+		74B059121B6C39D3006394F6 /* HCAboutMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B059101B6C39D3006394F6 /* HCAboutMapTableViewCell.xib */; };
+		74B059141B6C39DE006394F6 /* HCAboutDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B059131B6C39DE006394F6 /* HCAboutDescriptionTableViewCell.xib */; };
+		74B059151B6C39DE006394F6 /* HCAboutDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B059131B6C39DE006394F6 /* HCAboutDescriptionTableViewCell.xib */; };
+		74B059171B6C3A43006394F6 /* HCAboutDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B059161B6C3A43006394F6 /* HCAboutDateTableViewCell.xib */; };
+		74B059181B6C3A43006394F6 /* HCAboutDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B059161B6C3A43006394F6 /* HCAboutDateTableViewCell.xib */; };
+		74B0591A1B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B059191B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib */; };
+		74B0591B1B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B059191B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib */; };
 		AC1ECCAD1B6BF9A400473404 /* HCFAQQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1ECCAC1B6BF9A400473404 /* HCFAQQuestionViewController.m */; };
 		AC1ECCB01B6BFB2E00473404 /* HCScheduleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1ECCAF1B6BFB2E00473404 /* HCScheduleEventViewController.m */; };
 		AC5CC48C1B6C2DB30078A593 /* HCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */; };
@@ -74,6 +82,10 @@
 		74B059071B6BB369006394F6 /* HCScheduleItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCScheduleItemTableViewCell.h; sourceTree = "<group>"; };
 		74B059081B6BB369006394F6 /* HCScheduleItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCScheduleItemTableViewCell.m; sourceTree = "<group>"; };
 		74B0590A1B6BB386006394F6 /* ScheduleItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleItemTableViewCell.xib; sourceTree = "<group>"; };
+		74B059101B6C39D3006394F6 /* HCAboutMapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAboutMapTableViewCell.xib; sourceTree = "<group>"; };
+		74B059131B6C39DE006394F6 /* HCAboutDescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAboutDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		74B059161B6C3A43006394F6 /* HCAboutDateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAboutDateTableViewCell.xib; sourceTree = "<group>"; };
+		74B059191B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAboutSocialNetworkTableViewCell.xib; sourceTree = "<group>"; };
 		8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.debug.xcconfig"; sourceTree = "<group>"; };
 		9008A8621007CD93C72E9FF4 /* libPods-Hackcancer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackcancer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1ECCAB1B6BF9A400473404 /* HCFAQQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCFAQQuestionViewController.h; sourceTree = "<group>"; };
@@ -236,6 +248,10 @@
 				ACA005E61B6BCA7E005463F8 /* HCFAQTableViewCell.xib */,
 				ACA005E41B6BCA7E005463F8 /* HCFAQTableViewCell.h */,
 				ACA005E51B6BCA7E005463F8 /* HCFAQTableViewCell.m */,
+				74B059101B6C39D3006394F6 /* HCAboutMapTableViewCell.xib */,
+				74B059131B6C39DE006394F6 /* HCAboutDescriptionTableViewCell.xib */,
+				74B059161B6C3A43006394F6 /* HCAboutDateTableViewCell.xib */,
+				74B059191B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,10 +355,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B0591A1B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib in Resources */,
+				74B059171B6C3A43006394F6 /* HCAboutDateTableViewCell.xib in Resources */,
 				745D60B51B166F4E00558337 /* Localizable.strings in Resources */,
 				748B21891B24882B002D2E15 /* MainInterface.storyboard in Resources */,
 				745D609B1B15209D00558337 /* LaunchScreen.xib in Resources */,
+				74B059111B6C39D3006394F6 /* HCAboutMapTableViewCell.xib in Resources */,
 				745D60981B15209D00558337 /* Images.xcassets in Resources */,
+				74B059141B6C39DE006394F6 /* HCAboutDescriptionTableViewCell.xib in Resources */,
 				ACA005E81B6BCA7E005463F8 /* HCFAQTableViewCell.xib in Resources */,
 				74B0590B1B6BB386006394F6 /* ScheduleItemTableViewCell.xib in Resources */,
 				74B058FA1B6BABAE006394F6 /* NewsArticleTableViewCell.xib in Resources */,
@@ -353,6 +373,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B0591B1B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib in Resources */,
+				74B059121B6C39D3006394F6 /* HCAboutMapTableViewCell.xib in Resources */,
+				74B059181B6C3A43006394F6 /* HCAboutDateTableViewCell.xib in Resources */,
+				74B059151B6C39DE006394F6 /* HCAboutDescriptionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
