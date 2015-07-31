@@ -5,8 +5,10 @@ target 'Hackcancer' do
     
 pod 'Overcoat/ReactiveCocoa'
 pod 'PureLayout'
+pod 'Parse'
 
 end
 
 target 'HackcancerTests' do
 
+end
