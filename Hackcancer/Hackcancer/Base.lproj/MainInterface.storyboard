@@ -38,7 +38,9 @@
                             <outlet property="delegate" destination="82y-2x-9S2" id="ph9-LU-QJD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="EbJ-7d-r8Y"/>
+                    <navigationItem key="navigationItem" title="News" id="EbJ-7d-r8Y">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="CTS-Fa-Knj"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yiQ-bC-Bd6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,7 +59,9 @@
                             <outlet property="delegate" destination="tTy-Oy-cAF" id="2o4-yN-G4J"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="95C-74-cpi"/>
+                    <navigationItem key="navigationItem" title="Schedule" id="95C-74-cpi">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Aze-T3-goG"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG4-Kv-SNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,7 +144,9 @@
                             <outlet property="delegate" destination="sgK-FF-ODU" id="QPN-7H-fOa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="TGF-jH-AJh"/>
+                    <navigationItem key="navigationItem" title="FAQs" id="TGF-jH-AJh">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="dRU-Kw-sDx"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oey-LK-bUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
