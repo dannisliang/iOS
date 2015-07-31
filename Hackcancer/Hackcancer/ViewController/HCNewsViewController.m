@@ -55,7 +55,7 @@ static NSString * const HCNewsArticleIdentifier = @"NewsArticleTableViewCell";
     
     HCNewsArticleTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:HCNewsArticleIdentifier];
     
-    cell.textLabel.text = article.title;
+    cell.titleView.text = article.title;
     
     return cell;
 }
