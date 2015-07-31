@@ -32,6 +32,14 @@
 		74B059181B6C3A43006394F6 /* HCAboutDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B059161B6C3A43006394F6 /* HCAboutDateTableViewCell.xib */; };
 		74B0591A1B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B059191B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib */; };
 		74B0591B1B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B059191B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib */; };
+		74B0591E1B6C3CFC006394F6 /* HCAboutMapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B0591D1B6C3CFC006394F6 /* HCAboutMapTableViewCell.m */; };
+		74B0591F1B6C3CFC006394F6 /* HCAboutMapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B0591D1B6C3CFC006394F6 /* HCAboutMapTableViewCell.m */; };
+		74B059221B6C3D16006394F6 /* HCAboutDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059211B6C3D16006394F6 /* HCAboutDateTableViewCell.m */; };
+		74B059231B6C3D16006394F6 /* HCAboutDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059211B6C3D16006394F6 /* HCAboutDateTableViewCell.m */; };
+		74B059261B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059251B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m */; };
+		74B059271B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059251B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m */; };
+		74B0592A1B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059291B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m */; };
+		74B0592B1B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059291B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m */; };
 		AC1ECCAD1B6BF9A400473404 /* HCFAQQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1ECCAC1B6BF9A400473404 /* HCFAQQuestionViewController.m */; };
 		AC1ECCB01B6BFB2E00473404 /* HCScheduleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1ECCAF1B6BFB2E00473404 /* HCScheduleEventViewController.m */; };
 		AC5CC48C1B6C2DB30078A593 /* HCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */; };
@@ -86,6 +94,14 @@
 		74B059131B6C39DE006394F6 /* HCAboutDescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAboutDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		74B059161B6C3A43006394F6 /* HCAboutDateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAboutDateTableViewCell.xib; sourceTree = "<group>"; };
 		74B059191B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAboutSocialNetworkTableViewCell.xib; sourceTree = "<group>"; };
+		74B0591C1B6C3CFC006394F6 /* HCAboutMapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAboutMapTableViewCell.h; sourceTree = "<group>"; };
+		74B0591D1B6C3CFC006394F6 /* HCAboutMapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAboutMapTableViewCell.m; sourceTree = "<group>"; };
+		74B059201B6C3D16006394F6 /* HCAboutDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAboutDateTableViewCell.h; sourceTree = "<group>"; };
+		74B059211B6C3D16006394F6 /* HCAboutDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAboutDateTableViewCell.m; sourceTree = "<group>"; };
+		74B059241B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAboutDescriptionTableViewCell.h; sourceTree = "<group>"; };
+		74B059251B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAboutDescriptionTableViewCell.m; sourceTree = "<group>"; };
+		74B059281B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAboutSocialNetworkTableViewCell.h; sourceTree = "<group>"; };
+		74B059291B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAboutSocialNetworkTableViewCell.m; sourceTree = "<group>"; };
 		8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.debug.xcconfig"; sourceTree = "<group>"; };
 		9008A8621007CD93C72E9FF4 /* libPods-Hackcancer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackcancer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1ECCAB1B6BF9A400473404 /* HCFAQQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCFAQQuestionViewController.h; sourceTree = "<group>"; };
@@ -239,19 +255,27 @@
 		74B058F81B6BAB84006394F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				74B058F91B6BABAE006394F6 /* NewsArticleTableViewCell.xib */,
-				74B058FE1B6BADA6006394F6 /* HCNewsArticleTableViewCell.h */,
-				74B058FF1B6BADA6006394F6 /* HCNewsArticleTableViewCell.m */,
-				74B0590A1B6BB386006394F6 /* ScheduleItemTableViewCell.xib */,
-				74B059071B6BB369006394F6 /* HCScheduleItemTableViewCell.h */,
-				74B059081B6BB369006394F6 /* HCScheduleItemTableViewCell.m */,
-				ACA005E61B6BCA7E005463F8 /* HCFAQTableViewCell.xib */,
+				74B059201B6C3D16006394F6 /* HCAboutDateTableViewCell.h */,
+				74B059211B6C3D16006394F6 /* HCAboutDateTableViewCell.m */,
+				74B059161B6C3A43006394F6 /* HCAboutDateTableViewCell.xib */,
+				74B059241B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.h */,
+				74B059251B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m */,
+				74B059131B6C39DE006394F6 /* HCAboutDescriptionTableViewCell.xib */,
+				74B0591C1B6C3CFC006394F6 /* HCAboutMapTableViewCell.h */,
+				74B0591D1B6C3CFC006394F6 /* HCAboutMapTableViewCell.m */,
+				74B059101B6C39D3006394F6 /* HCAboutMapTableViewCell.xib */,
+				74B059281B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.h */,
+				74B059291B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m */,
+				74B059191B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib */,
 				ACA005E41B6BCA7E005463F8 /* HCFAQTableViewCell.h */,
 				ACA005E51B6BCA7E005463F8 /* HCFAQTableViewCell.m */,
-				74B059101B6C39D3006394F6 /* HCAboutMapTableViewCell.xib */,
-				74B059131B6C39DE006394F6 /* HCAboutDescriptionTableViewCell.xib */,
-				74B059161B6C3A43006394F6 /* HCAboutDateTableViewCell.xib */,
-				74B059191B6C3A4F006394F6 /* HCAboutSocialNetworkTableViewCell.xib */,
+				ACA005E61B6BCA7E005463F8 /* HCFAQTableViewCell.xib */,
+				74B058FE1B6BADA6006394F6 /* HCNewsArticleTableViewCell.h */,
+				74B058FF1B6BADA6006394F6 /* HCNewsArticleTableViewCell.m */,
+				74B059071B6BB369006394F6 /* HCScheduleItemTableViewCell.h */,
+				74B059081B6BB369006394F6 /* HCScheduleItemTableViewCell.m */,
+				74B058F91B6BABAE006394F6 /* NewsArticleTableViewCell.xib */,
+				74B0590A1B6BB386006394F6 /* ScheduleItemTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -421,19 +445,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				74B059031B6BB243006394F6 /* HCScheduleItemViewController.m in Sources */,
+				74B059221B6C3D16006394F6 /* HCAboutDateTableViewCell.m in Sources */,
 				74B059091B6BB369006394F6 /* HCScheduleItemTableViewCell.m in Sources */,
 				74B059001B6BADA6006394F6 /* HCNewsArticleTableViewCell.m in Sources */,
+				74B0591E1B6C3CFC006394F6 /* HCAboutMapTableViewCell.m in Sources */,
 				ACA005EB1B6BCC9C005463F8 /* HCFAQListViewController.m in Sources */,
 				74B059061B6BB2A0006394F6 /* HCScheduleItem.m in Sources */,
 				748AEC881B6B9E69002AD90B /* HCAppDelegate.m in Sources */,
 				ACA005E71B6BCA7E005463F8 /* HCFAQTableViewCell.m in Sources */,
 				AC5CC4921B6C37510078A593 /* HCTabBarViewController.m in Sources */,
 				AC5CC48C1B6C2DB30078A593 /* HCAboutViewController.m in Sources */,
+				74B059261B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m in Sources */,
 				74B058F41B6BA447006394F6 /* HCNewsArticle.m in Sources */,
 				ACA005EE1B6BCF00005463F8 /* HCFAQItem.m in Sources */,
 				AC5CC48F1B6C2E850078A593 /* HCAbout.m in Sources */,
 				748AEC8B1B6B9E8D002AD90B /* main.m in Sources */,
 				AC1ECCAD1B6BF9A400473404 /* HCFAQQuestionViewController.m in Sources */,
+				74B0592A1B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m in Sources */,
 				AC1ECCB01B6BFB2E00473404 /* HCScheduleEventViewController.m in Sources */,
 				74B058F71B6BA809006394F6 /* HCNewsArticleViewController.m in Sources */,
 				74B058FC1B6BACF8006394F6 /* HCNewsViewController.m in Sources */,
@@ -444,7 +472,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B059231B6C3D16006394F6 /* HCAboutDateTableViewCell.m in Sources */,
 				745D60A71B15209D00558337 /* HackcancerTests.swift in Sources */,
+				74B0591F1B6C3CFC006394F6 /* HCAboutMapTableViewCell.m in Sources */,
+				74B059271B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m in Sources */,
+				74B0592B1B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
