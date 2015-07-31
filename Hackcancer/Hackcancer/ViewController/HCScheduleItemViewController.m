@@ -13,7 +13,7 @@
 
 @interface HCScheduleItemViewController ()
 
-@property (nonatomic, strong) NSArray *scheduleItems;
+@property (nonatomic, strong) NSArray *scheduleEvents;
 
 @end
 
@@ -27,8 +27,8 @@ static NSString * const HCScheduleItemIdentifier = @"ScheduleItemTableViewCell";
 {
     [super viewDidLoad];
     
-    PFQuery *scheduleIeemQuery = [PFQuery queryWithClassName:[HCScheduleItem parseClassName]];
-    self.scheduleItems = [scheduleIeemQuery findObjects];
+    PFQuery *scheduleItemQuery = [PFQuery queryWithClassName:[HCScheduleItem parseClassName]];
+    self.scheduleEvents = [scheduleItemQuery findObjects];
     
     UINib *tableViewCellNib = [UINib nibWithNibName:HCScheduleItemIdentifier
                                              bundle:[NSBundle mainBundle]];
@@ -42,17 +42,19 @@ static NSString * const HCScheduleItemIdentifier = @"ScheduleItemTableViewCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.scheduleItems.count;
+    return self.scheduleEvents.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    HCScheduleItem *article = self.scheduleItems[indexPath.row];
+    HCScheduleItem *event = self.scheduleEvents[indexPath.row];
     
     HCScheduleItemTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:HCScheduleItemIdentifier];
     
-    cell.titleView.text = article.title;
+    cell.eventTitleLabel.text = event.title;
+    cell.eventContentLabel.text = event.content;
+    cell.eventTimeLabel.text = event.time;
     
     return cell;
 }

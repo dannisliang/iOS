@@ -1,18 +1,17 @@
 //
-//  HCScheduleItem.m
+//  HCFAQItem.m
 //  Hackcancer
 //
 //  Created by James Campbell on 31/07/2015.
 //  Copyright (c) 2015 Hackcancer. All rights reserved.
 //
 
-#import "HCScheduleItem.h"
+#import "HCFAQItem.h"
 
-@implementation HCScheduleItem
+@implementation HCFAQItem
 
-@dynamic title;
-@dynamic content;
-@dynamic time;
+@dynamic question;
+@dynamic answer;
 
 + (void)load
 {
@@ -21,7 +20,7 @@
 
 + (NSString *)parseClassName
 {
-    return @"ScheduleItem";
+    return @"FAQItem";
 }
 
 @end

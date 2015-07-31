@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import <ParseUI/ParseUI.h>
+
 @interface HCNewsArticleTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UILabel *titleView;
+@property (nonatomic, strong) IBOutlet UILabel *articleTitleLabel;
+@property (nonatomic, strong) IBOutlet PFImageView *articleImageView;
 
 @end

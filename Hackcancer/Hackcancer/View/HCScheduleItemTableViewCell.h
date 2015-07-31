@@ -10,6 +10,8 @@
 
 @interface HCScheduleItemTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UILabel *titleView;
+@property (nonatomic, strong) IBOutlet UILabel *eventTitleLabel;
+@property (nonatomic, strong) IBOutlet UILabel *eventContentLabel;
+@property (nonatomic, strong) IBOutlet UILabel *eventTimeLabel;
 
 @end
