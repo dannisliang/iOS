@@ -11,6 +11,10 @@
 #import <Parse/Parse.h>
 
 #import "HCAbout.h"
+#import "HCAboutDateTableViewCell.h"
+#import "HCAboutDescriptionTableViewCell.h"
+#import "HCAboutMapTableViewCell.h"
+#import "HCAboutSocialNetworkTableViewCell.h"
 
 static NSInteger const HCAboutNumberOfRows = 7;
 
@@ -77,16 +81,33 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"AboutSocialNetwork";
     switch (indexPath.row)
     {
         case HCAboutRowMap:
-            break;
+        {
+            HCAboutMapTableViewCell *mapCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutMapIdentifier];
             
+            cell = mapCell;
+            break;
+        }
         case HCAboutRowDescription:
-            break;
+        {
+            HCAboutDescriptionTableViewCell *descriptionCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutDescriptionIdentifier];
             
+            cell = descriptionCell;
+            break;
+        }
         case HCAboutRowDate:
-            break;
+        {
+            HCAboutDateTableViewCell *dateCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutDateIdentifier];
             
-        default:
+            cell = dateCell;
             break;
+        }
+        default:
+        {
+            HCAboutSocialNetworkTableViewCell *socialCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
+            
+            cell = socialCell;
+            break;
+        }
     }
     
     return cell;
