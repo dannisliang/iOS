@@ -58,6 +58,8 @@ static NSString * const HCNewsArticleIdentifier = @"NewsArticleTableViewCell";
     cell.articleTitleLabel.text = article.title;
     cell.articleImageView.file = article.image;
     
+    [cell.articleImageView loadInBackground];
+    
     return cell;
 }
 
