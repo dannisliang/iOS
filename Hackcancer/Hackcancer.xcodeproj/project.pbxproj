@@ -17,6 +17,7 @@
 		748AEC901B6BA087002AD90B /* HCNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748AEC8F1B6BA087002AD90B /* HCNewsViewController.m */; };
 		748B21891B24882B002D2E15 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748B21871B24882B002D2E15 /* MainInterface.storyboard */; };
 		74B058F41B6BA447006394F6 /* HCNewsArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B058F31B6BA447006394F6 /* HCNewsArticle.m */; };
+		74B058F71B6BA809006394F6 /* HCNewsArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B058F61B6BA809006394F6 /* HCNewsArticleViewController.m */; };
 		74BE05051B26346C00C58272 /* NewsItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74BE05041B26346C00C58272 /* NewsItemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,8 @@
 		748B21881B24882B002D2E15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		74B058F21B6BA447006394F6 /* HCNewsArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNewsArticle.h; sourceTree = "<group>"; };
 		74B058F31B6BA447006394F6 /* HCNewsArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNewsArticle.m; sourceTree = "<group>"; };
+		74B058F51B6BA809006394F6 /* HCNewsArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNewsArticleViewController.h; sourceTree = "<group>"; };
+		74B058F61B6BA809006394F6 /* HCNewsArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNewsArticleViewController.m; sourceTree = "<group>"; };
 		74BE05041B26346C00C58272 /* NewsItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsItemTableViewCell.xib; sourceTree = "<group>"; };
 		8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.debug.xcconfig"; sourceTree = "<group>"; };
 		9008A8621007CD93C72E9FF4 /* libPods-Hackcancer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackcancer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +151,8 @@
 			children = (
 				748AEC8E1B6BA087002AD90B /* HCNewsViewController.h */,
 				748AEC8F1B6BA087002AD90B /* HCNewsViewController.m */,
+				74B058F51B6BA809006394F6 /* HCNewsArticleViewController.h */,
+				74B058F61B6BA809006394F6 /* HCNewsArticleViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 				748AEC881B6B9E69002AD90B /* HCAppDelegate.m in Sources */,
 				74B058F41B6BA447006394F6 /* HCNewsArticle.m in Sources */,
 				748AEC8B1B6B9E8D002AD90B /* main.m in Sources */,
+				74B058F71B6BA809006394F6 /* HCNewsArticleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

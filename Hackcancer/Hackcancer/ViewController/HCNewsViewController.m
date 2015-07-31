@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 
 #import "HCNewsArticle.h"
+#import "HCNewsArticleViewController.h"
 
 @interface HCNewsViewController ()
 
@@ -25,17 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+    
     PFQuery *newsArticleQuery = [PFQuery queryWithClassName:[HCNewsArticle parseClassName]];
     self.newsArticles = [newsArticleQuery findObjects];
     
     [self.tableView reloadData];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table View Data Source
@@ -54,6 +49,19 @@
     cell.textLabel.text = article.title;
     
     return cell;
+}
+
+#pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HCNewsArticle *article = self.newsArticles[indexPath.row];
+    
+    HCNewsArticleViewController *articleViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"NewsArticle"];
+    articleViewController.article = article;
+    
+    [self.navigationController pushViewController:articleViewController
+                                         animated:YES];
 }
 
 @end
