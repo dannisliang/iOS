@@ -17,6 +17,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="4HD-VU-avW" kind="relationship" relationship="viewControllers" id="uHp-KC-Psr"/>
+                        <segue destination="YuD-aE-MiZ" kind="relationship" relationship="viewControllers" id="Xd4-4m-bEV"/>
                         <segue destination="oyh-QX-GWX" kind="relationship" relationship="viewControllers" id="Bur-RI-xEs"/>
                         <segue destination="J2Y-Qd-IAG" kind="relationship" relationship="viewControllers" id="2JR-rE-1Ny"/>
                     </connections>
@@ -65,7 +66,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG4-Kv-SNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-759" y="1899"/>
+            <point key="canvasLocation" x="-87" y="1899"/>
         </scene>
         <!--NewsArticleViewController-->
         <scene sceneID="uva-OC-1bR">
@@ -150,7 +151,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oey-LK-bUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-53" y="1899"/>
+            <point key="canvasLocation" x="619" y="1899"/>
         </scene>
         <!--News-->
         <scene sceneID="fu9-ee-5pq">
@@ -188,7 +189,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqE-zx-HWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-759" y="1147"/>
+            <point key="canvasLocation" x="-87" y="1147"/>
         </scene>
         <!--FAQs-->
         <scene sceneID="oTt-3Y-c9m">
@@ -207,7 +208,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTc-sp-d1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-53" y="1147"/>
+            <point key="canvasLocation" x="619" y="1147"/>
         </scene>
         <!--ScheduleEventViewController-->
         <scene sceneID="ZXW-R8-w1v">
@@ -280,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOx-03-0i2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-759" y="2625"/>
+            <point key="canvasLocation" x="-87" y="2625"/>
         </scene>
         <!--FAQQuestionViewController-->
         <scene sceneID="fFG-bK-chv">
@@ -337,7 +338,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bW9-qa-bZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-53" y="2625"/>
+            <point key="canvasLocation" x="619" y="2625"/>
+        </scene>
+        <!--AboutViewController-->
+        <scene sceneID="rN1-4E-adI">
+            <objects>
+                <tableViewController id="Iew-pf-Flz" userLabel="AboutViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oxk-Qx-xKw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Iew-pf-Flz" id="PqG-6H-hL2"/>
+                            <outlet property="delegate" destination="Iew-pf-Flz" id="gKF-7x-7VY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="About" id="YFN-4R-Gih">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="1oF-AW-3dn"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDy-EL-bBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="1899"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="RJJ-eL-PIc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YuD-aE-MiZ" userLabel="About" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" id="0uF-1l-Gts" userLabel="FAQs"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XdY-YF-fgs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Iew-pf-Flz" kind="relationship" relationship="rootViewController" id="Nsa-ds-Cp0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AxC-bJ-FNC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="1147"/>
+        </scene>
+        <!--FAQQuestionViewController-->
+        <scene sceneID="Q6e-ej-Mcy">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Thq-Hl-U3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="AboutMap" id="bRt-lH-4b1" userLabel="FAQQuestionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pY6-bz-3QZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="RRE-gX-TsA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xPB-xR-crF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-769" y="2625"/>
         </scene>
     </scenes>
 </document>
