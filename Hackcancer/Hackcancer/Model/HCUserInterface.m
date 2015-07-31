@@ -23,7 +23,7 @@
 
 + (NSString *)parseClassName
 {
-    return @"NewsArticle";
+    return @"iOSUserInterface";
 }
 
 @end
