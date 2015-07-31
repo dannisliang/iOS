@@ -37,6 +37,9 @@ static NSString * const HCFAQItemIdentifier = @"HCFAQItemIdentifier";
     [self.tableView registerNib:tableViewCellNib
          forCellReuseIdentifier:HCFAQItemIdentifier];
     
+    self.tableView.estimatedRowHeight = 44.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     [self.tableView reloadData];
 }
 

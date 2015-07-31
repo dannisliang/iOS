@@ -35,6 +35,9 @@ static NSString * const HCScheduleItemIdentifier = @"ScheduleItemTableViewCell";
     [self.tableView registerNib:tableViewCellNib
          forCellReuseIdentifier:HCScheduleItemIdentifier];
     
+    self.tableView.estimatedRowHeight = 44.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     [self.tableView reloadData];
 }
 

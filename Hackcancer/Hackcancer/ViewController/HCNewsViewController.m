@@ -38,6 +38,9 @@ static NSString * const HCNewsArticleIdentifier = @"NewsArticleTableViewCell";
     [self.tableView registerNib:tableViewCellNib
          forCellReuseIdentifier:HCNewsArticleIdentifier];
     
+    self.tableView.estimatedRowHeight = 44.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     [self.tableView reloadData];
 }
 
