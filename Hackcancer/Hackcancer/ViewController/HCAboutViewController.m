@@ -12,6 +12,15 @@
 
 #import "HCAbout.h"
 
+static NSInteger const HCAboutNumberOfRows = 7;
+
+typedef NS_ENUM(NSUInteger, HCAboutRow)
+{
+    HCAboutRowMap = 0,
+    HCAboutRowDescription = 1,
+    HCAboutRowDate = 2,
+    HCAboutRowSocialNetwork = 3
+};
 
 @interface HCAboutViewController ()
 
@@ -51,6 +60,36 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"AboutSocialNetwork";
                                               bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:tableViewCellNib4
          forCellReuseIdentifier:HCAboutSocialNetworkIdentifier];
+}
+
+#pragma mark - Table View Data Source
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return HCAboutNumberOfRows;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = nil;
+    
+    switch (indexPath.row)
+    {
+        case HCAboutRowMap:
+            break;
+            
+        case HCAboutRowDescription:
+            break;
+            
+        case HCAboutRowDate:
+            break;
+            
+        default:
+            break;
+    }
+    
+    return cell;
 }
 
 @end
