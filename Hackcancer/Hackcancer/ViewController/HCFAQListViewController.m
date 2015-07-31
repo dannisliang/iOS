@@ -2,13 +2,11 @@
 //  HCFAQListViewController.m
 //  Hackcancer
 //
-//  Created by James Campbell on 31/07/2015.
+//  Created by Robert Swift on 31/07/2015.
 //  Copyright (c) 2015 Hackcancer. All rights reserved.
 //
 
 #import "HCFAQListViewController.h"
-
-#import <Parse/Parse.h>
 
 #import "HCFAQItem.h"
 #import "HCFAQTableViewCell.h"
@@ -23,7 +21,7 @@
 
 @implementation HCFAQListViewController
 
-static NSString * const HCFAQItemIdentifier = @"HCFAQItemIdentifier";
+static NSString * const HCFAQItemIdentifier = @"HCFAQTableViewCell";
 
 #pragma mark - View Controller Lifecycle
 

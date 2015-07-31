@@ -2,7 +2,7 @@
 //  HCFAQListViewController.h
 //  Hackcancer
 //
-//  Created by James Campbell on 31/07/2015.
+//  Created by Robert Swift on 31/07/2015.
 //  Copyright (c) 2015 Hackcancer. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  HCFAQItem.h
 //  Hackcancer
 //
-//  Created by James Campbell on 31/07/2015.
+//  Created by Robert Swift on 31/07/2015.
 //  Copyright (c) 2015 Hackcancer. All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 
 @interface HCFAQItem : PFObject<PFSubclassing>
 
+@property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *question;
 @property (nonatomic, strong) NSString *answer;
 

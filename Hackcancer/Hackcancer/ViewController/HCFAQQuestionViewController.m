@@ -18,7 +18,7 @@
 {
     [super viewWillAppear:animated];
     
-    self.navigationItem.title = self.question.question;
+    self.navigationItem.title = self.question.title;
 }
 
 @end
