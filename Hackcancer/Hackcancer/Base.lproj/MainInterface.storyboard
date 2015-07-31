@@ -160,7 +160,7 @@
         <!--ScheduleEventViewController-->
         <scene sceneID="ZXW-R8-w1v">
             <objects>
-                <viewController storyboardIdentifier="ScheduleEvent" id="1wt-c7-Jp4" userLabel="ScheduleEventViewController" customClass="HCNewsArticleViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScheduleEvent" id="1wt-c7-Jp4" userLabel="ScheduleEventViewController" customClass="HCScheduleEventViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7qC-sw-y34"/>
                         <viewControllerLayoutGuide type="bottom" id="Rvp-sp-w5v"/>
@@ -178,7 +178,7 @@
         <!--FAQQuestionViewController-->
         <scene sceneID="fFG-bK-chv">
             <objects>
-                <viewController storyboardIdentifier="FAQQuestion" id="rV2-y7-51M" userLabel="FAQQuestionViewController" customClass="HCNewsArticleViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FAQQuestion" id="rV2-y7-51M" userLabel="FAQQuestionViewController" customClass="HCFAQQuestionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dO3-4f-sKA"/>
                         <viewControllerLayoutGuide type="bottom" id="BTV-Ud-kNj"/>
