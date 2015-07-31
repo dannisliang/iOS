@@ -14,32 +14,46 @@
 
 @interface HCNewsViewController ()
 
+@property (nonatomic, strong) NSArray *newsArticles;
+
 @end
 
 @implementation HCNewsViewController
+
+#pragma mark - View Controller Lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
    
     PFQuery *newsArticleQuery = [PFQuery queryWithClassName:[HCNewsArticle parseClassName]];
-    NSArray *newsArticleObjects = [newsArticleQuery findObjects];
+    self.newsArticles = [newsArticleQuery findObjects];
     
+    [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Table View Data Source
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.newsArticles.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HCNewsArticle *article = self.newsArticles[indexPath.row];
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
+    cell.textLabel.text = article.title;
+    
+    return cell;
+}
 
 @end
