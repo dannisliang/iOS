@@ -8,15 +8,23 @@
 
 #import "HCNewsViewController.h"
 
+#import <Parse/Parse.h>
+
+#import "HCNewsArticle.h"
+
 @interface HCNewsViewController ()
 
 @end
 
 @implementation HCNewsViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
+    PFQuery *newsArticleQuery = [PFQuery queryWithClassName:[HCNewsArticle parseClassName]];
+    NSArray *newsArticleObjects = [newsArticleQuery findObjects];
+    
 }
 
 - (void)didReceiveMemoryWarning {

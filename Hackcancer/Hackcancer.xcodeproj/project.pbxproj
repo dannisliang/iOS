@@ -15,7 +15,6 @@
 		748AEC881B6B9E69002AD90B /* HCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748AEC871B6B9E69002AD90B /* HCAppDelegate.m */; };
 		748AEC8B1B6B9E8D002AD90B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 748AEC8A1B6B9E8D002AD90B /* main.m */; };
 		748AEC901B6BA087002AD90B /* HCNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748AEC8F1B6BA087002AD90B /* HCNewsViewController.m */; };
-		748AEC911B6BA087002AD90B /* HCNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748AEC8F1B6BA087002AD90B /* HCNewsViewController.m */; };
 		748B21891B24882B002D2E15 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748B21871B24882B002D2E15 /* MainInterface.storyboard */; };
 		74B058F41B6BA447006394F6 /* HCNewsArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B058F31B6BA447006394F6 /* HCNewsArticle.m */; };
 		74BE05051B26346C00C58272 /* NewsItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74BE05041B26346C00C58272 /* NewsItemTableViewCell.xib */; };
@@ -327,7 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				748AEC911B6BA087002AD90B /* HCNewsViewController.m in Sources */,
 				745D60A71B15209D00558337 /* HackcancerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
