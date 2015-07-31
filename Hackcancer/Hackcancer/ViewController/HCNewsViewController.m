@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 
 #import "HCNewsArticle.h"
+#import "HCNewsArticleTableViewCell.h"
 #import "HCNewsArticleViewController.h"
 
 @interface HCNewsViewController ()
@@ -21,6 +22,8 @@
 
 @implementation HCNewsViewController
 
+static NSString * const HCNewsArticleIdentifier = @"NewsArticleTableViewCell";
+
 #pragma mark - View Controller Lifecycle
 
 - (void)viewDidLoad
@@ -29,6 +32,11 @@
     
     PFQuery *newsArticleQuery = [PFQuery queryWithClassName:[HCNewsArticle parseClassName]];
     self.newsArticles = [newsArticleQuery findObjects];
+    
+    UINib *tableViewCellNib = [UINib nibWithNibName:HCNewsArticleIdentifier
+                                             bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:tableViewCellNib
+         forCellReuseIdentifier:HCNewsArticleIdentifier];
     
     [self.tableView reloadData];
 }
@@ -44,7 +52,8 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     HCNewsArticle *article = self.newsArticles[indexPath.row];
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
+    HCNewsArticleTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:HCNewsArticleIdentifier];
     
     cell.textLabel.text = article.title;
     
