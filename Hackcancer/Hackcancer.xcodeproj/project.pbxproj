@@ -17,6 +17,7 @@
 		748AEC901B6BA087002AD90B /* HCNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748AEC8F1B6BA087002AD90B /* HCNewsViewController.m */; };
 		748AEC911B6BA087002AD90B /* HCNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748AEC8F1B6BA087002AD90B /* HCNewsViewController.m */; };
 		748B21891B24882B002D2E15 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748B21871B24882B002D2E15 /* MainInterface.storyboard */; };
+		74B058F41B6BA447006394F6 /* HCNewsArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B058F31B6BA447006394F6 /* HCNewsArticle.m */; };
 		74BE05051B26346C00C58272 /* NewsItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74BE05041B26346C00C58272 /* NewsItemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,8 @@
 		748AEC8E1B6BA087002AD90B /* HCNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNewsViewController.h; sourceTree = "<group>"; };
 		748AEC8F1B6BA087002AD90B /* HCNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNewsViewController.m; sourceTree = "<group>"; };
 		748B21881B24882B002D2E15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		74B058F21B6BA447006394F6 /* HCNewsArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNewsArticle.h; sourceTree = "<group>"; };
+		74B058F31B6BA447006394F6 /* HCNewsArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNewsArticle.m; sourceTree = "<group>"; };
 		74BE05041B26346C00C58272 /* NewsItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsItemTableViewCell.xib; sourceTree = "<group>"; };
 		8147E1ECADD785D092B05B75 /* Pods-Hackcancer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackcancer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackcancer/Pods-Hackcancer.debug.xcconfig"; sourceTree = "<group>"; };
 		9008A8621007CD93C72E9FF4 /* libPods-Hackcancer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackcancer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +96,7 @@
 		745D608D1B15209D00558337 /* Hackcancer */ = {
 			isa = PBXGroup;
 			children = (
+				74B058F11B6BA433006394F6 /* Model */,
 				748AEC8D1B6BA07C002AD90B /* ViewController */,
 				748AEC8A1B6B9E8D002AD90B /* main.m */,
 				745D60971B15209D00558337 /* Images.xcassets */,
@@ -147,6 +151,15 @@
 				748AEC8F1B6BA087002AD90B /* HCNewsViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		74B058F11B6BA433006394F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74B058F21B6BA447006394F6 /* HCNewsArticle.h */,
+				74B058F31B6BA447006394F6 /* HCNewsArticle.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7FDE03CFBAC6030F61D00834 /* Pods */ = {
@@ -305,6 +318,7 @@
 			files = (
 				748AEC901B6BA087002AD90B /* HCNewsViewController.m in Sources */,
 				748AEC881B6B9E69002AD90B /* HCAppDelegate.m in Sources */,
+				74B058F41B6BA447006394F6 /* HCNewsArticle.m in Sources */,
 				748AEC8B1B6B9E8D002AD90B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
