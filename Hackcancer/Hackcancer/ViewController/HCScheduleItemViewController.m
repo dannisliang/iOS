@@ -14,6 +14,7 @@
 @interface HCScheduleItemViewController ()
 
 @property (nonatomic, strong) NSArray *scheduleEvents;
+@property (nonatomic, strong) NSDateFormatter *dateFormat;
 
 @end
 
@@ -27,11 +28,15 @@ static NSString * const HCScheduleItemIdentifier = @"ScheduleItemTableViewCell";
 {
     [super viewDidLoad];
     
+    self.dateFormat = [[NSDateFormatter alloc] init];
+    self.dateFormat.dateFormat = @"HH:mm";
+    self.dateFormat.locale = [NSLocale localeWithLocaleIdentifier:@"en_GB"];
+    
     PFQuery *scheduleItemQuery = [PFQuery queryWithClassName:[HCScheduleItem parseClassName]];
     self.scheduleEvents = [scheduleItemQuery findObjects];
     
     UINib *tableViewCellNib = [UINib nibWithNibName:HCScheduleItemIdentifier
-                                             bundle:[NSBundle mainBundle]];
+                                            bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:tableViewCellNib
          forCellReuseIdentifier:HCScheduleItemIdentifier];
     
@@ -57,7 +62,7 @@ static NSString * const HCScheduleItemIdentifier = @"ScheduleItemTableViewCell";
     
     cell.eventTitleLabel.text = event.title;
     cell.eventContentLabel.text = event.content;
-    cell.eventTimeLabel.text = event.time;
+    cell.eventTimeLabel.text = [self.dateFormat stringFromDate:event.time];
     
     return cell;
 }
