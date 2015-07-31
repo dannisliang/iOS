@@ -93,7 +93,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="articleContent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig5-H6-agy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="articleContent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig5-H6-agy">
                                 <rect key="frame" x="20" y="220" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -116,6 +116,7 @@
                             <constraint firstAttribute="trailing" secondItem="VV0-xC-eAD" secondAttribute="trailing" id="zPW-6s-nMF"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="newsArticleContentLabel" destination="ig5-H6-agy" id="rs4-0p-iyp"/>
                         <outlet property="newsArticleImageView" destination="VV0-xC-eAD" id="fL2-jK-ELz"/>
@@ -232,7 +233,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventContent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRm-GF-MbQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventContent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRm-GF-MbQ">
                                 <rect key="frame" x="20" y="220" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -263,6 +264,7 @@
                             <constraint firstItem="sCX-9Y-NNo" firstAttribute="trailing" secondItem="HpQ-qp-eyt" secondAttribute="trailing" constant="20" id="zmE-2r-lgH"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="eventContentLabel" destination="pRm-GF-MbQ" id="Sqs-Ph-u1G"/>
                         <outlet property="eventImageView" destination="sCX-9Y-NNo" id="dj5-hu-ssL"/>
@@ -304,7 +306,7 @@
                                     <constraint firstAttribute="bottom" secondItem="eFc-3q-ij0" secondAttribute="bottom" constant="20" id="yxv-qi-KNR"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="answerLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6j-vT-o1H">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="answerLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6j-vT-o1H">
                                 <rect key="frame" x="20" y="101" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -321,6 +323,7 @@
                             <constraint firstItem="W6j-vT-o1H" firstAttribute="top" secondItem="eq5-V3-Pa7" secondAttribute="bottom" constant="20" id="ykX-44-Wxq"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="answerLabel" destination="W6j-vT-o1H" id="dkN-FJ-8hN"/>
                         <outlet property="questionLabel" destination="eFc-3q-ij0" id="1Cj-5i-oXn"/>

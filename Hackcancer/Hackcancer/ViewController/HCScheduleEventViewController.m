@@ -35,8 +35,10 @@
     self.eventImageView.file = self.event.image;
     self.eventTitleLabel.text = self.event.title;
     self.eventTimeLabel.text = [self.dateFormat stringFromDate:self.event.time];
-
     self.eventContentLabel.text = self.event.content;
+    
+    self.eventImageView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.eventImageView loadInBackground];
 }
 
 @end
