@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="hjY-Db-qdz">
             <objects>
-                <tabBarController id="BXZ-Cf-xm1" sceneMemberID="viewController">
+                <tabBarController id="BXZ-Cf-xm1" customClass="HCTabBarViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ySz-63-uIh"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="lp2-mL-62v">

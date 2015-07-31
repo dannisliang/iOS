@@ -29,6 +29,7 @@
 		AC5CC48C1B6C2DB30078A593 /* HCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */; };
 		AC5CC48F1B6C2E850078A593 /* HCAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48E1B6C2E850078A593 /* HCAbout.m */; };
 		AC5CC4921B6C37510078A593 /* HCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC4911B6C37510078A593 /* HCTabBarViewController.m */; };
+		AC5CC4951B6C38580078A593 /* HCUserInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC4941B6C38580078A593 /* HCUserInterface.m */; };
 		ACA005E71B6BCA7E005463F8 /* HCFAQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA005E51B6BCA7E005463F8 /* HCFAQTableViewCell.m */; };
 		ACA005E81B6BCA7E005463F8 /* HCFAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACA005E61B6BCA7E005463F8 /* HCFAQTableViewCell.xib */; };
 		ACA005EB1B6BCC9C005463F8 /* HCFAQListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA005EA1B6BCC9C005463F8 /* HCFAQListViewController.m */; };
@@ -86,6 +87,8 @@
 		AC5CC48E1B6C2E850078A593 /* HCAbout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAbout.m; sourceTree = "<group>"; };
 		AC5CC4901B6C37510078A593 /* HCTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCTabBarViewController.h; path = ../View/HCTabBarViewController.h; sourceTree = "<group>"; };
 		AC5CC4911B6C37510078A593 /* HCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCTabBarViewController.m; path = ../View/HCTabBarViewController.m; sourceTree = "<group>"; };
+		AC5CC4931B6C38580078A593 /* HCUserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUserInterface.h; sourceTree = "<group>"; };
+		AC5CC4941B6C38580078A593 /* HCUserInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUserInterface.m; sourceTree = "<group>"; };
 		ACA005E41B6BCA7E005463F8 /* HCFAQTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCFAQTableViewCell.h; sourceTree = "<group>"; };
 		ACA005E51B6BCA7E005463F8 /* HCFAQTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCFAQTableViewCell.m; sourceTree = "<group>"; };
 		ACA005E61B6BCA7E005463F8 /* HCFAQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCFAQTableViewCell.xib; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 		74B058F11B6BA433006394F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC5CC4931B6C38580078A593 /* HCUserInterface.h */,
+				AC5CC4941B6C38580078A593 /* HCUserInterface.m */,
 				74B058F21B6BA447006394F6 /* HCNewsArticle.h */,
 				74B058F31B6BA447006394F6 /* HCNewsArticle.m */,
 				AC5CC48D1B6C2E850078A593 /* HCAbout.h */,
@@ -403,6 +408,7 @@
 				74B059061B6BB2A0006394F6 /* HCScheduleItem.m in Sources */,
 				748AEC881B6B9E69002AD90B /* HCAppDelegate.m in Sources */,
 				ACA005E71B6BCA7E005463F8 /* HCFAQTableViewCell.m in Sources */,
+				AC5CC4951B6C38580078A593 /* HCUserInterface.m in Sources */,
 				AC5CC4921B6C37510078A593 /* HCTabBarViewController.m in Sources */,
 				AC5CC48C1B6C2DB30078A593 /* HCAboutViewController.m in Sources */,
 				74B058F41B6BA447006394F6 /* HCNewsArticle.m in Sources */,

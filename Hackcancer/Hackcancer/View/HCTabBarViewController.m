@@ -8,7 +8,11 @@
 
 #import "HCTabBarViewController.h"
 
+#import "HCUserInterface.h"
+
 @interface HCTabBarViewController ()
+
+@property (nonatomic, strong) HCUserInterface *userInterface;
 
 @end
 
@@ -16,22 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//    
+//    self.userInterface.
+//    
+//    UIImage *tabBarItem1 = self.userInterface.newsTabBarItem;
+//    
+//    [[self.tabBarController.tabBar.items objectAtIndex:1] setImage:tabBarItem1];
+//    [[self.tabBarController.tabBar.items objectAtIndex:2] setImage:tabBarItem1];
+//    [[self.tabBarController.tabBar.items objectAtIndex:3] setImage:tabBarItem1];
+//    [[self.tabBarController.tabBar.items objectAtIndex:4] setImage:tabBarItem1];
+//    [[self.tabBarController.tabBar.items objectAtIndex:5] setImage:tabBarItem1];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
