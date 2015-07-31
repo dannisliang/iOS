@@ -79,12 +79,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIu-NV-D1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1789" y="1845"/>
+            <point key="canvasLocation" x="-1455" y="2633"/>
         </scene>
-        <!--NewsViewController-->
+        <!--FAQListViewController-->
         <scene sceneID="aJ4-0f-MpQ">
             <objects>
-                <tableViewController id="sgK-FF-ODU" userLabel="NewsViewController" customClass="HCFAQListViewController" sceneMemberID="viewController">
+                <tableViewController id="sgK-FF-ODU" userLabel="FAQListViewController" customClass="HCFAQListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KfB-yR-RxC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,6 +156,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTc-sp-d1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-53" y="1147"/>
+        </scene>
+        <!--ScheduleEventViewController-->
+        <scene sceneID="ZXW-R8-w1v">
+            <objects>
+                <viewController storyboardIdentifier="ScheduleEvent" id="1wt-c7-Jp4" userLabel="ScheduleEventViewController" customClass="HCNewsArticleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7qC-sw-y34"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rvp-sp-w5v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hfb-wK-Ie9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOx-03-0i2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="2625"/>
+        </scene>
+        <!--FAQQuestionViewController-->
+        <scene sceneID="fFG-bK-chv">
+            <objects>
+                <viewController storyboardIdentifier="FAQQuestion" id="rV2-y7-51M" userLabel="FAQQuestionViewController" customClass="HCNewsArticleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dO3-4f-sKA"/>
+                        <viewControllerLayoutGuide type="bottom" id="BTV-Ud-kNj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nag-oI-dyl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bW9-qa-bZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-53" y="2625"/>
         </scene>
     </scenes>
 </document>

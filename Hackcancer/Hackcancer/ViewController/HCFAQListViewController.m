@@ -12,7 +12,7 @@
 
 #import "HCFAQItem.h"
 #import "HCFAQTableViewCell.h"
-#import "HCFAQListViewController.h"
+#import "HCFAQQuestionViewController.h"
 
 
 @interface HCFAQListViewController ()
@@ -24,6 +24,8 @@
 @implementation HCFAQListViewController
 
 static NSString * const HCFAQItemIdentifier = @"HCFAQItemIdentifier";
+
+#pragma mark - View Controller Lifecycle
 
 - (void)viewDidLoad
 {
@@ -62,5 +64,19 @@ static NSString * const HCFAQItemIdentifier = @"HCFAQItemIdentifier";
     
     return cell;
 }
+
+#pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HCFAQItem *question = self.FAQItem[indexPath.row];
+    
+    HCFAQQuestionViewController *questionViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"FAQQuestion"];
+    questionViewController.question = question;
+    
+    [self.navigationController pushViewController:questionViewController
+                                         animated:YES];
+}
+
 
 @end
