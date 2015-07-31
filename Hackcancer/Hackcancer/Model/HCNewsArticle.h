@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Hackcancer. All rights reserved.
 //
 
-#import "PFObject.h"
+#import <Parse/Parse.h>
 
 @interface HCNewsArticle : PFObject<PFSubclassing>
 
