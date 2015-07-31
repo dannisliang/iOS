@@ -10,6 +10,7 @@
 
 #import "HCScheduleItem.h"
 #import "HCScheduleItemTableViewCell.h"
+#import "HCScheduleEventViewController.h"
 
 @interface HCScheduleItemViewController ()
 
@@ -65,6 +66,19 @@ static NSString * const HCScheduleItemIdentifier = @"ScheduleItemTableViewCell";
     cell.eventTimeLabel.text = [self.dateFormat stringFromDate:event.time];
     
     return cell;
+}
+
+#pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HCScheduleItem *event = self.scheduleEvents[indexPath.row];
+    
+    HCScheduleEventViewController *eventViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"ScheduleEvent"];
+    eventViewController.event = event;
+    
+    [self.navigationController pushViewController:eventViewController
+                                         animated:YES];
 }
 
 @end

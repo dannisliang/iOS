@@ -25,6 +25,7 @@
 		74B059091B6BB369006394F6 /* HCScheduleItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059081B6BB369006394F6 /* HCScheduleItemTableViewCell.m */; };
 		74B0590B1B6BB386006394F6 /* ScheduleItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B0590A1B6BB386006394F6 /* ScheduleItemTableViewCell.xib */; };
 		AC1ECCAD1B6BF9A400473404 /* HCFAQQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1ECCAC1B6BF9A400473404 /* HCFAQQuestionViewController.m */; };
+		AC1ECCB01B6BFB2E00473404 /* HCScheduleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1ECCAF1B6BFB2E00473404 /* HCScheduleEventViewController.m */; };
 		ACA005E71B6BCA7E005463F8 /* HCFAQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA005E51B6BCA7E005463F8 /* HCFAQTableViewCell.m */; };
 		ACA005E81B6BCA7E005463F8 /* HCFAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACA005E61B6BCA7E005463F8 /* HCFAQTableViewCell.xib */; };
 		ACA005EB1B6BCC9C005463F8 /* HCFAQListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA005EA1B6BCC9C005463F8 /* HCFAQListViewController.m */; };
@@ -74,6 +75,8 @@
 		9008A8621007CD93C72E9FF4 /* libPods-Hackcancer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackcancer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1ECCAB1B6BF9A400473404 /* HCFAQQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCFAQQuestionViewController.h; sourceTree = "<group>"; };
 		AC1ECCAC1B6BF9A400473404 /* HCFAQQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCFAQQuestionViewController.m; sourceTree = "<group>"; };
+		AC1ECCAE1B6BFB2E00473404 /* HCScheduleEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCScheduleEventViewController.h; sourceTree = "<group>"; };
+		AC1ECCAF1B6BFB2E00473404 /* HCScheduleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCScheduleEventViewController.m; sourceTree = "<group>"; };
 		ACA005E41B6BCA7E005463F8 /* HCFAQTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCFAQTableViewCell.h; sourceTree = "<group>"; };
 		ACA005E51B6BCA7E005463F8 /* HCFAQTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCFAQTableViewCell.m; sourceTree = "<group>"; };
 		ACA005E61B6BCA7E005463F8 /* HCFAQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCFAQTableViewCell.xib; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				74B058F61B6BA809006394F6 /* HCNewsArticleViewController.m */,
 				74B059011B6BB243006394F6 /* HCScheduleItemViewController.h */,
 				74B059021B6BB243006394F6 /* HCScheduleItemViewController.m */,
+				AC1ECCAE1B6BFB2E00473404 /* HCScheduleEventViewController.h */,
+				AC1ECCAF1B6BFB2E00473404 /* HCScheduleEventViewController.m */,
 				ACA005E91B6BCC9C005463F8 /* HCFAQListViewController.h */,
 				ACA005EA1B6BCC9C005463F8 /* HCFAQListViewController.m */,
 				AC1ECCAB1B6BF9A400473404 /* HCFAQQuestionViewController.h */,
@@ -387,6 +392,7 @@
 				ACA005EE1B6BCF00005463F8 /* HCFAQItem.m in Sources */,
 				748AEC8B1B6B9E8D002AD90B /* main.m in Sources */,
 				AC1ECCAD1B6BF9A400473404 /* HCFAQQuestionViewController.m in Sources */,
+				AC1ECCB01B6BFB2E00473404 /* HCScheduleEventViewController.m in Sources */,
 				74B058F71B6BA809006394F6 /* HCNewsArticleViewController.m in Sources */,
 				74B058FC1B6BACF8006394F6 /* HCNewsViewController.m in Sources */,
 			);
