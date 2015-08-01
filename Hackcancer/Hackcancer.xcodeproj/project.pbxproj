@@ -42,6 +42,7 @@
 		AC1ECCAD1B6BF9A400473404 /* HCFAQQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1ECCAC1B6BF9A400473404 /* HCFAQQuestionViewController.m */; };
 		AC1ECCB01B6BFB2E00473404 /* HCScheduleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1ECCAF1B6BFB2E00473404 /* HCScheduleEventViewController.m */; };
 		AC5434A41B6D3256006A73C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5434A31B6D3256006A73C3 /* MapKit.framework */; };
+		AC5434A71B6D34FC006A73C3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5434A61B6D34FC006A73C3 /* CoreLocation.framework */; };
 		AC5CC48C1B6C2DB30078A593 /* HCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */; };
 		AC5CC48F1B6C2E850078A593 /* HCAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48E1B6C2E850078A593 /* HCAbout.m */; };
 		AC5CC4921B6C37510078A593 /* HCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC4911B6C37510078A593 /* HCTabBarViewController.m */; };
@@ -110,6 +111,7 @@
 		AC1ECCAE1B6BFB2E00473404 /* HCScheduleEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCScheduleEventViewController.h; sourceTree = "<group>"; };
 		AC1ECCAF1B6BFB2E00473404 /* HCScheduleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCScheduleEventViewController.m; sourceTree = "<group>"; };
 		AC5434A31B6D3256006A73C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AC5434A61B6D34FC006A73C3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AC5CC48A1B6C2DB30078A593 /* HCAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAboutViewController.h; sourceTree = "<group>"; };
 		AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAboutViewController.m; sourceTree = "<group>"; };
 		AC5CC48D1B6C2E850078A593 /* HCAbout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAbout.h; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5434A71B6D34FC006A73C3 /* CoreLocation.framework in Frameworks */,
 				AC5434A41B6D3256006A73C3 /* MapKit.framework in Frameworks */,
 				6C3C6AEB17C30A3B9FF604A5 /* libPods-Hackcancer.a in Frameworks */,
 			);
@@ -299,6 +302,7 @@
 		A73BA80D422F025919807B8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC5434A61B6D34FC006A73C3 /* CoreLocation.framework */,
 				AC5434A31B6D3256006A73C3 /* MapKit.framework */,
 				9008A8621007CD93C72E9FF4 /* libPods-Hackcancer.a */,
 			);

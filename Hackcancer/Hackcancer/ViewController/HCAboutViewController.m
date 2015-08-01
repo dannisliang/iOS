@@ -9,6 +9,7 @@
 #import "HCAboutViewController.h"
 
 #import <Parse/Parse.h>
+#import <MapKit/MapKit.h>
 
 #import "HCAbout.h"
 #import "HCAboutDateTableViewCell.h"
@@ -29,8 +30,12 @@ typedef NS_ENUM(NSUInteger, HCAboutRow)
 @interface HCAboutViewController ()
 
 @property (nonatomic, strong) NSArray *aboutContent;
+@property (nonatomic, assign, readonly) CLLocationCoordinate2D coordinate;
 
 @property (nonatomic, strong) NSDateFormatter *dateFormat;
+
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate;
+
 
 @end
 
@@ -112,6 +117,9 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
             HCAbout *about = self.aboutContent[indexPath.row - 1];
             
             HCAboutMapTableViewCell *mapCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutMapIdentifier];
+            
+            mapCell.mapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.332495f, -122.029095f),
+                                                         MKCoordinateSpanMake(0.008516f, 0.021801f));
             
             cell = mapCell;
             
