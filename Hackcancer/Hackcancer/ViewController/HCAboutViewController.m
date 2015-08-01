@@ -45,6 +45,9 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
 {
     [super viewDidLoad];
     
+    PFQuery *aboutContentQuery = [PFQuery queryWithClassName:[HCAbout parseClassName]];
+    self.aboutContent = [aboutContentQuery findObjects];
+    
     UINib *tableViewCellNib = [UINib nibWithNibName:HCAboutMapIdentifier
                                              bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:tableViewCellNib
@@ -64,6 +67,11 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
                                               bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:tableViewCellNib4
          forCellReuseIdentifier:HCAboutSocialNetworkIdentifier];
+    
+    self.tableView.estimatedRowHeight = 44.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table View Data Source
@@ -90,10 +98,11 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
         }
         case HCAboutRowDescription:
         {
-            HCAbout *aboutDescription = self.aboutContent[indexPath.row];
+            HCAbout *about = self.aboutContent[indexPath.row];
+            
             HCAboutDescriptionTableViewCell *descriptionCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutDescriptionIdentifier];
             
-            descriptionCell.aboutDescriptionLabel.text = aboutDescription.aboutDescription;
+            descriptionCell.aboutDescriptionLabel.text = about.aboutDescription;
             
             cell = descriptionCell;
             

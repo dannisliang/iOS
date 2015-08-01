@@ -1,8 +1,8 @@
 //
 //  main.m
-//  Fling
+//  Hackcancer
 //
-//  Created by Gabriel Massana on 22/10/2014.
+//  Created by James Campbell on 22/10/2014.
 //  Copyright (c) 2014 Unii Ltd. All rights reserved.
 //
 
