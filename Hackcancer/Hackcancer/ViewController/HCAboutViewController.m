@@ -85,13 +85,18 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"AboutSocialNetwork";
             HCAboutMapTableViewCell *mapCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutMapIdentifier];
             
             cell = mapCell;
+        
             break;
         }
         case HCAboutRowDescription:
         {
+            HCAbout *aboutDescription = self.aboutContent[indexPath.row];
             HCAboutDescriptionTableViewCell *descriptionCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutDescriptionIdentifier];
             
+            descriptionCell.aboutDescriptionLabel.text = aboutDescription.aboutDescription;
+            
             cell = descriptionCell;
+            
             break;
         }
         case HCAboutRowDate:

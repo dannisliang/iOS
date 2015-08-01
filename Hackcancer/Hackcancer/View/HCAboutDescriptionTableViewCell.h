@@ -10,4 +10,6 @@
 
 @interface HCAboutDescriptionTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *aboutDescriptionLabel;
+
 @end
