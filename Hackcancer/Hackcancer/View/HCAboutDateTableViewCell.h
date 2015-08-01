@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import <ParseUI/ParseUI.h>
+
 @interface HCAboutDateTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet PFImageView *eventIcon;
+@property (weak, nonatomic) IBOutlet UILabel *eventDate;
 
 @end

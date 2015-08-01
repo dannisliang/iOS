@@ -13,8 +13,12 @@
 @property (nonatomic, strong) PFGeoPoint *hackLocation;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *aboutDescription;
+@property (nonatomic, strong) PFFile *eventIcon;
 @property (nonatomic, strong) NSDate *eventStartDate;
 @property (nonatomic, strong) NSDate *eventEndDate;
+@property (nonatomic, strong) PFFile *facebookIcon;
+@property (nonatomic, strong) PFFile *twitterIcon;
+@property (nonatomic, strong) PFFile *instagramIcon;
 
 + (NSString *)parseClassName;
 

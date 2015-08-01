@@ -20,8 +20,8 @@ static NSInteger const HCAboutNumberOfRows = 7;
 
 typedef NS_ENUM(NSUInteger, HCAboutRow)
 {
-    HCAboutRowMap = 0,
-    HCAboutRowDescription = 1,
+    HCAboutRowDescription = 0,
+    HCAboutRowMap = 1,
     HCAboutRowDate = 2,
     HCAboutRowSocialNetwork = 3
 };
@@ -29,6 +29,8 @@ typedef NS_ENUM(NSUInteger, HCAboutRow)
 @interface HCAboutViewController ()
 
 @property (nonatomic, strong) NSArray *aboutContent;
+
+@property (nonatomic, strong) NSDateFormatter *dateFormat;
 
 @end
 
@@ -45,18 +47,23 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
 {
     [super viewDidLoad];
     
+    self.dateFormat = [[NSDateFormatter alloc] init];
+    self.dateFormat.dateFormat = @"HH:mm";
+    self.dateFormat.locale = [NSLocale localeWithLocaleIdentifier:@"en_GB"];
+    
     PFQuery *aboutContentQuery = [PFQuery queryWithClassName:[HCAbout parseClassName]];
     self.aboutContent = [aboutContentQuery findObjects];
     
-    UINib *tableViewCellNib = [UINib nibWithNibName:HCAboutMapIdentifier
+    UINib *tableViewCellNib = [UINib nibWithNibName:HCAboutDescriptionIdentifier
                                              bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:tableViewCellNib
-         forCellReuseIdentifier:HCAboutMapIdentifier];
+         forCellReuseIdentifier:HCAboutDescriptionIdentifier];
     
-    UINib *tableViewCellNib2 = [UINib nibWithNibName:HCAboutDescriptionIdentifier
+    UINib *tableViewCellNib2 = [UINib nibWithNibName:HCAboutMapIdentifier
                                               bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:tableViewCellNib2
-         forCellReuseIdentifier:HCAboutDescriptionIdentifier];
+         forCellReuseIdentifier:HCAboutMapIdentifier];
+    
     
     UINib *tableViewCellNib3 = [UINib nibWithNibName:HCAboutDateIdentifier
                                               bundle:[NSBundle mainBundle]];
@@ -88,17 +95,9 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
     
     switch (indexPath.row)
     {
-        case HCAboutRowMap:
-        {
-            HCAboutMapTableViewCell *mapCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutMapIdentifier];
-            
-            cell = mapCell;
-        
-            break;
-        }
         case HCAboutRowDescription:
         {
-            HCAbout *about = self.aboutContent[indexPath.row - 1];
+            HCAbout *about = self.aboutContent[indexPath.row];
             
             HCAboutDescriptionTableViewCell *descriptionCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutDescriptionIdentifier];
             
@@ -108,15 +107,33 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
             
             break;
         }
+        case HCAboutRowMap:
+        {
+            HCAbout *about = self.aboutContent[indexPath.row - 1];
+            
+            HCAboutMapTableViewCell *mapCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutMapIdentifier];
+            
+            cell = mapCell;
+            
+            break;
+        }
         case HCAboutRowDate:
         {
+            HCAbout *about = self.aboutContent[indexPath.row - 2];
+
             HCAboutDateTableViewCell *dateCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutDateIdentifier];
             
+            dateCell.eventIcon.file = about.eventIcon;
+            dateCell.eventDate.text = [self.dateFormat stringFromDate:about.eventStartDate];
+
             cell = dateCell;
+
             break;
         }
         default:
         {
+//            HCAbout *about = self.aboutContent[indexPath.row - 1];
+            
             HCAboutSocialNetworkTableViewCell *socialCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
             
             cell = socialCell;

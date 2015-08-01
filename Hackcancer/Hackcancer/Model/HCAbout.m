@@ -13,8 +13,12 @@
 @dynamic hackLocation;
 @dynamic title;
 @dynamic aboutDescription;
+@dynamic eventIcon;
 @dynamic eventStartDate;
 @dynamic eventEndDate;
+@dynamic facebookIcon;
+@dynamic twitterIcon;
+@dynamic instagramIcon;
 
 + (void)load
 {
