@@ -98,7 +98,7 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
         }
         case HCAboutRowDescription:
         {
-            HCAbout *about = self.aboutContent[indexPath.row];
+            HCAbout *about = self.aboutContent[indexPath.row - 1];
             
             HCAboutDescriptionTableViewCell *descriptionCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutDescriptionIdentifier];
             
