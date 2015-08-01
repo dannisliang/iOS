@@ -38,6 +38,7 @@
     self.eventContentLabel.text = self.event.content;
     
     self.eventImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.eventImageView.clipsToBounds = YES;
     [self.eventImageView loadInBackground];
 }
 

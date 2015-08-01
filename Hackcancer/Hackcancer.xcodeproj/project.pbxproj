@@ -277,9 +277,9 @@
 				ACA005E61B6BCA7E005463F8 /* HCFAQTableViewCell.xib */,
 				74B058FE1B6BADA6006394F6 /* HCNewsArticleTableViewCell.h */,
 				74B058FF1B6BADA6006394F6 /* HCNewsArticleTableViewCell.m */,
+				74B058F91B6BABAE006394F6 /* NewsArticleTableViewCell.xib */,
 				74B059071B6BB369006394F6 /* HCScheduleItemTableViewCell.h */,
 				74B059081B6BB369006394F6 /* HCScheduleItemTableViewCell.m */,
-				74B058F91B6BABAE006394F6 /* NewsArticleTableViewCell.xib */,
 				74B0590A1B6BB386006394F6 /* ScheduleItemTableViewCell.xib */,
 			);
 			path = View;
