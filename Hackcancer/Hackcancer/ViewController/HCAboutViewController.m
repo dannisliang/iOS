@@ -34,10 +34,10 @@ typedef NS_ENUM(NSUInteger, HCAboutRow)
 
 @implementation HCAboutViewController
 
-static NSString * const HCAboutMapIdentifier = @"AboutMapIdentifier";
-static NSString * const HCAboutDescriptionIdentifier = @"AboutDescriptionIdentifier";
-static NSString * const HCAboutDateIdentifier = @"AboutDateIdentifier";
-static NSString * const HCAboutSocialNetworkIdentifier = @"AboutSocialNetwork";
+static NSString * const HCAboutMapIdentifier = @"HCAboutMapTableViewCell";
+static NSString * const HCAboutDescriptionIdentifier = @"HCAboutDescriptionTableViewCell";
+static NSString * const HCAboutDateIdentifier = @"HCAboutDateTableViewCell";
+static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableViewCell";
 
 #pragma mark - View Controller Lifecycle
 
