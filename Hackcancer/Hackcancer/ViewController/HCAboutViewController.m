@@ -167,7 +167,7 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
             cell = facebookCell;
             
             break;
-        {
+        }
         case HCAboutRowSocialNetworkTwitter:
         {
             HCAbout *about = self.aboutContent[indexPath.row - 4];
