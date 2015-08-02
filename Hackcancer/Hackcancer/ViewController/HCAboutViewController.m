@@ -17,14 +17,17 @@
 #import "HCAboutMapTableViewCell.h"
 #import "HCAboutSocialNetworkTableViewCell.h"
 
-static NSInteger const HCAboutNumberOfRows = 3;
+static NSInteger const HCAboutNumberOfRows = 7;
 
 typedef NS_ENUM(NSUInteger, HCAboutRow)
 {
     HCAboutRowDescription = 0,
     HCAboutRowMap = 1,
     HCAboutRowDate = 2,
-    HCAboutRowSocialNetwork = 3
+    HCAboutRowSocialNetworkFacebook = 3,
+    HCAboutRowSocialNetworkTwitter = 4,
+    HCAboutRowSocialNetworkInstagram = 5,
+    HCAboutRowSocialNetworkEmail = 6
 };
 
 @interface HCAboutViewController ()
@@ -80,6 +83,22 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
     [self.tableView registerNib:tableViewCellNib4
          forCellReuseIdentifier:HCAboutSocialNetworkIdentifier];
     
+    UINib *tableViewCellNib5 = [UINib nibWithNibName:HCAboutSocialNetworkIdentifier
+                                              bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:tableViewCellNib5
+         forCellReuseIdentifier:HCAboutSocialNetworkIdentifier];
+    
+    
+    UINib *tableViewCellNib6 = [UINib nibWithNibName:HCAboutSocialNetworkIdentifier
+                                              bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:tableViewCellNib6
+         forCellReuseIdentifier:HCAboutSocialNetworkIdentifier];
+    
+    UINib *tableViewCellNib7 = [UINib nibWithNibName:HCAboutSocialNetworkIdentifier
+                                              bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:tableViewCellNib7
+         forCellReuseIdentifier:HCAboutSocialNetworkIdentifier];
+    
     self.tableView.estimatedRowHeight = 44.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
@@ -90,7 +109,7 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return HCAboutNumberOfRows + self.aboutContent.count;
+    return HCAboutNumberOfRows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -136,20 +155,59 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
 
             break;
         }
-        default:
+        case HCAboutRowSocialNetworkFacebook:
         {
             HCAbout *about = self.aboutContent[indexPath.row - 3];
             
-            HCAboutSocialNetworkTableViewCell *socialCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
+            HCAboutSocialNetworkTableViewCell *facebookCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
             
-            socialCell.socialNetworkTitleLabel.text = about.facebookTitle;
-            socialCell.socialNetworkLogoImageView.file = about.facebookIcon;
+            facebookCell.socialNetworkTitleLabel.text = about.facebookTitle;
+            facebookCell.socialNetworkLogoImageView.file = about.facebookIcon;
             
-            cell = socialCell;
+            cell = facebookCell;
+            
+            break;
+        {
+        case HCAboutRowSocialNetworkTwitter:
+        {
+            HCAbout *about = self.aboutContent[indexPath.row - 4];
+            
+            HCAboutSocialNetworkTableViewCell *twitterCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
+            
+            twitterCell.socialNetworkTitleLabel.text = about.twitterTitle;
+            twitterCell.socialNetworkLogoImageView.file = about.twitterIcon;
+            
+            cell = twitterCell;
+            
+            break;
+        }
+        case HCAboutRowSocialNetworkInstagram:
+        {
+            HCAbout *about = self.aboutContent[indexPath.row - 5];
+            
+            HCAboutSocialNetworkTableViewCell *instagramCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
+            
+            instagramCell.socialNetworkTitleLabel.text = about.instagramTitle;
+            instagramCell.socialNetworkLogoImageView.file = about.instagramIcon;
+            
+            cell = instagramCell;
+            
+            break;
+        }
+        case HCAboutRowSocialNetworkEmail:
+        {
+            HCAbout *about = self.aboutContent[indexPath.row - 6];
+            
+            HCAboutSocialNetworkTableViewCell *emailCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
+            
+            emailCell.socialNetworkTitleLabel.text = about.emailTitle;
+            emailCell.socialNetworkLogoImageView.file = about.emailIcon;
+            
+            cell = emailCell;
+            
             break;
         }
     }
-    
     return cell;
 }
 
