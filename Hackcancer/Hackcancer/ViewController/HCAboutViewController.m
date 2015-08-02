@@ -140,9 +140,12 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
         }
         default:
         {
-//            HCAbout *about = self.aboutContent[indexPath.row - 1];
+            HCAbout *about = self.aboutContent[indexPath.row - 1];
             
             HCAboutSocialNetworkTableViewCell *socialCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
+            
+            socialCell.socialNetworkTitleLabel.text = about.facebookTitle;
+            socialCell.socialNetworkLogoImageView.file = about.facebookIcon;
             
             cell = socialCell;
             break;

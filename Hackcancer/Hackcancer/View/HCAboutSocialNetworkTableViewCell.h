@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import <ParseUI/ParseUI.h>
+
 @interface HCAboutSocialNetworkTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *socialNetworkTitleLabel;
+@property (weak, nonatomic) IBOutlet PFImageView *socialNetworkLogoImageView;
 
 @end

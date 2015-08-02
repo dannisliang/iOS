@@ -16,9 +16,14 @@
 @dynamic eventIcon;
 @dynamic eventStartDate;
 @dynamic eventEndDate;
+@dynamic facebookTitle;
+@dynamic twitterTitle;
+@dynamic instagramTitle;
+@dynamic emailTitle;
 @dynamic facebookIcon;
 @dynamic twitterIcon;
 @dynamic instagramIcon;
+@dynamic emailIcon;
 
 + (void)load
 {
