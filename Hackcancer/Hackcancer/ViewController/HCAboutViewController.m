@@ -17,7 +17,7 @@
 #import "HCAboutMapTableViewCell.h"
 #import "HCAboutSocialNetworkTableViewCell.h"
 
-static NSInteger const HCAboutNumberOfRows = 7;
+static NSInteger const HCAboutNumberOfRows = 3;
 
 typedef NS_ENUM(NSUInteger, HCAboutRow)
 {
@@ -90,7 +90,7 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return HCAboutNumberOfRows;
+    return HCAboutNumberOfRows + self.aboutContent.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -114,8 +114,6 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
         }
         case HCAboutRowMap:
         {
-            HCAbout *about = self.aboutContent[indexPath.row - 1];
-            
             HCAboutMapTableViewCell *mapCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutMapIdentifier];
             
             mapCell.mapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.332495f, -122.029095f),
@@ -140,7 +138,7 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
         }
         default:
         {
-            HCAbout *about = self.aboutContent[indexPath.row - 1];
+            HCAbout *about = self.aboutContent[indexPath.row - 3];
             
             HCAboutSocialNetworkTableViewCell *socialCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
             

@@ -38,7 +38,6 @@
 		74B059261B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059251B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m */; };
 		74B059271B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059251B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m */; };
 		74B0592A1B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059291B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m */; };
-		74B0592B1B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B059291B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m */; };
 		AC1ECCAD1B6BF9A400473404 /* HCFAQQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1ECCAC1B6BF9A400473404 /* HCFAQQuestionViewController.m */; };
 		AC1ECCB01B6BFB2E00473404 /* HCScheduleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1ECCAF1B6BFB2E00473404 /* HCScheduleEventViewController.m */; };
 		AC5434A41B6D3256006A73C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5434A31B6D3256006A73C3 /* MapKit.framework */; };
@@ -488,7 +487,6 @@
 				745D60A71B15209D00558337 /* HackcancerTests.swift in Sources */,
 				74B0591F1B6C3CFC006394F6 /* HCAboutMapTableViewCell.m in Sources */,
 				74B059271B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m in Sources */,
-				74B0592B1B6C3D3A006394F6 /* HCAboutSocialNetworkTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
