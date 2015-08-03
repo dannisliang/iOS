@@ -11,6 +11,7 @@
 @implementation HCAbout
 
 @dynamic hackLocation;
+@dynamic mapPinIcon;
 @dynamic title;
 @dynamic aboutDescription;
 @dynamic eventIcon;
