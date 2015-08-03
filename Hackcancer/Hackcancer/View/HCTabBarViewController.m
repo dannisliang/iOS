@@ -31,20 +31,12 @@
     
 //    [[self.tabBarController.tabBar.items objectAtIndex:0] setImage:self.tabBarItem0];
     
-//    [UITabBar appearance].tintColor = [UIColor colorWithRed:255 green:200 blue:50 alpha:1.0];
-//    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:255 green:200 blue:50 alpha:1.0]];
-    
-    [[UITabBar appearance] setBackgroundColor:[UIColor colorWithRed:255 green:200 blue:50 alpha:1.0]];
-    
-    
-//    [UITabBar appearance].tintColor = self.colors[@"Tint2"];
-//    
-//    [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
 
     
-//    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:[self.userInterface.primaryR floatValue] green:[self.userInterface.primaryG floatValue] blue:[self.userInterface.primaryB floatValue] alpha:1.0]];
-//    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:[self.userInterface.primaryR floatValue] green:[self.userInterface.primaryG floatValue] blue:[self.userInterface.primaryB floatValue] alpha:1.0]];
-//    
+    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:[self.userInterface.primaryR floatValue] green:[self.userInterface.primaryG floatValue] blue:[self.userInterface.primaryB floatValue] alpha:1.0]];
+    
+    
+    
     
 //    [[self.tabBarController.tabBar.items objectAtIndex:1] setImage:tabBarItem2];
 //    [[self.tabBarController.tabBar.items objectAtIndex:2] setImage:tabBarItem3];
