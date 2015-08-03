@@ -167,48 +167,49 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
             cell = facebookCell;
             
             break;
-        {
-        case HCAboutRowSocialNetworkTwitter:
-        {
-            HCAbout *about = self.aboutContent[indexPath.row - 4];
-            
-            HCAboutSocialNetworkTableViewCell *twitterCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
-            
-            twitterCell.socialNetworkTitleLabel.text = about.twitterTitle;
-            twitterCell.socialNetworkLogoImageView.file = about.twitterIcon;
-            
-            cell = twitterCell;
-            
-            break;
-        }
-        case HCAboutRowSocialNetworkInstagram:
-        {
-            HCAbout *about = self.aboutContent[indexPath.row - 5];
-            
-            HCAboutSocialNetworkTableViewCell *instagramCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
-            
-            instagramCell.socialNetworkTitleLabel.text = about.instagramTitle;
-            instagramCell.socialNetworkLogoImageView.file = about.instagramIcon;
-            
-            cell = instagramCell;
-            
-            break;
-        }
-        case HCAboutRowSocialNetworkEmail:
-        {
-            HCAbout *about = self.aboutContent[indexPath.row - 6];
-            
-            HCAboutSocialNetworkTableViewCell *emailCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
-            
-            emailCell.socialNetworkTitleLabel.text = about.emailTitle;
-            emailCell.socialNetworkLogoImageView.file = about.emailIcon;
-            
-            cell = emailCell;
-            
-            break;
+//        {
+//        case HCAboutRowSocialNetworkTwitter:
+//        {
+//            HCAbout *about = self.aboutContent[indexPath.row - 4];
+//            
+//            HCAboutSocialNetworkTableViewCell *twitterCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
+//            
+//            twitterCell.socialNetworkTitleLabel.text = about.twitterTitle;
+//            twitterCell.socialNetworkLogoImageView.file = about.twitterIcon;
+//            
+//            cell = twitterCell;
+//            
+//            break;
+//        }
+//        case HCAboutRowSocialNetworkInstagram:
+//        {
+//            HCAbout *about = self.aboutContent[indexPath.row - 5];
+//            
+//            HCAboutSocialNetworkTableViewCell *instagramCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
+//            
+//            instagramCell.socialNetworkTitleLabel.text = about.instagramTitle;
+//            instagramCell.socialNetworkLogoImageView.file = about.instagramIcon;
+//            
+//            cell = instagramCell;
+//            
+//            break;
+//        }
+//        case HCAboutRowSocialNetworkEmail:
+//        {
+//            HCAbout *about = self.aboutContent[indexPath.row - 6];
+//            
+//            HCAboutSocialNetworkTableViewCell *emailCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
+//            
+//            emailCell.socialNetworkTitleLabel.text = about.emailTitle;
+//            emailCell.socialNetworkLogoImageView.file = about.emailIcon;
+//            
+//            cell = emailCell;
+//            
+//            break;
         }
     }
     return cell;
 }
+            
 
 @end

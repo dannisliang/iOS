@@ -15,6 +15,9 @@
 @dynamic conciergeTabBarItem;
 @dynamic scheduleTabBarItem;
 @dynamic faqTabBarItem;
+@dynamic primaryR;
+@dynamic primaryG;
+@dynamic primaryB;
 
 + (void)load
 {

@@ -15,6 +15,10 @@
 @property (nonatomic, strong) PFFile *conciergeTabBarItem;
 @property (nonatomic, strong) PFFile *scheduleTabBarItem;
 @property (nonatomic, strong) PFFile *faqTabBarItem;
+@property NSNumber *primaryR;
+@property NSNumber *primaryG;
+@property NSNumber *primaryB;
+
 
 + (NSString *)parseClassName;
 
