@@ -11,7 +11,9 @@
 @implementation HCAbout
 
 @dynamic viewTitle;
+@dynamic mapTitle;
 @dynamic hackLocation;
+@dynamic directionsTitle;
 @dynamic mapPinIcon;
 @dynamic aboutDescription;
 @dynamic eventIcon;

@@ -10,6 +10,8 @@
 
 @interface HCAbout : PFObject<PFSubclassing>
 
+@property (nonatomic, strong) NSString *mapTitle;
+@property (nonatomic, strong) NSString *directionsTitle;
 @property (nonatomic, strong) PFGeoPoint *hackLocation;
 @property (nonatomic, strong) PFFile *mapPinIcon;
 @property (nonatomic, strong) NSString *viewTitle;

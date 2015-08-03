@@ -22,6 +22,17 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    self.title = self.about.mapTitle;
+    
+    UIBarButtonItem *directionsButton = [[UIBarButtonItem alloc]
+                                         initWithTitle:self.about.directionsTitle
+                                         style:UIBarButtonItemStyleDone
+                                         target:self
+                                         action:@selector(onDirectionsButton)];
+    self.navigationItem.rightBarButtonItem = directionsButton;
+    
+    
     self.mapView.delegate = self;
     self.mapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(self.about.hackLocation.latitude, self.about.hackLocation.longitude), MKCoordinateSpanMake(0.004f, 0.004f));
     
@@ -30,7 +41,39 @@
     [self.mapView addAnnotation:hackCancerVenueLocationPin];
 }
 
--(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+- (void)onDirectionsButton {
+    MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:CLLocationCoordinate2DMake(self.about.hackLocation.latitude, self.about.hackLocation.longitude) addressDictionary:nil];
+    MKMapItem *myMapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+    
+    
+    MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
+    [request setSource:[MKMapItem mapItemForCurrentLocation]];
+    [request setDestination:myMapItem];
+    [request setTransportType:MKDirectionsTransportTypeAny]; // This can be limited to automobile and walking directions.
+    [request setRequestsAlternateRoutes:YES]; // Gives you several route options.
+    MKDirections *directions = [[MKDirections alloc] initWithRequest:request];
+    [directions calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
+        if (!error) {
+            for (MKRoute *route in [response routes]) {
+                [self.mapView addOverlay:[route polyline] level:MKOverlayLevelAboveRoads]; // Draws the route above roads, but below labels.
+                // You can also get turn-by-turn steps, distance, advisory notices, ETA, etc by accessing various route properties.
+            }
+        }
+    }];
+}
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
+{
+    if ([overlay isKindOfClass:[MKPolyline class]]) {
+        MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithOverlay:overlay];
+        [renderer setStrokeColor:[UIColor colorWithRed:(102.0/255.0) green:(51.0/255.0) blue:(153.0/255.0) alpha:1.0]];
+        [renderer setLineWidth:5.0];
+        return renderer;
+    }
+    return nil;
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
     //if annotation is the user location, return nil to get default blue-dot...
     if ([annotation isKindOfClass:[MKUserLocation class]])
