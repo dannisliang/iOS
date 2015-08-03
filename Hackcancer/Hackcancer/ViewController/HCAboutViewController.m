@@ -55,6 +55,10 @@ static NSString *HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableVie
                  ],
              @[
                  HCAboutSocialNetworkIdentifier,
+                 HCAboutSocialNetworkIdentifier,
+                 HCAboutSocialNetworkIdentifier,
+                 HCAboutSocialNetworkIdentifier,
+                 HCAboutSocialNetworkIdentifier,
                  HCAboutSocialNetworkIdentifier
                  ]
              ];
@@ -71,7 +75,10 @@ static NSString *HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableVie
     self.socialNetworks = [socialNetworksQuery findObjects];
     
     
-    
+//    for (HCSocialNetworks *socialNetwork in self.socialNetworks) {
+//        socialNetwork.cellIdentifier = HCAboutSocialNetworkIdentifier;
+//    }
+//    
     self.dateFormat = [[NSDateFormatter alloc] init];
     self.dateFormat.dateFormat = @"HH:mm";
     self.dateFormat.locale = [NSLocale localeWithLocaleIdentifier:@"en_GB"];
