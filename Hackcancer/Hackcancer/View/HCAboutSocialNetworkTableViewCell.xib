@@ -42,7 +42,7 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="socialNetworkLogoImageView" destination="qm0-ms-dNg" id="Bl4-kQ-G4g"/>
+                <outlet property="socialNetworkIconImageView" destination="qm0-ms-dNg" id="y03-To-pEG"/>
                 <outlet property="socialNetworkTitleLabel" destination="B9N-Xi-Yq7" id="wQC-og-YGz"/>
             </connections>
             <point key="canvasLocation" x="205" y="258.5"/>

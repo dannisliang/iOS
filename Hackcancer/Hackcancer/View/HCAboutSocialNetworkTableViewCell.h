@@ -13,6 +13,6 @@
 @interface HCAboutSocialNetworkTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *socialNetworkTitleLabel;
-@property (weak, nonatomic) IBOutlet PFImageView *socialNetworkLogoImageView;
+@property (weak, nonatomic) IBOutlet PFImageView *socialNetworkIconImageView;
 
 @end

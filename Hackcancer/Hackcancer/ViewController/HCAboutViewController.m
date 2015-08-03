@@ -13,54 +13,68 @@
 #import <MapKit/MapKit.h>
 
 #import "HCAbout.h"
+#import "HCSocialNetworks.h"
 #import "HCAboutDateTableViewCell.h"
 #import "HCAboutDescriptionTableViewCell.h"
 #import "HCAboutMapTableViewCell.h"
 #import "HCAboutSocialNetworkTableViewCell.h"
 
-static NSInteger const HCAboutNumberOfRows = 7;
 
-typedef NS_ENUM(NSUInteger, HCAboutRow)
-{
-    HCAboutRowDescription = 0,
-    HCAboutRowMap = 1,
-    HCAboutRowDate = 2,
-    HCAboutRowSocialNetworkFacebook = 3,
-    HCAboutRowSocialNetworkTwitter = 4,
-    HCAboutRowSocialNetworkInstagram = 5,
-    HCAboutRowSocialNetworkEmail = 6
-};
-
-@interface HCAboutViewController () <MKMapViewDelegate>
+@interface HCAboutViewController () <UITableViewDelegate, MKMapViewDelegate>
 
 @property (nonatomic, strong) NSArray *aboutContent;
+@property (nonatomic, strong) NSArray *socialNetworks;
 
 @property (nonatomic, strong) NSDateFormatter *dateFormat;
-
-@property (nonatomic, strong) HCAbout *about;
-@property (nonatomic, strong) UIImage *pinImage;
 
 @end
 
 @implementation HCAboutViewController
 
-static NSString * const HCAboutMapIdentifier = @"HCAboutMapTableViewCell";
-static NSString * const HCAboutDescriptionIdentifier = @"HCAboutDescriptionTableViewCell";
-static NSString * const HCAboutDateIdentifier = @"HCAboutDateTableViewCell";
-static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableViewCell";
+static NSString *HCAboutDescriptionIdentifier = @"HCAboutDescriptionTableViewCell";
+static NSString *HCAboutMapIdentifier = @"HCAboutMapTableViewCell";
+static NSString *HCAboutDateIdentifier = @"HCAboutDateTableViewCell";
+static NSString *HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableViewCell";
 
 #pragma mark - View Controller Lifecycle
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [[self tableData] count];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [[[self tableData] objectAtIndex:section] count];
+}
+
+- (NSArray *)tableData {
+    return @[
+             @[
+                 HCAboutDescriptionIdentifier,
+                 HCAboutMapIdentifier,
+                 HCAboutDateIdentifier,
+                 ],
+             @[
+                 HCAboutSocialNetworkIdentifier,
+                 HCAboutSocialNetworkIdentifier
+                 ]
+             ];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    PFQuery *aboutContentQuery = [PFQuery queryWithClassName:[HCAbout parseClassName]];
+    self.aboutContent = [aboutContentQuery findObjects];
+    
+    PFQuery *socialNetworksQuery = [PFQuery queryWithClassName:[HCSocialNetworks parseClassName]];
+    self.socialNetworks = [socialNetworksQuery findObjects];
+    
+    
+    
     self.dateFormat = [[NSDateFormatter alloc] init];
     self.dateFormat.dateFormat = @"HH:mm";
     self.dateFormat.locale = [NSLocale localeWithLocaleIdentifier:@"en_GB"];
-    
-    PFQuery *aboutContentQuery = [PFQuery queryWithClassName:[HCAbout parseClassName]];
-    self.aboutContent = [aboutContentQuery findObjects];
     
     UINib *tableViewCellNib = [UINib nibWithNibName:HCAboutDescriptionIdentifier
                                              bundle:[NSBundle mainBundle]];
@@ -83,140 +97,67 @@ static NSString * const HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkT
     [self.tableView registerNib:tableViewCellNib4
          forCellReuseIdentifier:HCAboutSocialNetworkIdentifier];
     
-    UINib *tableViewCellNib5 = [UINib nibWithNibName:HCAboutSocialNetworkIdentifier
-                                              bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:tableViewCellNib5
-         forCellReuseIdentifier:HCAboutSocialNetworkIdentifier];
-    
-    
-    UINib *tableViewCellNib6 = [UINib nibWithNibName:HCAboutSocialNetworkIdentifier
-                                              bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:tableViewCellNib6
-         forCellReuseIdentifier:HCAboutSocialNetworkIdentifier];
-    
-    UINib *tableViewCellNib7 = [UINib nibWithNibName:HCAboutSocialNetworkIdentifier
-                                              bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:tableViewCellNib7
-         forCellReuseIdentifier:HCAboutSocialNetworkIdentifier];
-    
     self.tableView.estimatedRowHeight = 44.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     [self.tableView reloadData];
 }
 
-#pragma mark - Table View Data Source
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return HCAboutNumberOfRows;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = nil;
     
-    switch (indexPath.row)
-    {
-        case HCAboutRowDescription:
-        {
-            HCAbout *about = self.aboutContent[indexPath.row];
-            
-            HCAboutDescriptionTableViewCell *descriptionCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutDescriptionIdentifier];
-            
-            descriptionCell.aboutDescriptionLabel.text = about.aboutDescription;
-            
-            cell = descriptionCell;
-            
-            break;
-        }
-        case HCAboutRowMap:
-        {
-            HCAbout *about = self.aboutContent[indexPath.row - 1];
-            
-            HCAboutMapTableViewCell *mapCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutMapIdentifier];
-            
-            mapCell.mapView.delegate = self;
-            mapCell.mapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(about.hackLocation.latitude, about.hackLocation.longitude),
-                                                         MKCoordinateSpanMake(0.004f, 0.004f));
-            
-            MKPointAnnotation *hackCancerVenueLocationPin = [[MKPointAnnotation alloc]init];
-            hackCancerVenueLocationPin.coordinate=CLLocationCoordinate2DMake(about.hackLocation.latitude, about.hackLocation.longitude);
-            [mapCell.mapView addAnnotation:hackCancerVenueLocationPin];
-            
-            cell = mapCell;
-            
-            break;
-        }
-        case HCAboutRowDate:
-        {
-            HCAbout *about = self.aboutContent[indexPath.row - 2];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:[self tableData][indexPath.section][indexPath.row] forIndexPath:indexPath];
+    
+    if (indexPath.section == 0) {
+                HCAbout *about = self.aboutContent.firstObject;
+        
+                id identifier = [self tableData][indexPath.section][indexPath.row];
+        
+                if  ([identifier isEqualToString:HCAboutDescriptionIdentifier]) {
+                    cell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutDescriptionIdentifier];
+                    ((HCAboutDescriptionTableViewCell *)cell).aboutDescriptionLabel.text = about.aboutDescription;
+                    }
+        
+                if ([identifier isEqualToString:HCAboutMapIdentifier]) {
+                    cell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutMapIdentifier];
+                    ((HCAboutMapTableViewCell *)cell).mapView.delegate = self;
+                    ((HCAboutMapTableViewCell *)cell).mapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(about.hackLocation.latitude, about.hackLocation.longitude), MKCoordinateSpanMake(0.004f, 0.004f));
+                    
+                    MKPointAnnotation *hackCancerVenueLocationPin = [[MKPointAnnotation alloc]init];
+                    hackCancerVenueLocationPin.coordinate=CLLocationCoordinate2DMake(about.hackLocation.latitude, about.hackLocation.longitude);
+                    [((HCAboutMapTableViewCell *)cell).mapView addAnnotation:hackCancerVenueLocationPin];
+                    }
+                    
+                if ([identifier isEqualToString:HCAboutDateIdentifier]) {
+                    cell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutDateIdentifier];
+                    ((HCAboutDateTableViewCell *)cell).eventIcon.file = about.eventIcon;
+                    ((HCAboutDateTableViewCell *)cell).eventDate.text = [self.dateFormat stringFromDate:about.eventStartDate];
+                    }
 
-            HCAboutDateTableViewCell *dateCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutDateIdentifier];
+        } else if (indexPath.section == 1){
+                HCSocialNetworks *socialNetworks = self.socialNetworks[indexPath.row];
             
-            dateCell.eventIcon.file = about.eventIcon;
-            dateCell.eventDate.text = [self.dateFormat stringFromDate:about.eventStartDate];
-
-            cell = dateCell;
-
-            break;
+                id identifier = [self tableData][indexPath.section][indexPath.row];
+            
+                if ([identifier isEqualToString:HCAboutSocialNetworkIdentifier]) {
+                    cell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
+                    ((HCAboutSocialNetworkTableViewCell *)cell).socialNetworkTitleLabel.text = socialNetworks.socialNetworkTitle;
+                    ((HCAboutSocialNetworkTableViewCell *)cell).socialNetworkIconImageView.file = socialNetworks.socialNetworkIcon;
+            
+                }
         }
-        case HCAboutRowSocialNetworkFacebook:
-        {
-            HCAbout *about = self.aboutContent[indexPath.row - 3];
-            
-            HCAboutSocialNetworkTableViewCell *facebookCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
-            
-            facebookCell.socialNetworkTitleLabel.text = about.facebookTitle;
-            facebookCell.socialNetworkLogoImageView.file = about.facebookIcon;
-            
-            cell = facebookCell;
-            
-            break;
-        }
-        case HCAboutRowSocialNetworkTwitter:
-        {
-            HCAbout *about = self.aboutContent[indexPath.row - 4];
-            
-            HCAboutSocialNetworkTableViewCell *twitterCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
-            
-            twitterCell.socialNetworkTitleLabel.text = about.twitterTitle;
-            twitterCell.socialNetworkLogoImageView.file = about.twitterIcon;
-            
-            cell = twitterCell;
-            
-            break;
-        }
-        case HCAboutRowSocialNetworkInstagram:
-        {
-            HCAbout *about = self.aboutContent[indexPath.row - 5];
-            
-            HCAboutSocialNetworkTableViewCell *instagramCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
-            
-            instagramCell.socialNetworkTitleLabel.text = about.instagramTitle;
-            instagramCell.socialNetworkLogoImageView.file = about.instagramIcon;
-            
-            cell = instagramCell;
-            
-            break;
-        }
-        case HCAboutRowSocialNetworkEmail:
-        {
-            HCAbout *about = self.aboutContent[indexPath.row - 6];
-            
-            HCAboutSocialNetworkTableViewCell *emailCell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
-            
-            emailCell.socialNetworkTitleLabel.text = about.emailTitle;
-            emailCell.socialNetworkLogoImageView.file = about.emailIcon;
-            
-            cell = emailCell;
-            
-            break;
-        }
-    }
-    return cell;
+    
+        return cell;
 }
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    HCSocialNetworks *socialNetworks = self.socialNetworks[indexPath.row];
+//    NSString *url = socialNetworks.socialNetworkAddress;
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+//}
+
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {

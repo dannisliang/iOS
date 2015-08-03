@@ -42,6 +42,7 @@
 		AC1ECCB01B6BFB2E00473404 /* HCScheduleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1ECCAF1B6BFB2E00473404 /* HCScheduleEventViewController.m */; };
 		AC5434A41B6D3256006A73C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5434A31B6D3256006A73C3 /* MapKit.framework */; };
 		AC5434A71B6D34FC006A73C3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5434A61B6D34FC006A73C3 /* CoreLocation.framework */; };
+		AC5434AA1B6F9A1D006A73C3 /* HCSocialNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5434A91B6F9A1D006A73C3 /* HCSocialNetworks.m */; };
 		AC5CC48C1B6C2DB30078A593 /* HCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */; };
 		AC5CC48F1B6C2E850078A593 /* HCAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48E1B6C2E850078A593 /* HCAbout.m */; };
 		AC5CC4921B6C37510078A593 /* HCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC4911B6C37510078A593 /* HCTabBarViewController.m */; };
@@ -111,6 +112,8 @@
 		AC1ECCAF1B6BFB2E00473404 /* HCScheduleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCScheduleEventViewController.m; sourceTree = "<group>"; };
 		AC5434A31B6D3256006A73C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AC5434A61B6D34FC006A73C3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AC5434A81B6F9A1D006A73C3 /* HCSocialNetworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSocialNetworks.h; sourceTree = "<group>"; };
+		AC5434A91B6F9A1D006A73C3 /* HCSocialNetworks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSocialNetworks.m; sourceTree = "<group>"; };
 		AC5CC48A1B6C2DB30078A593 /* HCAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAboutViewController.h; sourceTree = "<group>"; };
 		AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAboutViewController.m; sourceTree = "<group>"; };
 		AC5CC48D1B6C2E850078A593 /* HCAbout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAbout.h; sourceTree = "<group>"; };
@@ -247,6 +250,8 @@
 		74B058F11B6BA433006394F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC5434A81B6F9A1D006A73C3 /* HCSocialNetworks.h */,
+				AC5434A91B6F9A1D006A73C3 /* HCSocialNetworks.m */,
 				AC5CC4931B6C38580078A593 /* HCUserInterface.h */,
 				AC5CC4941B6C38580078A593 /* HCUserInterface.m */,
 				74B058F21B6BA447006394F6 /* HCNewsArticle.h */,
@@ -463,6 +468,7 @@
 				ACA005EB1B6BCC9C005463F8 /* HCFAQListViewController.m in Sources */,
 				74B059061B6BB2A0006394F6 /* HCScheduleItem.m in Sources */,
 				748AEC881B6B9E69002AD90B /* HCAppDelegate.m in Sources */,
+				AC5434AA1B6F9A1D006A73C3 /* HCSocialNetworks.m in Sources */,
 				ACA005E71B6BCA7E005463F8 /* HCFAQTableViewCell.m in Sources */,
 				AC5CC4951B6C38580078A593 /* HCUserInterface.m in Sources */,
 				AC5CC4921B6C37510078A593 /* HCTabBarViewController.m in Sources */,
