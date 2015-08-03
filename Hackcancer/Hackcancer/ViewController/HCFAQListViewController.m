@@ -9,6 +9,8 @@
 #import "HCFAQListViewController.h"
 
 #import "HCFAQItem.h"
+#import "HCUserInterface.h"
+
 #import "HCFAQTableViewCell.h"
 #import "HCFAQQuestionViewController.h"
 
@@ -16,6 +18,7 @@
 @interface HCFAQListViewController ()
 
 @property (nonatomic, strong) NSArray *FAQItem;
+@property (nonatomic, strong) NSArray *userInterface;
 
 @end
 
@@ -31,6 +34,13 @@ static NSString * const HCFAQItemIdentifier = @"HCFAQTableViewCell";
     
     PFQuery *FAQItemQuery = [PFQuery queryWithClassName:[HCFAQItem parseClassName]];
     self.FAQItem = [FAQItemQuery findObjects];
+    
+    PFQuery *userInterfaceQuery = [PFQuery queryWithClassName:[HCUserInterface parseClassName]];
+    self.userInterface = [userInterfaceQuery findObjects];
+    
+    HCUserInterface *userInterface = self.userInterface[2];
+    self.title = userInterface.viewTitle;
+
     
     UINib *tableViewCellNib = [UINib nibWithNibName:HCFAQItemIdentifier
                                              bundle:[NSBundle mainBundle]];

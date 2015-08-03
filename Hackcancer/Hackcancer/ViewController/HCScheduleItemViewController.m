@@ -9,12 +9,15 @@
 #import "HCScheduleItemViewController.h"
 
 #import "HCScheduleItem.h"
+#import "HCUserInterface.h"
+
 #import "HCScheduleItemTableViewCell.h"
 #import "HCScheduleEventViewController.h"
 
 @interface HCScheduleItemViewController ()
 
 @property (nonatomic, strong) NSArray *scheduleEvents;
+@property (nonatomic, strong) NSArray *userInterface;
 @property (nonatomic, strong) NSDateFormatter *dateFormat;
 
 @end
@@ -35,6 +38,12 @@ static NSString * const HCScheduleItemIdentifier = @"ScheduleItemTableViewCell";
     
     PFQuery *scheduleItemQuery = [PFQuery queryWithClassName:[HCScheduleItem parseClassName]];
     self.scheduleEvents = [scheduleItemQuery findObjects];
+    
+    PFQuery *userInterfaceQuery = [PFQuery queryWithClassName:[HCUserInterface parseClassName]];
+    self.userInterface = [userInterfaceQuery findObjects];
+    
+    HCUserInterface *userInterface = self.userInterface[3];
+    self.title = userInterface.viewTitle;
     
     UINib *tableViewCellNib = [UINib nibWithNibName:HCScheduleItemIdentifier
                                             bundle:[NSBundle mainBundle]];

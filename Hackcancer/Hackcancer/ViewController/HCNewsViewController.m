@@ -11,12 +11,15 @@
 #import <Parse/Parse.h>
 
 #import "HCNewsArticle.h"
+#import "HCUserInterface.h"
+
 #import "HCNewsArticleTableViewCell.h"
 #import "HCNewsArticleViewController.h"
 
 @interface HCNewsViewController ()
 
 @property (nonatomic, strong) NSArray *newsArticles;
+@property (nonatomic, strong) NSArray *userInterface;
 
 @end
 
@@ -32,6 +35,12 @@ static NSString * const HCNewsArticleIdentifier = @"NewsArticleTableViewCell";
     
     PFQuery *newsArticleQuery = [PFQuery queryWithClassName:[HCNewsArticle parseClassName]];
     self.newsArticles = [newsArticleQuery findObjects];
+    
+    PFQuery *userInterfaceQuery = [PFQuery queryWithClassName:[HCUserInterface parseClassName]];
+    self.userInterface = [userInterfaceQuery findObjects];
+
+    HCUserInterface *userInterface = self.userInterface.firstObject;
+    self.title = userInterface.viewTitle;
     
     UINib *tableViewCellNib = [UINib nibWithNibName:HCNewsArticleIdentifier
                                              bundle:[NSBundle mainBundle]];

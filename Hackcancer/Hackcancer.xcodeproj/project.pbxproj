@@ -43,6 +43,8 @@
 		AC5434A41B6D3256006A73C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5434A31B6D3256006A73C3 /* MapKit.framework */; };
 		AC5434A71B6D34FC006A73C3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5434A61B6D34FC006A73C3 /* CoreLocation.framework */; };
 		AC5434AA1B6F9A1D006A73C3 /* HCSocialNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5434A91B6F9A1D006A73C3 /* HCSocialNetworks.m */; };
+		AC5434AC1B6FE707006A73C3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5434AB1B6FE707006A73C3 /* MessageUI.framework */; };
+		AC5434AF1B6FE99F006A73C3 /* HCEmailSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5434AE1B6FE99F006A73C3 /* HCEmailSettings.m */; };
 		AC5CC48C1B6C2DB30078A593 /* HCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */; };
 		AC5CC48F1B6C2E850078A593 /* HCAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48E1B6C2E850078A593 /* HCAbout.m */; };
 		AC5CC4921B6C37510078A593 /* HCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC4911B6C37510078A593 /* HCTabBarViewController.m */; };
@@ -114,6 +116,9 @@
 		AC5434A61B6D34FC006A73C3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AC5434A81B6F9A1D006A73C3 /* HCSocialNetworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSocialNetworks.h; sourceTree = "<group>"; };
 		AC5434A91B6F9A1D006A73C3 /* HCSocialNetworks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSocialNetworks.m; sourceTree = "<group>"; };
+		AC5434AB1B6FE707006A73C3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		AC5434AD1B6FE99F006A73C3 /* HCEmailSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEmailSettings.h; sourceTree = "<group>"; };
+		AC5434AE1B6FE99F006A73C3 /* HCEmailSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEmailSettings.m; sourceTree = "<group>"; };
 		AC5CC48A1B6C2DB30078A593 /* HCAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAboutViewController.h; sourceTree = "<group>"; };
 		AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAboutViewController.m; sourceTree = "<group>"; };
 		AC5CC48D1B6C2E850078A593 /* HCAbout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAbout.h; sourceTree = "<group>"; };
@@ -137,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5434AC1B6FE707006A73C3 /* MessageUI.framework in Frameworks */,
 				AC5434A71B6D34FC006A73C3 /* CoreLocation.framework in Frameworks */,
 				AC5434A41B6D3256006A73C3 /* MapKit.framework in Frameworks */,
 				6C3C6AEB17C30A3B9FF604A5 /* libPods-Hackcancer.a in Frameworks */,
@@ -250,6 +256,8 @@
 		74B058F11B6BA433006394F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC5434AD1B6FE99F006A73C3 /* HCEmailSettings.h */,
+				AC5434AE1B6FE99F006A73C3 /* HCEmailSettings.m */,
 				AC5434A81B6F9A1D006A73C3 /* HCSocialNetworks.h */,
 				AC5434A91B6F9A1D006A73C3 /* HCSocialNetworks.m */,
 				AC5CC4931B6C38580078A593 /* HCUserInterface.h */,
@@ -306,6 +314,7 @@
 		A73BA80D422F025919807B8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC5434AB1B6FE707006A73C3 /* MessageUI.framework */,
 				AC5434A61B6D34FC006A73C3 /* CoreLocation.framework */,
 				AC5434A31B6D3256006A73C3 /* MapKit.framework */,
 				9008A8621007CD93C72E9FF4 /* libPods-Hackcancer.a */,
@@ -476,6 +485,7 @@
 				74B059261B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m in Sources */,
 				74B058F41B6BA447006394F6 /* HCNewsArticle.m in Sources */,
 				ACA005EE1B6BCF00005463F8 /* HCFAQItem.m in Sources */,
+				AC5434AF1B6FE99F006A73C3 /* HCEmailSettings.m in Sources */,
 				AC5CC48F1B6C2E850078A593 /* HCAbout.m in Sources */,
 				748AEC8B1B6B9E8D002AD90B /* main.m in Sources */,
 				AC1ECCAD1B6BF9A400473404 /* HCFAQQuestionViewController.m in Sources */,

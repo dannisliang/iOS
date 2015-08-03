@@ -11,19 +11,25 @@
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 #import <MapKit/MapKit.h>
+#import <MessageUI/MessageUI.h>
 
 #import "HCAbout.h"
 #import "HCSocialNetworks.h"
+#import "HCEmailSettings.h"
+#import "HCUserInterface.h"
+
 #import "HCAboutDateTableViewCell.h"
 #import "HCAboutDescriptionTableViewCell.h"
 #import "HCAboutMapTableViewCell.h"
 #import "HCAboutSocialNetworkTableViewCell.h"
 
 
-@interface HCAboutViewController () <UITableViewDelegate, MKMapViewDelegate>
+@interface HCAboutViewController () <MFMailComposeViewControllerDelegate, UITableViewDelegate, MKMapViewDelegate>
 
 @property (nonatomic, strong) NSArray *aboutContent;
 @property (nonatomic, strong) NSArray *socialNetworks;
+@property (nonatomic, strong) NSArray *emailSettings;
+@property (nonatomic, strong) NSArray *userInterface;
 
 @property (nonatomic, strong) NSDateFormatter *dateFormat;
 
@@ -58,7 +64,9 @@ static NSString *HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableVie
                  HCAboutSocialNetworkIdentifier,
                  HCAboutSocialNetworkIdentifier,
                  HCAboutSocialNetworkIdentifier,
-                 HCAboutSocialNetworkIdentifier,
+                 HCAboutSocialNetworkIdentifier
+                 ],
+             @[
                  HCAboutSocialNetworkIdentifier
                  ]
              ];
@@ -74,11 +82,18 @@ static NSString *HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableVie
     PFQuery *socialNetworksQuery = [PFQuery queryWithClassName:[HCSocialNetworks parseClassName]];
     self.socialNetworks = [socialNetworksQuery findObjects];
     
+    PFQuery *emailSettingsQuery = [PFQuery queryWithClassName:[HCEmailSettings parseClassName]];
+    self.emailSettings = [emailSettingsQuery findObjects];
     
-//    for (HCSocialNetworks *socialNetwork in self.socialNetworks) {
-//        socialNetwork.cellIdentifier = HCAboutSocialNetworkIdentifier;
-//    }
-//    
+    PFQuery *userInterfaceQuery = [PFQuery queryWithClassName:[HCUserInterface parseClassName]];
+    self.userInterface = [userInterfaceQuery findObjects];
+    
+    
+    HCUserInterface *userInterface = self.userInterface[1];
+    self.title = userInterface.viewTitle;
+    
+//    self setTintColor:[UIColor colorWithRed:[userInterface.primaryR floatValue] green:[userInterface.primaryG floatValue] blue:[userInterface.primaryB floatValue] alpha:1.0]];
+    
     self.dateFormat = [[NSDateFormatter alloc] init];
     self.dateFormat.dateFormat = @"HH:mm";
     self.dateFormat.locale = [NSLocale localeWithLocaleIdentifier:@"en_GB"];
@@ -153,17 +168,52 @@ static NSString *HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableVie
                     ((HCAboutSocialNetworkTableViewCell *)cell).socialNetworkIconImageView.file = socialNetworks.socialNetworkIcon;
             
                 }
+        } else if (indexPath.section == 2){
+            HCEmailSettings *emailSettings = self.emailSettings[indexPath.row];
+            
+            id identifier = [self tableData][indexPath.section][indexPath.row];
+            
+            if ([identifier isEqualToString:HCAboutSocialNetworkIdentifier]) {
+                cell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutSocialNetworkIdentifier];
+                ((HCAboutSocialNetworkTableViewCell *)cell).socialNetworkTitleLabel.text = emailSettings.emailTitle;
+                ((HCAboutSocialNetworkTableViewCell *)cell).socialNetworkIconImageView.file = emailSettings.emailIcon;
+            }
         }
     
         return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    HCSocialNetworks *socialNetworks = self.socialNetworks[indexPath.row];
-//    NSString *url = socialNetworks.socialNetworkAddress;
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        
+    } else if (indexPath.section == 1) {
+        HCSocialNetworks *socialNetworks = self.socialNetworks[indexPath.row];
+        NSString *url = socialNetworks.socialNetworkAddress;
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        
+    } else if (indexPath.section == 2) {
+        HCEmailSettings *emailSettings = self.emailSettings.firstObject;
+        
+        // Email Subject
+        NSString *emailSubject = emailSettings.emailSubject;
+        // Email Content
+        NSString *emailBody = emailSettings.emailBody;
+        // To address
+        NSArray *recipients = [NSArray arrayWithObject:emailSettings.emailAddress];
+        
+        MFMailComposeViewController *email = [[MFMailComposeViewController alloc] init];
+        email.mailComposeDelegate = self;
+        [email setSubject:emailSubject];
+        [email setMessageBody:emailBody isHTML:NO];
+        [email setToRecipients:recipients];
+        
+        // Present mail view controller on screen
+        [self presentViewController:email animated:YES completion:NULL];
+
+    }
+}
+
 
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
@@ -191,6 +241,30 @@ static NSString *HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableVie
     }
     
     return hackCancerVenueLocationPin;
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

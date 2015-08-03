@@ -1,20 +1,19 @@
 //
-//  HCUserInterface.m
+//  HCEmailSettings.m
 //  Hackcancer
 //
 //  Created by Robert Swift on 31/07/2015.
 //  Copyright (c) 2015 Hackcancer. All rights reserved.
 //
 
-#import "HCUserInterface.h"
+#import "HCEmailSettings.h"
 
-@implementation HCUserInterface
+@implementation HCEmailSettings
 
-@dynamic tabBarItem;
-@dynamic viewTitle;
-@dynamic primaryR;
-@dynamic primaryG;
-@dynamic primaryB;
+@dynamic emailTitle;
+@dynamic emailSubject;
+@dynamic emailBody;
+@dynamic emailAddress;
 
 + (void)load
 {
@@ -23,7 +22,7 @@
 
 + (NSString *)parseClassName
 {
-    return @"iOSUserInterface";
+    return @"EmailSettings";
 }
 
 @end

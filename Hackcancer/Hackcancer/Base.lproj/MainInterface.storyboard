@@ -153,11 +153,11 @@
             </objects>
             <point key="canvasLocation" x="619" y="1899"/>
         </scene>
-        <!--News-->
+        <!--Navigation Controller-->
         <scene sceneID="fu9-ee-5pq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4HD-VU-avW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" id="9yk-Zi-FsH"/>
+                    <tabBarItem key="tabBarItem" title="" id="9yk-Zi-FsH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zhb-Qf-d1V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -172,11 +172,11 @@
             </objects>
             <point key="canvasLocation" x="-1455" y="1147"/>
         </scene>
-        <!--Schedule-->
+        <!--Navigation Controller-->
         <scene sceneID="Kgh-du-V95">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oyh-QX-GWX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" id="utw-vL-C28"/>
+                    <tabBarItem key="tabBarItem" title="" id="utw-vL-C28"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bIo-SA-WCP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -191,11 +191,11 @@
             </objects>
             <point key="canvasLocation" x="-87" y="1147"/>
         </scene>
-        <!--FAQs-->
+        <!--Navigation Controller-->
         <scene sceneID="oTt-3Y-c9m">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J2Y-Qd-IAG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="FAQs" id="UqE-Ts-tVC" userLabel="FAQs"/>
+                    <tabBarItem key="tabBarItem" title="" id="UqE-Ts-tVC" userLabel="FAQs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tPG-Ss-YpV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -365,7 +365,7 @@
         <scene sceneID="RJJ-eL-PIc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YuD-aE-MiZ" userLabel="About" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" id="0uF-1l-Gts" userLabel="FAQs"/>
+                    <tabBarItem key="tabBarItem" title="" id="0uF-1l-Gts" userLabel="FAQs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XdY-YF-fgs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

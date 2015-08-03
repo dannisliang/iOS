@@ -10,9 +10,9 @@
 
 @implementation HCAbout
 
+@dynamic viewTitle;
 @dynamic hackLocation;
 @dynamic mapPinIcon;
-@dynamic title;
 @dynamic aboutDescription;
 @dynamic eventIcon;
 @dynamic eventStartDate;

@@ -10,11 +10,8 @@
 
 @interface HCUserInterface : PFObject<PFSubclassing>
 
-@property (nonatomic, strong) PFFile *newsTabBarItem;
-@property (nonatomic, strong) PFFile *aboutTabBarItem;
-@property (nonatomic, strong) PFFile *conciergeTabBarItem;
-@property (nonatomic, strong) PFFile *scheduleTabBarItem;
-@property (nonatomic, strong) PFFile *faqTabBarItem;
+@property (nonatomic, strong) PFFile *tabBarItem;
+@property (nonatomic, strong) NSString *viewTitle;
 @property NSNumber *primaryR;
 @property NSNumber *primaryG;
 @property NSNumber *primaryB;
