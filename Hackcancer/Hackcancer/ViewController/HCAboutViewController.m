@@ -22,14 +22,17 @@
 #import "HCAboutDescriptionTableViewCell.h"
 #import "HCAboutMapTableViewCell.h"
 #import "HCAboutSocialNetworkTableViewCell.h"
+#import "HCMapViewController.h"
 
 
-@interface HCAboutViewController () <MFMailComposeViewControllerDelegate, UITableViewDelegate, MKMapViewDelegate>
+@interface HCAboutViewController () <MFMailComposeViewControllerDelegate, UITableViewDelegate, MKMapViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) NSArray *aboutContent;
 @property (nonatomic, strong) NSArray *socialNetworks;
 @property (nonatomic, strong) NSArray *emailSettings;
 @property (nonatomic, strong) NSArray *userInterface;
+
+@property (nonatomic, strong) UITapGestureRecognizer *mapTapGesture;
 
 @property (nonatomic, strong) NSDateFormatter *dateFormat;
 
@@ -75,6 +78,10 @@ static NSString *HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableVie
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.mapTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleMapTap:)];
+    self.mapTapGesture.cancelsTouchesInView = NO;
+    self.mapTapGesture.delegate = self;
     
     PFQuery *aboutContentQuery = [PFQuery queryWithClassName:[HCAbout parseClassName]];
     self.aboutContent = [aboutContentQuery findObjects];
@@ -143,6 +150,7 @@ static NSString *HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableVie
         
                 if ([identifier isEqualToString:HCAboutMapIdentifier]) {
                     cell = [self.tableView dequeueReusableCellWithIdentifier:HCAboutMapIdentifier];
+                    [((HCAboutMapTableViewCell *)cell).mapView addGestureRecognizer:self.mapTapGesture];
                     ((HCAboutMapTableViewCell *)cell).mapView.delegate = self;
                     ((HCAboutMapTableViewCell *)cell).mapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(about.hackLocation.latitude, about.hackLocation.longitude), MKCoordinateSpanMake(0.004f, 0.004f));
                     
@@ -186,6 +194,18 @@ static NSString *HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableVie
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
+        
+        id identifier = [self tableData][indexPath.section][indexPath.row];
+        
+        if ([identifier isEqualToString:HCAboutMapIdentifier]) {
+            HCAbout *about = self.aboutContent.firstObject;
+        
+            HCMapViewController *mapViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"AboutMap"];
+            mapViewController.about = about;
+        
+            [self.navigationController pushViewController:mapViewController
+                                             animated:YES];
+            }
         
     } else if (indexPath.section == 1) {
         HCSocialNetworks *socialNetworks = self.socialNetworks[indexPath.row];
@@ -265,6 +285,15 @@ static NSString *HCAboutSocialNetworkIdentifier = @"HCAboutSocialNetworkTableVie
     
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+-(void)handleMapTap:(id)sender {
+    HCAbout *about = self.aboutContent.firstObject;
+    HCMapViewController *mapViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"AboutMap"];
+    mapViewController.about = about;
+    
+    [self.navigationController pushViewController:mapViewController
+                                         animated:YES];
 }
 
 @end

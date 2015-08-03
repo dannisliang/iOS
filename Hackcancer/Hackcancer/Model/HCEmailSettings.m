@@ -10,6 +10,7 @@
 
 @implementation HCEmailSettings
 
+@dynamic emailIcon;
 @dynamic emailTitle;
 @dynamic emailSubject;
 @dynamic emailBody;

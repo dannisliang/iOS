@@ -45,6 +45,7 @@
 		AC5434AA1B6F9A1D006A73C3 /* HCSocialNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5434A91B6F9A1D006A73C3 /* HCSocialNetworks.m */; };
 		AC5434AC1B6FE707006A73C3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5434AB1B6FE707006A73C3 /* MessageUI.framework */; };
 		AC5434AF1B6FE99F006A73C3 /* HCEmailSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5434AE1B6FE99F006A73C3 /* HCEmailSettings.m */; };
+		AC5434B21B700695006A73C3 /* HCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5434B11B700695006A73C3 /* HCMapViewController.m */; };
 		AC5CC48C1B6C2DB30078A593 /* HCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */; };
 		AC5CC48F1B6C2E850078A593 /* HCAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC48E1B6C2E850078A593 /* HCAbout.m */; };
 		AC5CC4921B6C37510078A593 /* HCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5CC4911B6C37510078A593 /* HCTabBarViewController.m */; };
@@ -119,6 +120,8 @@
 		AC5434AB1B6FE707006A73C3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AC5434AD1B6FE99F006A73C3 /* HCEmailSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEmailSettings.h; sourceTree = "<group>"; };
 		AC5434AE1B6FE99F006A73C3 /* HCEmailSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEmailSettings.m; sourceTree = "<group>"; };
+		AC5434B01B700695006A73C3 /* HCMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMapViewController.h; sourceTree = "<group>"; };
+		AC5434B11B700695006A73C3 /* HCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMapViewController.m; sourceTree = "<group>"; };
 		AC5CC48A1B6C2DB30078A593 /* HCAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAboutViewController.h; sourceTree = "<group>"; };
 		AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAboutViewController.m; sourceTree = "<group>"; };
 		AC5CC48D1B6C2E850078A593 /* HCAbout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAbout.h; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				74B058F61B6BA809006394F6 /* HCNewsArticleViewController.m */,
 				AC5CC48A1B6C2DB30078A593 /* HCAboutViewController.h */,
 				AC5CC48B1B6C2DB30078A593 /* HCAboutViewController.m */,
+				AC5434B01B700695006A73C3 /* HCMapViewController.h */,
+				AC5434B11B700695006A73C3 /* HCMapViewController.m */,
 				74B059011B6BB243006394F6 /* HCScheduleItemViewController.h */,
 				74B059021B6BB243006394F6 /* HCScheduleItemViewController.m */,
 				AC1ECCAE1B6BFB2E00473404 /* HCScheduleEventViewController.h */,
@@ -485,6 +490,7 @@
 				74B059261B6C3D27006394F6 /* HCAboutDescriptionTableViewCell.m in Sources */,
 				74B058F41B6BA447006394F6 /* HCNewsArticle.m in Sources */,
 				ACA005EE1B6BCF00005463F8 /* HCFAQItem.m in Sources */,
+				AC5434B21B700695006A73C3 /* HCMapViewController.m in Sources */,
 				AC5434AF1B6FE99F006A73C3 /* HCEmailSettings.m in Sources */,
 				AC5CC48F1B6C2E850078A593 /* HCAbout.m in Sources */,
 				748AEC8B1B6B9E8D002AD90B /* main.m in Sources */,

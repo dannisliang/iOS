@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,36 +12,30 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aSf-71-1Dx" id="Sr2-5i-Usv">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lf8-O9-7Ve">
-                        <rect key="frame" x="0.0" y="-1" width="320" height="200"/>
+                    <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lf8-O9-7Ve">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="200" id="w1S-a8-89K"/>
                         </constraints>
                     </mapView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="lf8-O9-7Ve" firstAttribute="top" secondItem="Sr2-5i-Usv" secondAttribute="top" constant="-1" id="1NW-M7-eyv"/>
+                    <constraint firstItem="lf8-O9-7Ve" firstAttribute="top" secondItem="Sr2-5i-Usv" secondAttribute="top" id="1NW-M7-eyv"/>
+                    <constraint firstAttribute="bottom" secondItem="lf8-O9-7Ve" secondAttribute="bottom" constant="-1" id="2GV-YK-ldm"/>
                     <constraint firstItem="lf8-O9-7Ve" firstAttribute="leading" secondItem="Sr2-5i-Usv" secondAttribute="leading" id="Jae-dW-DID"/>
                     <constraint firstAttribute="bottom" secondItem="lf8-O9-7Ve" secondAttribute="bottom" id="aog-s6-1zC"/>
-                    <constraint firstItem="lf8-O9-7Ve" firstAttribute="top" secondItem="Sr2-5i-Usv" secondAttribute="top" id="dLa-XJ-k6Q"/>
-                    <constraint firstAttribute="centerXWithinMargins" secondItem="lf8-O9-7Ve" secondAttribute="centerXWithinMargins" id="kKJ-SO-odS"/>
                     <constraint firstAttribute="trailing" secondItem="lf8-O9-7Ve" secondAttribute="trailing" id="nox-UM-lCM"/>
-                    <constraint firstAttribute="centerYWithinMargins" secondItem="lf8-O9-7Ve" secondAttribute="centerYWithinMargins" id="qk8-dj-mBX"/>
-                    <constraint firstAttribute="bottom" secondItem="lf8-O9-7Ve" secondAttribute="bottom" id="xbB-dE-CIu"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="dLa-XJ-k6Q"/>
-                        <exclude reference="kKJ-SO-odS"/>
-                        <exclude reference="qk8-dj-mBX"/>
-                        <exclude reference="xbB-dE-CIu"/>
+                        <exclude reference="aog-s6-1zC"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="mapView" destination="lf8-O9-7Ve" id="rwf-ka-T8x"/>
             </connections>
-            <point key="canvasLocation" x="231" y="230"/>
+            <point key="canvasLocation" x="93" y="157"/>
         </tableViewCell>
     </objects>
 </document>

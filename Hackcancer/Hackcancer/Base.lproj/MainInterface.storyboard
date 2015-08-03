@@ -380,10 +380,10 @@
             </objects>
             <point key="canvasLocation" x="-759" y="1147"/>
         </scene>
-        <!--FAQQuestionViewController-->
+        <!--AboutMapViewController-->
         <scene sceneID="Q6e-ej-Mcy">
             <objects>
-                <viewController storyboardIdentifier="AboutMap" id="bRt-lH-4b1" userLabel="FAQQuestionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutMap" id="bRt-lH-4b1" userLabel="AboutMapViewController" customClass="HCMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pY6-bz-3QZ"/>
                         <viewControllerLayoutGuide type="bottom" id="RRE-gX-TsA"/>
@@ -391,9 +391,29 @@
                     <view key="view" contentMode="scaleToFill" id="xPB-xR-crF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dzj-KC-3sF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dzj-KC-3sF" firstAttribute="top" secondItem="xPB-xR-crF" secondAttribute="top" id="8oC-vb-mqh"/>
+                            <constraint firstAttribute="trailing" secondItem="dzj-KC-3sF" secondAttribute="trailing" id="SNV-EJ-h1y"/>
+                            <constraint firstItem="dzj-KC-3sF" firstAttribute="top" secondItem="pY6-bz-3QZ" secondAttribute="bottom" constant="-20" id="hL8-Xc-dle"/>
+                            <constraint firstItem="RRE-gX-TsA" firstAttribute="top" secondItem="dzj-KC-3sF" secondAttribute="bottom" id="hMl-hv-V8Q"/>
+                            <constraint firstItem="dzj-KC-3sF" firstAttribute="leading" secondItem="xPB-xR-crF" secondAttribute="leading" id="hWh-uP-qWK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hL8-Xc-dle"/>
+                            </mask>
+                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="mapView" destination="dzj-KC-3sF" id="Agg-9E-e5I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Thq-Hl-U3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
